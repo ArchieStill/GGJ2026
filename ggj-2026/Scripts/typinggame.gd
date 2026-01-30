@@ -1,12 +1,14 @@
 extends Control
 
+signal finished
+
 @onready var input: LineEdit = $TextInput
 @onready var target_word: Label = $TargetWord
 
 var line
 var index = 1
 var words_done = 0
-var can_type = true
+var can_type = false
 
 func _ready() -> void:
 	line = Typinggamewords.Text.pick_random()
@@ -38,3 +40,4 @@ func _new_word():
 
 func _on_end_timer_timeout() -> void:
 	hide()
+	emit_signal("finished")
