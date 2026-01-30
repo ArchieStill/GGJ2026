@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://i45fblbjbmb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knxqi"]
+[ext_resource type="StyleBox" uid="uid://cgu7rwe6nqd38" path="res://Styles/redbutton.tres" id="1_svsfh"]
+[ext_resource type="StyleBox" uid="uid://cnpojrnnk21t8" path="res://Styles/bluebutton.tres" id="2_qemty"]
+[ext_resource type="StyleBox" uid="uid://b53x50iqfrg5u" path="res://Styles/greenbutton.tres" id="3_4iikw"]
+[ext_resource type="StyleBox" uid="uid://ck6lx073hqp8f" path="res://Styles/yellowbutton.tres" id="4_lxsu7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svsfh"]
 
 [node name="SimonSaysGame" type="Control" unique_id=1769986982]
 layout_mode = 3
@@ -19,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28235295, 0.28235295, 0.28235295, 0.7058824)
 
-[node name="Panel" type="Panel" parent="." unique_id=1710912800]
+[node name="GuideBase" type="Panel" parent="." unique_id=1710912800]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -33,7 +38,7 @@ offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel2" type="Panel" parent="." unique_id=1108137312]
+[node name="PlayerBase" type="Panel" parent="." unique_id=1108137312]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,10 +52,66 @@ offset_bottom = 303.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1426811495]
+[node name="GuideButtons" type="HBoxContainer" parent="." unique_id=1601203494]
 layout_mode = 0
-offset_left = 107.0
-offset_top = 76.0
-offset_right = 273.0
-offset_bottom = 242.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_knxqi")
+offset_left = 103.0
+offset_top = 60.0
+offset_right = 1041.0
+offset_bottom = 265.0
+theme_override_constants/separation = 40
+
+[node name="Red" type="Button" parent="GuideButtons" unique_id=1426811495]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("1_svsfh")
+
+[node name="Blue" type="Button" parent="GuideButtons" unique_id=803435597]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_qemty")
+
+[node name="Green" type="Button" parent="GuideButtons" unique_id=1227926827]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("3_4iikw")
+
+[node name="Yellow" type="Button" parent="GuideButtons" unique_id=859669091]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_lxsu7")
+
+[node name="GuideBarrier" type="Panel" parent="." unique_id=1201715295]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 29.0
+offset_right = 1080.0
+offset_bottom = 293.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_svsfh")
+
+[node name="PlayerButtons" type="HBoxContainer" parent="." unique_id=655376494]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 390.0
+offset_right = 1041.0
+offset_bottom = 595.0
+theme_override_constants/separation = 40
+
+[node name="Red" type="Button" parent="PlayerButtons" unique_id=265148402]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("1_svsfh")
+
+[node name="Blue" type="Button" parent="PlayerButtons" unique_id=236023286]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_qemty")
+
+[node name="Green" type="Button" parent="PlayerButtons" unique_id=693123110]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("3_4iikw")
+
+[node name="Yellow" type="Button" parent="PlayerButtons" unique_id=447536342]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_lxsu7")
