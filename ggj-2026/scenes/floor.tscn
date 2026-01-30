@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c32sog2bute6i"]
+
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://scenes/player.tscn" id="1_ukw5w"]
+[ext_resource type="Texture2D" uid="uid://cmqya7aw7jbt8" path="res://assets/Screenshot 2026-01-30 190504.png" id="2_kuqtn"]
+[ext_resource type="PackedScene" uid="uid://bs2jlg3yvqtl6" path="res://scenes/interact_point.tscn" id="3_whr1e"]
+[ext_resource type="PackedScene" uid="uid://cxqad1t47al07" path="res://scenes/prompt.tscn" id="4_3lc0u"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_kuqtn"]
+sky_material = SubResource("ProceduralSkyMaterial_ukw5w")
+
+[sub_resource type="Environment" id="Environment_whr1e"]
+background_mode = 2
+sky = SubResource("Sky_kuqtn")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whr1e"]
+albedo_texture = ExtResource("2_kuqtn")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ukw5w"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kuqtn"]
+size = Vector3(20, 1, 20)
+
+[node name="Main" type="Node3D" unique_id=883790013]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=441263989]
+transform = Transform3D(-0.8553643, 0.51802695, 2.2643677e-08, 0, -4.371139e-08, 1, 0.51802695, 0.8553643, 3.7389164e-08, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1509588367]
+environment = SubResource("Environment_whr1e")
+
+[node name="player" parent="." unique_id=1619847247 instance=ExtResource("1_ukw5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5462308, 0)
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=1208025134]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=1169923487]
+material_override = SubResource("StandardMaterial3D_whr1e")
+mesh = SubResource("BoxMesh_ukw5w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=862090169]
+shape = SubResource("BoxShape3D_kuqtn")
+
+[node name="InteractPoint" parent="." unique_id=659263292 instance=ExtResource("3_whr1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11917162, 1.5530734, -2.9320502)
+
+[node name="Prompt" parent="." unique_id=819614728 instance=ExtResource("4_3lc0u")]
