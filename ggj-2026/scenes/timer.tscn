@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dj1fel4m2qqsq"]
+
+[ext_resource type="Script" uid="uid://ciaj3ceuey003" path="res://scripts/timer.gd" id="1_srplv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srplv"]
+bg_color = Color(0.38625076, 0.38625088, 0.38625073, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lxq6"]
+bg_color = Color(0.9843137, 0.26666668, 0.05490196, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="timer" type="Control" unique_id=865164884]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_srplv")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=325459048]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 33.0
+offset_right = 976.0
+offset_bottom = 60.0
+theme_override_styles/background = SubResource("StyleBoxFlat_srplv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5lxq6")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[connection signal="value_changed" from="ProgressBar" to="." method="_on_progress_bar_value_changed"]

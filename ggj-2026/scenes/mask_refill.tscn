@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dqsdq0knoy4a4"]
+
+[ext_resource type="Script" uid="uid://dqg7ygj3nbn00" path="res://scripts/mask_refill.gd" id="1_fqf36"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gifd2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gifd2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqf36"]
+transparency = 1
+albedo_color = Color(0, 1, 0, 0.2901961)
+
+[node name="maskRefill" type="Area3D" unique_id=2090824228]
+script = ExtResource("1_fqf36")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1022428253]
+shape = SubResource("BoxShape3D_gifd2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=434826357]
+mesh = SubResource("BoxMesh_gifd2")
+surface_material_override/0 = SubResource("StandardMaterial3D_fqf36")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1333524189]
+text = "Refill Area"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
