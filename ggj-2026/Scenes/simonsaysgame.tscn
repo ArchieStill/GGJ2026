@@ -1,11 +1,126 @@
 [gd_scene format=3 uid="uid://i45fblbjbmb"]
 
+[ext_resource type="Script" uid="uid://yph7i4uv5mdq" path="res://Scripts/simonsaysgame.gd" id="1_3o5b1"]
 [ext_resource type="StyleBox" uid="uid://cgu7rwe6nqd38" path="res://Styles/redbutton.tres" id="1_svsfh"]
+[ext_resource type="StyleBox" uid="uid://bl2doyt7qhenu" path="res://Styles/redhover.tres" id="2_4iikw"]
 [ext_resource type="StyleBox" uid="uid://cnpojrnnk21t8" path="res://Styles/bluebutton.tres" id="2_qemty"]
 [ext_resource type="StyleBox" uid="uid://b53x50iqfrg5u" path="res://Styles/greenbutton.tres" id="3_4iikw"]
+[ext_resource type="StyleBox" uid="uid://ffaxvkid11ck" path="res://Styles/bluehover.tres" id="4_4iikw"]
 [ext_resource type="StyleBox" uid="uid://ck6lx073hqp8f" path="res://Styles/yellowbutton.tres" id="4_lxsu7"]
+[ext_resource type="StyleBox" uid="uid://c58vg4ppjyn36" path="res://Styles/greenhover.tres" id="6_lxsu7"]
+[ext_resource type="StyleBox" uid="uid://ckcibqy8l7522" path="res://Styles/yellowhover.tres" id="8_i23xv"]
+[ext_resource type="StyleBox" uid="uid://vhg8pitp7dwa" path="res://Styles/redpressed.tres" id="9_ai8w8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svsfh"]
+
+[sub_resource type="Animation" id="Animation_3o5b1"]
+resource_name = "Pattern 1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuideButtons/Red:theme_override_styles/normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_svsfh"), ExtResource("2_4iikw"), ExtResource("1_svsfh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GuideButtons/Blue:theme_override_styles/normal")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_qemty"), ExtResource("4_4iikw"), ExtResource("2_qemty")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GuideButtons/Green:theme_override_styles/normal")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_4iikw"), ExtResource("6_lxsu7"), ExtResource("3_4iikw")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GuideButtons/Yellow:theme_override_styles/normal")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_lxsu7"), ExtResource("8_i23xv"), ExtResource("4_lxsu7")]
+}
+
+[sub_resource type="Animation" id="Animation_bvo36"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuideButtons/Red:theme_override_styles/normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_svsfh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GuideButtons/Blue:theme_override_styles/normal")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qemty")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GuideButtons/Green:theme_override_styles/normal")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_4iikw")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GuideButtons/Yellow:theme_override_styles/normal")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_lxsu7")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lqnwl"]
+_data = {
+&"Pattern 1": SubResource("Animation_3o5b1"),
+&"RESET": SubResource("Animation_bvo36")
+}
 
 [node name="SimonSaysGame" type="Control" unique_id=1769986982]
 layout_mode = 3
@@ -14,6 +129,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3o5b1")
 
 [node name="Transparency" type="ColorRect" parent="." unique_id=1543927034]
 layout_mode = 1
@@ -64,21 +180,25 @@ theme_override_constants/separation = 40
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("1_svsfh")
+theme_override_styles/hover = ExtResource("2_4iikw")
 
 [node name="Blue" type="Button" parent="GuideButtons" unique_id=803435597]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("2_qemty")
+theme_override_styles/hover = ExtResource("4_4iikw")
 
 [node name="Green" type="Button" parent="GuideButtons" unique_id=1227926827]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("3_4iikw")
+theme_override_styles/hover = ExtResource("6_lxsu7")
 
 [node name="Yellow" type="Button" parent="GuideButtons" unique_id=859669091]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("4_lxsu7")
+theme_override_styles/hover = ExtResource("8_i23xv")
 
 [node name="GuideBarrier" type="Panel" parent="." unique_id=1201715295]
 layout_mode = 0
@@ -100,18 +220,27 @@ theme_override_constants/separation = 40
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("1_svsfh")
+theme_override_styles/pressed = ExtResource("9_ai8w8")
+theme_override_styles/hover = ExtResource("2_4iikw")
 
 [node name="Blue" type="Button" parent="PlayerButtons" unique_id=236023286]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("2_qemty")
+theme_override_styles/hover = ExtResource("4_4iikw")
 
 [node name="Green" type="Button" parent="PlayerButtons" unique_id=693123110]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("3_4iikw")
+theme_override_styles/hover = ExtResource("6_lxsu7")
 
 [node name="Yellow" type="Button" parent="PlayerButtons" unique_id=447536342]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("4_lxsu7")
+theme_override_styles/hover = ExtResource("8_i23xv")
+
+[node name="ButtonPatterns" type="AnimationPlayer" parent="." unique_id=1506907903]
+libraries/ = SubResource("AnimationLibrary_lqnwl")
+autoplay = &"Pattern 1"
