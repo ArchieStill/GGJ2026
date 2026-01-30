@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://kl0d3v8bv3v3"]
+
+[node name="MinigameWin" type="Control" unique_id=1083407217]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=113047749]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 298.0
+offset_right = 533.0
+offset_bottom = 321.0
+text = "Hell yeah!"
+horizontal_alignment = 1
+vertical_alignment = 1
