@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cxqad1t47al07"]
+
+[node name="Prompt" type="Control" unique_id=819614728]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=220940409]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 385.0
+offset_right = 917.0
+offset_bottom = 603.0
+color = Color(0.16078432, 0.16078432, 0.16078432, 0.39215687)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=259259410]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 10.0
+offset_right = 671.0
+offset_bottom = 208.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Press E to work"
+horizontal_alignment = 1
+vertical_alignment = 1

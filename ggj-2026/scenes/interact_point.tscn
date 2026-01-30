@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bs2jlg3yvqtl6"]
+
+[ext_resource type="Script" uid="uid://choabwt8yk6sc" path="res://scripts/interact_point.gd" id="1_mp385"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o1jgd"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o1jgd"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mp385"]
+transparency = 1
+albedo_color = Color(1, 1, 0.53333336, 0.1882353)
+
+[node name="InteractPoint" type="Area3D" unique_id=659263292]
+script = ExtResource("1_mp385")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=511478840]
+shape = SubResource("BoxShape3D_o1jgd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1005521248]
+mesh = SubResource("BoxMesh_o1jgd")
+surface_material_override/0 = SubResource("StandardMaterial3D_mp385")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
