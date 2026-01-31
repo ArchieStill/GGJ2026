@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dj1fel4m2qqsq" path="res://Scenes/timer.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dqsdq0knoy4a4" path="res://Scenes/mask_refill.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://Scenes/coffee_game.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/simonsaysgame.tscn" id="9_h4fw4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -52,20 +53,29 @@ mesh = SubResource("BoxMesh_ukw5w")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=862090169]
 shape = SubResource("BoxShape3D_kuqtn")
 
-[node name="InteractPoint" parent="." unique_id=659263292 instance=ExtResource("3_whr1e")]
-transform = Transform3D(0.88298035, 0, 0.4694099, 0, 1, 0, -0.4694099, 0, 0.88298035, -6.299541, 1.5530734, -2.9320502)
+[node name="Typing" parent="." unique_id=659263292 instance=ExtResource("3_whr1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.120164, 1.5530739, -5.7020893)
 minigame = "TYPING"
 
-[node name="Typing" type="Label3D" parent="InteractPoint" unique_id=99971515]
+[node name="Typing" type="Label3D" parent="Typing" unique_id=99971515]
 text = "Typing"
 font_size = 100
 
-[node name="InteractPoint2" parent="." unique_id=892289555 instance=ExtResource("3_whr1e")]
-transform = Transform3D(0.9999688, 0, 0.007906258, 0, 1, 0, -0.007906258, 0, 0.9999688, -2.891935, 1.5530734, -5.842637)
+[node name="Coffee" parent="." unique_id=892289555 instance=ExtResource("3_whr1e")]
+transform = Transform3D(0.9999688, 0, 0.007906258, 0, 1, 0, -0.007906258, 0, 0.9999688, -3.7350128, 1.5530734, -5.842637)
 minigame = "COFFEE"
 
-[node name="Coffee" type="Label3D" parent="InteractPoint2" unique_id=1893608497]
+[node name="Coffee" type="Label3D" parent="Coffee" unique_id=1893608497]
 text = "Coffee"
+font_size = 100
+
+[node name="SimonSays" parent="." unique_id=2097505688 instance=ExtResource("3_whr1e")]
+transform = Transform3D(0.9999688, 0, 0.007906258, 0, 1, 0, -0.007906258, 0, 0.9999688, -0.16368079, 1.5530734, -5.842637)
+minigame = "SIMONSAYS"
+
+[node name="SimonSays" type="Label3D" parent="SimonSays" unique_id=182099179]
+text = "Simon
+Says"
 font_size = 100
 
 [node name="Prompt" parent="." unique_id=819614728 instance=ExtResource("4_3lc0u")]
@@ -73,7 +83,7 @@ font_size = 100
 [node name="timer" parent="." unique_id=865164884 instance=ExtResource("7_u5sy4")]
 
 [node name="maskRefill" parent="." unique_id=2090824228 instance=ExtResource("8_gee14")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.79, 1.553, -2.824)
+transform = Transform3D(0.05793682, 0, -1.9991606, 0, 2, 0, 1.9991606, 0, 0.05793682, 5.9376125, 1.553, -1.2738309)
 
 [node name="TypingGame" parent="." unique_id=1545435764 instance=ExtResource("5_ugy24")]
 visible = false
@@ -81,12 +91,19 @@ visible = false
 [node name="CoffeeGame" parent="." unique_id=925774508 instance=ExtResource("9_0tnpc")]
 visible = false
 
-[connection signal="coffee" from="InteractPoint" to="." method="_on_interact_point_coffee"]
-[connection signal="simonsays" from="InteractPoint" to="." method="_on_interact_point_simonsays"]
-[connection signal="typing" from="InteractPoint" to="." method="_on_interact_point_typing"]
-[connection signal="coffee" from="InteractPoint2" to="." method="_on_interact_point_coffee"]
-[connection signal="simonsays" from="InteractPoint2" to="." method="_on_interact_point_simonsays"]
-[connection signal="typing" from="InteractPoint2" to="." method="_on_interact_point_typing"]
+[node name="SimonSaysGame" parent="." unique_id=1769986982 instance=ExtResource("9_h4fw4")]
+visible = false
+
+[connection signal="coffee" from="Typing" to="." method="_on_interact_point_coffee"]
+[connection signal="simonsays" from="Typing" to="." method="_on_interact_point_simonsays"]
+[connection signal="typing" from="Typing" to="." method="_on_interact_point_typing"]
+[connection signal="coffee" from="Coffee" to="." method="_on_interact_point_coffee"]
+[connection signal="simonsays" from="Coffee" to="." method="_on_interact_point_simonsays"]
+[connection signal="typing" from="Coffee" to="." method="_on_interact_point_typing"]
+[connection signal="coffee" from="SimonSays" to="." method="_on_interact_point_coffee"]
+[connection signal="simonsays" from="SimonSays" to="." method="_on_interact_point_simonsays"]
+[connection signal="typing" from="SimonSays" to="." method="_on_interact_point_typing"]
 [connection signal="refill" from="maskRefill" to="." method="_on_mask_refill_refill"]
 [connection signal="finished" from="TypingGame" to="." method="_on_typing_game_finished"]
 [connection signal="finished" from="CoffeeGame" to="." method="_on_coffee_game_finished"]
+[connection signal="finished" from="SimonSaysGame" to="." method="_on_simon_says_game_finished"]
