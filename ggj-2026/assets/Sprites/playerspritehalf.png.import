@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3bxyjtphbuiv"
-path="res://.godot/imported/TYPINGGAME.png-9b50c4e70cbdff1ab298ba2f12f215a6.ctex"
+uid="uid://dyafl86uhf2sp"
+path="res://.godot/imported/playerspritehalf.png-b1a17e176680b9ffdf9e2a6d4044d37f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TYPINGGAME.png"
-dest_files=["res://.godot/imported/TYPINGGAME.png-9b50c4e70cbdff1ab298ba2f12f215a6.ctex"]
+source_file="res://Assets/Sprites/playerspritehalf.png"
+dest_files=["res://.godot/imported/playerspritehalf.png-b1a17e176680b9ffdf9e2a6d4044d37f.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qhpg6tmuusb4"]
 
-[ext_resource type="Texture2D" uid="uid://8njvvm41btlt" path="res://assets/white-house-plan-business-hotel-amtrak-white-bar.jpg" id="1_ldlei"]
-[ext_resource type="Script" uid="uid://r2nyvg5e1wq0" path="res://scripts/paper.gd" id="1_vas6c"]
+[ext_resource type="Texture2D" uid="uid://8njvvm41btlt" path="res://Assets/Images/white-house-plan-business-hotel-amtrak-white-bar.jpg" id="1_ldlei"]
+[ext_resource type="Script" path="res://scripts/paper.gd" id="1_vas6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vas6c"]
 size = Vector2(2.974659, 0.58719194)

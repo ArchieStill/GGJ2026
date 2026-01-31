@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxks2h47q5qw0"]
 
-[ext_resource type="Script" uid="uid://iy6r710vp1le" path="res://scripts/paper_game.gd" id="1_f6aeu"]
-[ext_resource type="PackedScene" uid="uid://qhpg6tmuusb4" path="res://scenes/paper.tscn" id="1_sc6pk"]
+[ext_resource type="Script" path="res://scripts/paper_game.gd" id="1_f6aeu"]
+[ext_resource type="PackedScene" uid="uid://qhpg6tmuusb4" path="res://Scenes/Minigames/paper.tscn" id="1_sc6pk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6aeu"]
 size = Vector2(874, 40)

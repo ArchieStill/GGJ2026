@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bd6heqc4v5rms"]
 
-[ext_resource type="Texture2D" uid="uid://p8h12ggu3vna" path="res://Assets/playerspriteempty.png" id="1_yxjnn"]
+[ext_resource type="Texture2D" uid="uid://p8h12ggu3vna" path="res://Assets/Sprites/playerspriteempty.png" id="1_yxjnn"]
 
 [node name="PlayerSprite" type="TextureRect" unique_id=592413707]
 offset_right = 1590.0

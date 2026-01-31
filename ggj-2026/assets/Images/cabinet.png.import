@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqblnr38u6kk7"
-path="res://.godot/imported/coffeedevart.png-586c3d5e031aa35ef73bfc3a9520df4a.ctex"
+uid="uid://c8ghv23ni7q67"
+path="res://.godot/imported/cabinet.png-fce64c4ee70a68c88d7b46069f20817c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/coffeedevart.png"
-dest_files=["res://.godot/imported/coffeedevart.png-586c3d5e031aa35ef73bfc3a9520df4a.ctex"]
+source_file="res://Assets/Images/cabinet.png"
+dest_files=["res://.godot/imported/cabinet.png-fce64c4ee70a68c88d7b46069f20817c.ctex"]
 
 [params]
 

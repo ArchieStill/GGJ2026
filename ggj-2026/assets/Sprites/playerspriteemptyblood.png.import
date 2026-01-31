@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ghv23ni7q67"
-path="res://.godot/imported/cabinet.png-1535f447e6a10e08637ccdb3d71cb992.ctex"
+uid="uid://boq1otbwj76h"
+path="res://.godot/imported/playerspriteemptyblood.png-0b05f809d963af206868026849d5cb91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/cabinet.png"
-dest_files=["res://.godot/imported/cabinet.png-1535f447e6a10e08637ccdb3d71cb992.ctex"]
+source_file="res://Assets/Sprites/playerspriteemptyblood.png"
+dest_files=["res://.godot/imported/playerspriteemptyblood.png-0b05f809d963af206868026849d5cb91.ctex"]
 
 [params]
 

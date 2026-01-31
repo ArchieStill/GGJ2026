@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v1lwwemvhbqn"
-path="res://.godot/imported/suitsad.jpg-5f689ef501bb7f6431321668a429b3d8.ctex"
+uid="uid://bnnn7t7nefvvk"
+path="res://.godot/imported/suitthumbsup.jpg-8215f9fd8be7439636535d0eeb006d97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/suitsad.jpg"
-dest_files=["res://.godot/imported/suitsad.jpg-5f689ef501bb7f6431321668a429b3d8.ctex"]
+source_file="res://Assets/Images/suitthumbsup.jpg"
+dest_files=["res://.godot/imported/suitthumbsup.jpg-8215f9fd8be7439636535d0eeb006d97.ctex"]
 
 [params]
 

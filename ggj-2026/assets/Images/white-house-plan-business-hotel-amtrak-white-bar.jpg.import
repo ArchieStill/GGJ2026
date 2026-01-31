@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyafl86uhf2sp"
-path="res://.godot/imported/playerspritehalf.png-2aa18d0b4c90f9f4f469f3cc2b433943.ctex"
+uid="uid://8njvvm41btlt"
+path="res://.godot/imported/white-house-plan-business-hotel-amtrak-white-bar.jpg-092245d4f7de0d4072a335e8a423e193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/playerspritehalf.png"
-dest_files=["res://.godot/imported/playerspritehalf.png-2aa18d0b4c90f9f4f469f3cc2b433943.ctex"]
+source_file="res://Assets/Images/white-house-plan-business-hotel-amtrak-white-bar.jpg"
+dest_files=["res://.godot/imported/white-house-plan-business-hotel-amtrak-white-bar.jpg-092245d4f7de0d4072a335e8a423e193.ctex"]
 
 [params]
 

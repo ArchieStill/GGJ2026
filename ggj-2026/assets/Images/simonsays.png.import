@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5li31lem3odm"
-path="res://.godot/imported/playerspritefull.png-a115f56a47c80942584dba6aaf4b53fa.ctex"
+uid="uid://cvhkjq6ajitvr"
+path="res://.godot/imported/simonsays.png-c7df28fe860f1cb2dc92efd8be42bf8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/playerspritefull.png"
-dest_files=["res://.godot/imported/playerspritefull.png-a115f56a47c80942584dba6aaf4b53fa.ctex"]
+source_file="res://Assets/Images/simonsays.png"
+dest_files=["res://.godot/imported/simonsays.png-c7df28fe860f1cb2dc92efd8be42bf8c.ctex"]
 
 [params]
 

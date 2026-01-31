@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cegdh4d7frl5l"]
 
-[ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://Scripts/typinggame.gd" id="1_w3iff"]
+[ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://Scripts/Minigames/typinggame.gd" id="1_w3iff"]
 [ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="2_sesx8"]
-[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://Assets/TYPINGGAME.png" id="3_mho23"]
+[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://Assets/Images/TYPINGGAME.png" id="3_mho23"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3iff"]
 

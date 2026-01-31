@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbuham80x6qwm"
-path="res://.godot/imported/folderBG.png-f3e28c02fc64a6e929de4c02f7f8be35.ctex"
+uid="uid://cdxa6qno56g0l"
+path="res://.godot/imported/playersprite1quart.png-7eb41dc055d75a9a482b414067000e10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/folderBG.png"
-dest_files=["res://.godot/imported/folderBG.png-f3e28c02fc64a6e929de4c02f7f8be35.ctex"]
+source_file="res://Assets/Sprites/playersprite1quart.png"
+dest_files=["res://.godot/imported/playersprite1quart.png-7eb41dc055d75a9a482b414067000e10.ctex"]
 
 [params]
 
