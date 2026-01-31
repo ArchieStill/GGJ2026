@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnnn7t7nefvvk"
-path="res://.godot/imported/suitthumbsup.jpg-8215f9fd8be7439636535d0eeb006d97.ctex"
+path="res://.godot/imported/suitthumbsup.jpg-a2c7a23d15543d2cedec005b853b9081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/suitthumbsup.jpg"
-dest_files=["res://.godot/imported/suitthumbsup.jpg-8215f9fd8be7439636535d0eeb006d97.ctex"]
+source_file="res://assets/Images/suitthumbsup.jpg"
+dest_files=["res://.godot/imported/suitthumbsup.jpg-a2c7a23d15543d2cedec005b853b9081.ctex"]
 
 [params]
 
