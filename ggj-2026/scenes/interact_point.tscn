@@ -23,6 +23,7 @@ mesh = SubResource("BoxMesh_o1jgd")
 surface_material_override/0 = SubResource("StandardMaterial3D_mp385")
 
 [node name="Label3D" type="Label3D" parent="." unique_id=99675405]
+visible = false
 text = "Interact Area
 "
 

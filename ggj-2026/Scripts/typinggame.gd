@@ -8,7 +8,7 @@ signal finished
 var line
 var index = 1
 var words_done = 0
-var can_type = false
+var can_play = false
 
 func _ready() -> void:
 	line = Typinggamewords.Text.pick_random()
@@ -16,7 +16,7 @@ func _ready() -> void:
 	input.grab_focus()
 
 func _process(_delta: float) -> void:
-	if can_type:
+	if can_play:
 		input.grab_focus()
 	else:
 		input.release_focus()
@@ -26,9 +26,8 @@ func _on_text_input_text_changed(new_text: String) -> void:
 		_new_word()
 		input.clear()
 		if words_done == 5:
-			can_type = false
+			can_play = false
 			target_word.text = "YAY"
-			print("YOU WIN")
 			$EndTimer.start()
 
 func _new_word():

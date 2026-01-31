@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnpa8784sm6gd"]
 
-[ext_resource type="Script" uid="uid://cmg3rbsmol41y" path="res://scripts/coffee_game.gd" id="1_earhl"]
-[ext_resource type="Texture2D" uid="uid://cqblnr38u6kk7" path="res://assets/coffeedevart.png" id="2_r2fce"]
+[ext_resource type="Script" uid="uid://cmg3rbsmol41y" path="res://Scripts/coffee_game.gd" id="1_earhl"]
+[ext_resource type="Texture2D" uid="uid://cqblnr38u6kk7" path="res://Assets/coffeedevart.png" id="2_r2fce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_earhl"]
 size = Vector2(32, 206)
@@ -107,3 +107,9 @@ offset_top = 54.0
 offset_right = 583.0
 offset_bottom = 301.0
 color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
+[node name="EndTimer" type="Timer" parent="." unique_id=880466879]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
