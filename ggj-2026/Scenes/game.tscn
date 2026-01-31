@@ -10,8 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/Minigames/simonsaysgame.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/folderSort.tscn" id="9_rku1e"]
-[ext_resource type="PackedScene" uid="uid://dgb2ti0kx8hlm" path="res://Assets/Models/Mask GGJ Map -- Unfinished.fbx" id="10_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://dgb2ti0kx8hlm" path="res://assets/Models/Mask GGJ Map -- Unfinished.fbx" id="10_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://cxks2h47q5qw0" path="res://Scenes/Minigames/paperGame.tscn" id="10_rfjv2"]
+[ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://Scenes/person.tscn" id="13_rfjv2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -34,9 +35,21 @@ size = Vector3(20, 1, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kuqtn"]
 size = Vector3(20, 1, 20)
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_ldgsr"]
-vertices = PackedVector3Array(-9.152382, 1.323256, -4.724913, -9.152382, 1.323256, 9.275087, 4.847618, 1.323256, 9.275087, 4.847618, 1.323256, -4.724913)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+[sub_resource type="NavigationMesh" id="NavigationMesh_1phco"]
+vertices = PackedVector3Array(3.75, 0.5089215, -2.846445, 3.25, 0.5089215, -2.596445, 7, 0.5089215, -2.346445, 3.5, 0.5089215, -4.346445, 7, 0.5089215, -6.846445, -1.25, 0.5089215, -4.346445, -7, 0.5089215, -6.846445, -7, 0.5089215, -3.096445, -1.5, 0.5089215, -3.096445, -1.25, 0.5089215, -2.596445, -7, 0.5089215, 6.653555, 7, 0.5089215, 6.653555)
+polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(3, 5, 4), PackedInt32Array(4, 5, 6), PackedInt32Array(8, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(8, 9, 7), PackedInt32Array(7, 9, 10), PackedInt32Array(1, 2, 9), PackedInt32Array(9, 2, 11), PackedInt32Array(9, 11, 10)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nb51f"]
+size = Vector2(15, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nnt18"]
+size = Vector2(15, 3.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ewbju"]
+size = Vector2(4, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_85qyi"]
+size = Vector2(6.3, 1)
 
 [node name="Game" type="Node3D" unique_id=883790013]
 script = ExtResource("1_i6g32")
@@ -131,6 +144,46 @@ script = null
 [node name="Mask GGJ Map -- Unfinished" parent="." unique_id=565526421 instance=ExtResource("10_ldgsr")]
 transform = Transform3D(124.37901, 0, 0, 0, 124.37901, 0, 0, 0, 124.37901, -2.393281, 0.5002814, 1.622438)
 visible = false
+
+[node name="People" type="Node3D" parent="." unique_id=771029013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9513855, 0, 9.812093)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="People" unique_id=1266878778]
+navigation_mesh = SubResource("NavigationMesh_1phco")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="People/NavigationRegion3D" unique_id=586755383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008921504, 2.0989323)
+visible = false
+mesh = SubResource("PlaneMesh_nb51f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="People/NavigationRegion3D" unique_id=249634596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008921504, -5.596445)
+visible = false
+mesh = SubResource("PlaneMesh_nnt18")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="People/NavigationRegion3D" unique_id=1020785297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.492654, 0.008921504, -3.3442342)
+visible = false
+mesh = SubResource("PlaneMesh_ewbju")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="People/NavigationRegion3D" unique_id=517492763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3440433, 0.008921504, -3.3442342)
+visible = false
+mesh = SubResource("PlaneMesh_85qyi")
+
+[node name="Points" type="Node3D" parent="People/NavigationRegion3D" unique_id=1596130815]
+
+[node name="Spot 0" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1967282286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5.049)
+
+[node name="Spot1" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1867529062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.978, 1, -0.812)
+
+[node name="Spot2" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1537309508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4.544)
+
+[node name="Person-0-1-2" parent="People" unique_id=801703538 instance=ExtResource("13_rfjv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [connection signal="refill" from="maskRefill" to="." method="_on_mask_refill_refill"]
 [connection signal="coffee" from="Interacts/Typing" to="." method="_on_interact_point_coffee"]

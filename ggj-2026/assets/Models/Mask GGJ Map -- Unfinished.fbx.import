@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dgb2ti0kx8hlm"
-path="res://.godot/imported/Mask GGJ Map -- Unfinished.fbx-9f7ebe7760ca36b4f50caa2711093bc5.scn"
+path="res://.godot/imported/Mask GGJ Map -- Unfinished.fbx-91946a5d819e2748e1b98b6e7ea386db.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Mask GGJ Map -- Unfinished.fbx"
-dest_files=["res://.godot/imported/Mask GGJ Map -- Unfinished.fbx-9f7ebe7760ca36b4f50caa2711093bc5.scn"]
+source_file="res://assets/Models/Mask GGJ Map -- Unfinished.fbx"
+dest_files=["res://.godot/imported/Mask GGJ Map -- Unfinished.fbx-91946a5d819e2748e1b98b6e7ea386db.scn"]
 
 [params]
 
