@@ -134,9 +134,11 @@ visible = false
 visible = false
 
 [node name="FolderGame" parent="." unique_id=1798135369 instance=ExtResource("9_rku1e")]
+visible = false
 script = null
 
 [node name="PaperGame" parent="." unique_id=1332495056 instance=ExtResource("10_rfjv2")]
+visible = false
 script = null
 
 [node name="UI" parent="." unique_id=355486815 instance=ExtResource("9_ldgsr")]
@@ -180,7 +182,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5.049)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.978, 1, -0.812)
 
 [node name="Spot2" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1537309508]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4.544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.250023, 1, 4.5439997)
 
 [node name="Person-0-1-2" parent="People" unique_id=801703538 instance=ExtResource("13_rfjv2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
