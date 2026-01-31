@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b2uccfx16mtvv"]
+
+[ext_resource type="Script" uid="uid://gopalnulgd5v" path="res://Scripts/ui.gd" id="1_nf4gj"]
+[ext_resource type="PackedScene" uid="uid://f4m3tbvok3qp" path="res://Scenes/mask_health.tscn" id="1_qdvrb"]
+[ext_resource type="PackedScene" uid="uid://bd6heqc4v5rms" path="res://Scenes/player_sprite.tscn" id="2_nf4gj"]
+
+[node name="UI" type="Control" unique_id=355486815]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_nf4gj")
+
+[node name="MaskHealth" parent="." unique_id=1667059085 instance=ExtResource("1_qdvrb")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 30.0
+offset_top = 36.0
+offset_right = 1119.0
+offset_bottom = 91.0
+grow_horizontal = 1
+
+[node name="PlayerSprite" parent="." unique_id=592413707 instance=ExtResource("2_nf4gj")]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 336.0
+offset_right = 2506.0
+offset_bottom = 2436.0

@@ -1,28 +1,29 @@
 extends Node3D
 
 func _on_mask_refill_refill() -> void:
-	$timer.setValue(10)
+	$MaskHealth.value = 100
 
 
 func _on_interact_point_typing() -> void:
-	$TypingGame.show()
-	$TypingGame.can_play = true
+	$Minigames/TypingGame.show()
+	$Minigames/TypingGame.can_play = true
 	$Player.can_move = false
 func _on_typing_game_finished() -> void:
 	$Player.can_move = true
 
 func _on_interact_point_coffee() -> void:
-	$CoffeeGame.show()
-	$CoffeeGame.can_play = true
+	$Minigames/CoffeeGame.show()
+	$Minigames/CoffeeGame.can_play = true
 	$Player.can_move = false
 func _on_coffee_game_finished() -> void:
 	$Player.can_move = true
+	
 
 func _on_interact_point_simonsays() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	$SimonSaysGame.show()
-	$SimonSaysGame.start_timer.start()
-	$SimonSaysGame.can_play = true
+	$Minigames/SimonSaysGame.show()
+	$Minigames/SimonSaysGame.start_timer.start()
+	$Minigames/SimonSaysGame.can_play = true
 	$Player.can_move = false
 func _on_simon_says_game_finished() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

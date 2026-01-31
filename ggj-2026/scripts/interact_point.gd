@@ -10,15 +10,15 @@ var menu_up = false
 var can_interact = true
 
 func _ready() -> void:
-	$"../Prompt".hide()
+	$"../../Prompt".hide()
 
 func _on_body_entered(_body: Node3D) -> void:
 	if can_interact:
-		$"../Prompt".show()
+		$"../../Prompt".show()
 		menu_up = true
 
 func _on_body_exited(_body: Node3D) -> void:
-	$"../Prompt".hide()
+	$"../../Prompt".hide()
 	menu_up = false
 
 func _physics_process(_delta: float) -> void:
@@ -28,6 +28,6 @@ func _physics_process(_delta: float) -> void:
 				"TYPING": emit_signal("typing")
 				"SIMONSAYS": emit_signal("simonsays")
 				"COFFEE": emit_signal("coffee")
-			$"../Prompt".hide()
+			$"../../Prompt".hide()
 			can_interact = false
 			hide()
