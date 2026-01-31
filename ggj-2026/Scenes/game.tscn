@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://c32sog2bute6i"]
 
-[ext_resource type="Script" uid="uid://co6tylpntrbr" path="res://Scripts/game.gd" id="1_i6g32"]
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_ukw5w"]
-[ext_resource type="PackedScene" uid="uid://bs2jlg3yvqtl6" path="res://Scenes/interact_point.tscn" id="3_whr1e"]
-[ext_resource type="PackedScene" uid="uid://cxqad1t47al07" path="res://Scenes/prompt.tscn" id="4_3lc0u"]
-[ext_resource type="PackedScene" uid="uid://cegdh4d7frl5l" path="res://Scenes/typinggame.tscn" id="5_ugy24"]
-[ext_resource type="PackedScene" uid="uid://dj1fel4m2qqsq" path="res://Scenes/timer.tscn" id="7_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://dqsdq0knoy4a4" path="res://Scenes/mask_refill.tscn" id="8_gee14"]
-[ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://Scenes/coffee_game.tscn" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://co6tylpntrbr" path="res://scripts/game.gd" id="1_i6g32"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://scenes/player.tscn" id="1_ukw5w"]
+[ext_resource type="PackedScene" uid="uid://bs2jlg3yvqtl6" path="res://scenes/interact_point.tscn" id="3_whr1e"]
+[ext_resource type="PackedScene" uid="uid://cxqad1t47al07" path="res://scenes/prompt.tscn" id="4_3lc0u"]
+[ext_resource type="PackedScene" uid="uid://cegdh4d7frl5l" path="res://scenes/typinggame.tscn" id="5_ugy24"]
+[ext_resource type="PackedScene" uid="uid://dj1fel4m2qqsq" path="res://scenes/timer.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dqsdq0knoy4a4" path="res://scenes/mask_refill.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://scenes/coffee_game.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://scenes/folderSort.tscn" id="9_vtaks"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -80,6 +81,8 @@ visible = false
 
 [node name="CoffeeGame" parent="." unique_id=925774508 instance=ExtResource("9_0tnpc")]
 visible = false
+
+[node name="folderSort" parent="." unique_id=1798135369 instance=ExtResource("9_vtaks")]
 
 [connection signal="coffee" from="InteractPoint" to="." method="_on_interact_point_coffee"]
 [connection signal="simonsays" from="InteractPoint" to="." method="_on_interact_point_simonsays"]

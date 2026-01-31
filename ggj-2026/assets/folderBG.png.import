@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvhkjq6ajitvr"
-path="res://.godot/imported/simonsays.png-192d1e2c942e1bd93088ba772338e4b3.ctex"
+uid="uid://cbuham80x6qwm"
+path="res://.godot/imported/folderBG.png-87573f869a0e00d93bb7c4938eb9eec9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/simonsays.png"
-dest_files=["res://.godot/imported/simonsays.png-192d1e2c942e1bd93088ba772338e4b3.ctex"]
+source_file="res://assets/folderBG.png"
+dest_files=["res://.godot/imported/folderBG.png-87573f869a0e00d93bb7c4938eb9eec9.ctex"]
 
 [params]
 

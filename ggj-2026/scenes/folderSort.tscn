@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://chdakdc422pr6"]
+
+[ext_resource type="Script" uid="uid://dmptxhcw14tlu" path="res://scripts/folder_sort.gd" id="1_gvgsa"]
+[ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://scenes/FolderPreset.tscn" id="1_y1ywe"]
+[ext_resource type="Texture2D" uid="uid://c8ghv23ni7q67" path="res://assets/cabinet.png" id="3_2vhpx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvgsa"]
+size = Vector2(15.338356, 16.071085)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vhpx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccy37"]
+
+[node name="folderSort" type="Control" unique_id=1798135369]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gvgsa")
+
+[node name="Background" type="ColorRect" parent="." unique_id=306592116]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 1116.0
+offset_bottom = 610.0
+color = Color(0.47843137, 0.6431373, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=815308432]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 1051.0
+offset_bottom = 554.0
+color = Color(0.6190818, 0.6190819, 0.6190818, 1)
+
+[node name="FolderController" type="Node2D" parent="." unique_id=1328452010]
+
+[node name="Folder" parent="FolderController" unique_id=1039454103 instance=ExtResource("1_y1ywe")]
+position = Vector2(226, 172)
+
+[node name="Folder2" parent="FolderController" unique_id=283737929 instance=ExtResource("1_y1ywe")]
+position = Vector2(164, 323)
+
+[node name="Folder3" parent="FolderController" unique_id=552829096 instance=ExtResource("1_y1ywe")]
+position = Vector2(427, 312)
+
+[node name="Folder4" parent="FolderController" unique_id=407013959 instance=ExtResource("1_y1ywe")]
+position = Vector2(213, 496)
+
+[node name="Folder5" parent="FolderController" unique_id=1915569989 instance=ExtResource("1_y1ywe")]
+position = Vector2(408, 484)
+
+[node name="Cabinet" type="Sprite2D" parent="." unique_id=44279739]
+position = Vector2(808, 338)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("3_2vhpx")
+
+[node name="A-H" type="Area2D" parent="." unique_id=1934214317]
+position = Vector2(677.99994, 176)
+scale = Vector2(9.393, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A-H" unique_id=103659785]
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_gvgsa")
+
+[node name="I-P" type="Area2D" parent="." unique_id=2108295943]
+position = Vector2(678, 333)
+scale = Vector2(7.1873198, 2.8000057)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="I-P" unique_id=1817633202]
+shape = SubResource("RectangleShape2D_2vhpx")
+
+[node name="Q-Z" type="Area2D" parent="." unique_id=1804764237]
+position = Vector2(676.99994, 483)
+scale = Vector2(7.9028516, 2.9450498)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Q-Z" unique_id=495017005]
+shape = SubResource("RectangleShape2D_ccy37")
+
+[connection signal="body_entered" from="A-H" to="." method="_on_ah_body_entered"]
+[connection signal="body_entered" from="I-P" to="." method="_on_ip_body_entered"]
+[connection signal="body_entered" from="Q-Z" to="." method="_on_qz_body_entered"]
