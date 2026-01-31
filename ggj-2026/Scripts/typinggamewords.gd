@@ -31,5 +31,6 @@ extends Node
 	"firmament",
 	"zarathustra",
 	"magnificent",
-	"lookbehindyoutheresascaryghost"
+	"lookbehindyoutheresascaryghost",
+	"Yeovil"
 ]

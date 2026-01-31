@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cegdh4d7frl5l" path="res://scenes/typinggame.tscn" id="5_ugy24"]
 [ext_resource type="PackedScene" uid="uid://dj1fel4m2qqsq" path="res://scenes/timer.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dqsdq0knoy4a4" path="res://scenes/mask_refill.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://scenes/coffee_game.tscn" id="9_0tnpc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -64,6 +65,8 @@ visible = false
 
 [node name="maskRefill" parent="." unique_id=2090824228 instance=ExtResource("8_gee14")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.79, 1.553, -2.824)
+
+[node name="CoffeeGame" parent="." unique_id=925774508 instance=ExtResource("9_0tnpc")]
 
 [connection signal="interacted" from="InteractPoint" to="." method="_on_interact_point_interacted"]
 [connection signal="finished" from="TypingGame" to="." method="_on_typing_game_finished"]
