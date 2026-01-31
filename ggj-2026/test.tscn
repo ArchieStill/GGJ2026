@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dv6vsbj4no5v5"]
+
+[ext_resource type="Script" uid="uid://dkucmdu6tjk8g" path="res://person.gd" id="1_37kl0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mf4mk"]
+size = Vector3(9.99958, 0.001, 10.013672)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mf4mk"]
+albedo_color = Color(0.114199646, 0.13041872, 0.2230991, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mf4mk"]
+size = Vector2(20, 15)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_8uh7m"]
+vertices = PackedVector3Array(-7, 0.5089215, -7, -7, 0.5089215, 7, 7, 0.5089215, 7, 7, 0.5089215, -7)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6uqi0"]
+size = Vector2(15, 15)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mf4mk"]
+radius = 0.4951172
+height = 1.8798828
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37kl0"]
+albedo_color = Color(0.45262197, 0.45262197, 0.163927, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_37kl0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_37kl0"]
+points = PackedVector3Array(0, 0, 0, 5, 0, 2.5, 5, 2.5, 0, 5, 0, -2.5, 5, -1, 0)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_37kl0"]
+radius = 1.0144539
+
+[node name="Node3D" type="Node3D" unique_id=1649159119]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1528015662]
+transform = Transform3D(-0.008515571, 0.6647446, -0.74702215, -0.13946001, 0.73895884, 0.6591591, 0.9901911, 0.109792836, 0.08641263, -4.3414593, 2.7979946, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=277951985]
+transform = Transform3D(0.9999999, 7.450581e-09, -7.450581e-09, -7.450581e-09, 0.99999994, 6.519258e-09, 0, -2.2351742e-08, 1, -1.4249648, 7.5504823, 6.7351103)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=816812688]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=65901610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08146286, -0.0020663142, -0.25146484)
+shape = SubResource("BoxShape3D_mf4mk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1639416933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0822196, 0, -0.23211491)
+material_override = SubResource("StandardMaterial3D_mf4mk")
+mesh = SubResource("PlaneMesh_mf4mk")
+
+[node name="People" type="Node3D" parent="." unique_id=1420385338]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="People" unique_id=825096749]
+navigation_mesh = SubResource("NavigationMesh_8uh7m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="People/NavigationRegion3D" unique_id=1208505450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008921504, 0)
+mesh = SubResource("PlaneMesh_6uqi0")
+
+[node name="Points" type="Node3D" parent="People/NavigationRegion3D" unique_id=76100631]
+
+[node name="Spot 0" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=919676703]
+
+[node name="Spot1" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=309729027]
+
+[node name="Spot2" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1466916960]
+
+[node name="Person" type="CharacterBody3D" parent="People" unique_id=1882645146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.095797, 0)
+script = ExtResource("1_37kl0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="People/Person" unique_id=684137761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04736328, 0)
+shape = SubResource("CapsuleShape3D_mf4mk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="People/Person" unique_id=2100505548]
+material_override = SubResource("StandardMaterial3D_37kl0")
+mesh = SubResource("CapsuleMesh_37kl0")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="People/Person" unique_id=1109672818]
+
+[node name="Viewcone" type="Area3D" parent="People/Person" unique_id=1970531074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5320971, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="People/Person/Viewcone" unique_id=1345757106]
+shape = SubResource("ConvexPolygonShape3D_37kl0")
+debug_color = Color(0.8392157, 0, 0.9254902, 1)
+
+[node name="Catchball" type="Area3D" parent="People/Person" unique_id=322844336]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="People/Person/Catchball" unique_id=849155627]
+shape = SubResource("SphereShape3D_37kl0")
+debug_color = Color(0.9882353, 0, 0.30588236, 1)
+
+[node name="Timer" type="Timer" parent="People/Person" unique_id=687178407]
+
+[connection signal="body_entered" from="People/Person/Viewcone" to="People/Person" method="_on_area_entered"]
