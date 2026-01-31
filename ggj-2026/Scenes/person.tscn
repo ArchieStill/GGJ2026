@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bbkjy0xi4oehv"]
+
+[ext_resource type="Script" uid="uid://dkucmdu6tjk8g" path="res://Scripts/person.gd" id="1_10xcd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mf4mk"]
+radius = 0.4951172
+height = 1.8798828
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37kl0"]
+albedo_color = Color(0.45262197, 0.45262197, 0.163927, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_37kl0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_37kl0"]
+points = PackedVector3Array(0, 0, 0, 5, 0, 2.5, 5, 2.5, 0, 5, 0, -2.5, 5, -1, 0)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_37kl0"]
+radius = 1.0144539
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10xcd"]
+size = Vector3(1.5412598, 1.8918457, 1.7116699)
+
+[node name="Person" type="CharacterBody3D" unique_id=801703538]
+script = ExtResource("1_10xcd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1638399332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04736328, 0)
+shape = SubResource("CapsuleShape3D_mf4mk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1985309317]
+material_override = SubResource("StandardMaterial3D_37kl0")
+mesh = SubResource("CapsuleMesh_37kl0")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=549198386]
+
+[node name="Viewcone" type="Area3D" parent="." unique_id=1166845293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5320971, 0)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Viewcone" unique_id=1685562303]
+shape = SubResource("ConvexPolygonShape3D_37kl0")
+debug_color = Color(0.8392157, 0, 0.9254902, 1)
+
+[node name="Catchball" type="Area3D" parent="." unique_id=595382056]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Catchball" unique_id=1467623288]
+shape = SubResource("SphereShape3D_37kl0")
+debug_color = Color(0.9882353, 0, 0.30588236, 1)
+
+[node name="Hitbody" type="Area3D" parent="." unique_id=543203788]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbody" unique_id=1461600783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0015869141, 0.05822754, -0.044555664)
+shape = SubResource("BoxShape3D_10xcd")
+
+[node name="Timer" type="Timer" parent="." unique_id=1536968283]
+
+[connection signal="body_entered" from="Viewcone" to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_point_reached"]
