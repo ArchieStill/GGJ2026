@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cxks2h47q5qw0"]
+
+[ext_resource type="Script" uid="uid://iy6r710vp1le" path="res://scripts/paper_game.gd" id="1_f6aeu"]
+[ext_resource type="PackedScene" uid="uid://qhpg6tmuusb4" path="res://scenes/paper.tscn" id="1_sc6pk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6aeu"]
+size = Vector2(874, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p1u1"]
+size = Vector2(19.349249, 23.731789)
+
+[node name="paperGame" type="Control" unique_id=1332495056]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6aeu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2101181926]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 1116.0
+offset_bottom = 610.0
+color = Color(0.47843137, 0.6431373, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=790035780]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 1051.0
+offset_bottom = 554.0
+color = Color(0.6190818, 0.6190819, 0.6190818, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect" unique_id=1876087935]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 408.0
+offset_right = 182.0
+offset_bottom = 533.0
+color = Color(0.37254903, 0.1764706, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Background/ColorRect" unique_id=589949666]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 408.0
+offset_right = 902.0
+offset_bottom = 533.0
+color = Color(0.37254903, 0.1764706, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Background/ColorRect" unique_id=1159753542]
+
+[node name="ColorRect" type="ColorRect" parent="Background/ColorRect/StaticBody2D" unique_id=1984361437]
+offset_left = 76.0
+offset_top = 379.0
+offset_right = 950.0
+offset_bottom = 419.0
+color = Color(0.37254903, 0.1764706, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/ColorRect/StaticBody2D" unique_id=346925397]
+position = Vector2(513, 399)
+shape = SubResource("RectangleShape2D_f6aeu")
+
+[node name="boxBack" type="Area2D" parent="." unique_id=934117179]
+position = Vector2(669.00006, 252)
+scale = Vector2(6.8512526, 4.5320106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boxBack" unique_id=1909797885]
+position = Vector2(19.996323, 19.999996)
+scale = Vector2(1.7349775, 1.6855036)
+shape = SubResource("RectangleShape2D_6p1u1")
+
+[node name="ColorRect" type="ColorRect" parent="boxBack" unique_id=581797624]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.7529412, 0.56078434, 0.30980393, 1)
+
+[node name="paperController" type="Node2D" parent="." unique_id=1870903638]
+
+[node name="paper" parent="paperController" unique_id=1906650262 instance=ExtResource("1_sc6pk")]
+position = Vector2(273, 312)
+
+[node name="paper2" parent="paperController" unique_id=1913827081 instance=ExtResource("1_sc6pk")]
+position = Vector2(276, 345)
+
+[node name="paper3" parent="paperController" unique_id=1978657343 instance=ExtResource("1_sc6pk")]
+position = Vector2(275, 379)
+
+[node name="paper4" parent="paperController" unique_id=882072533 instance=ExtResource("1_sc6pk")]
+position = Vector2(275, 413)
+
+[connection signal="body_entered" from="boxBack" to="." method="_on_box_back_body_entered"]
+[connection signal="body_exited" from="boxBack" to="." method="_on_box_back_body_exited"]
