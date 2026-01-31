@@ -58,7 +58,12 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0015869141, 0.05822754, -0.044555664)
 shape = SubResource("BoxShape3D_10xcd")
 
-[node name="Timer" type="Timer" parent="." unique_id=1536968283]
+[node name="Timer1" type="Timer" parent="." unique_id=1536968283]
+
+[node name="Timer2" type="Timer" parent="." unique_id=599594306]
+
+[node name="Timer3" type="Timer" parent="." unique_id=317225881]
 
 [connection signal="body_entered" from="Viewcone" to="." method="_on_area_entered"]
-[connection signal="timeout" from="Timer" to="." method="_point_reached"]
+[connection signal="timeout" from="Timer1" to="." method="_point_reached"]
+[connection signal="timeout" from="Timer2" to="." method="_start_chase"]
