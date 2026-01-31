@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://c32sog2bute6i"]
 
-[ext_resource type="Script" uid="uid://co6tylpntrbr" path="res://scripts/game.gd" id="1_i6g32"]
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://scenes/player.tscn" id="1_ukw5w"]
-[ext_resource type="PackedScene" uid="uid://bs2jlg3yvqtl6" path="res://scenes/interact_point.tscn" id="3_whr1e"]
-[ext_resource type="PackedScene" uid="uid://cxqad1t47al07" path="res://scenes/prompt.tscn" id="4_3lc0u"]
-[ext_resource type="PackedScene" uid="uid://cegdh4d7frl5l" path="res://scenes/typinggame.tscn" id="5_ugy24"]
-[ext_resource type="PackedScene" uid="uid://dqsdq0knoy4a4" path="res://scenes/mask_refill.tscn" id="8_gee14"]
-[ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://scenes/coffee_game.tscn" id="9_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://scenes/simonsaysgame.tscn" id="9_h4fw4"]
-[ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://scenes/ui.tscn" id="9_ldgsr"]
+[ext_resource type="Script" uid="uid://co6tylpntrbr" path="res://Scripts/game.gd" id="1_i6g32"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_ukw5w"]
+[ext_resource type="PackedScene" uid="uid://bs2jlg3yvqtl6" path="res://Scenes/interact_point.tscn" id="3_whr1e"]
+[ext_resource type="PackedScene" uid="uid://cxqad1t47al07" path="res://Scenes/prompt.tscn" id="4_3lc0u"]
+[ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://Scenes/person.tscn" id="5_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://cegdh4d7frl5l" path="res://Scenes/typinggame.tscn" id="5_ugy24"]
+[ext_resource type="PackedScene" uid="uid://dqsdq0knoy4a4" path="res://Scenes/mask_refill.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://Scenes/coffee_game.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/simonsaysgame.tscn" id="9_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,6 +31,10 @@ size = Vector3(20, 1, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kuqtn"]
 size = Vector3(20, 1, 20)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ldgsr"]
+vertices = PackedVector3Array(-9.152382, 1.323256, -4.724913, -9.152382, 1.323256, 9.275087, 4.847618, 1.323256, 9.275087, 4.847618, 1.323256, -4.724913)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [node name="Game" type="Node3D" unique_id=883790013]
 script = ExtResource("1_i6g32")
@@ -82,6 +87,26 @@ minigame = "SIMONSAYS"
 text = "Simon
 Says"
 font_size = 100
+
+[node name="npcs" type="Node3D" parent="." unique_id=863115670]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="npcs" unique_id=648572848]
+navigation_mesh = SubResource("NavigationMesh_ldgsr")
+
+[node name="Points" type="Node3D" parent="npcs/NavigationRegion3D" unique_id=1408857211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5148685, 0)
+
+[node name="Node3D" type="Node3D" parent="npcs/NavigationRegion3D/Points" unique_id=2052641089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96103, 0, 0)
+
+[node name="Node3D2" type="Node3D" parent="npcs/NavigationRegion3D/Points" unique_id=97491892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2444944, 0, 7.5824213)
+
+[node name="Node3D3" type="Node3D" parent="npcs/NavigationRegion3D/Points" unique_id=1253455542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8965898, 0, 8.046383)
+
+[node name="Person-0-1-2" parent="npcs" unique_id=801703538 instance=ExtResource("5_ldgsr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5277634, 5.012622)
 
 [node name="Prompt" parent="." unique_id=819614728 instance=ExtResource("4_3lc0u")]
 mouse_filter = 2
