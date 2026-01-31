@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqblnr38u6kk7"
-path="res://.godot/imported/coffeedevart.png-7bd1d304f27b0c0cc09853fe8847cb37.ctex"
+path="res://.godot/imported/coffeedevart.png-75a01f8fecb98792cf827bab477c6adb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/coffeedevart.png"
-dest_files=["res://.godot/imported/coffeedevart.png-7bd1d304f27b0c0cc09853fe8847cb37.ctex"]
+source_file="res://assets/Images/coffeedevart.png"
+dest_files=["res://.godot/imported/coffeedevart.png-75a01f8fecb98792cf827bab477c6adb.ctex"]
 
 [params]
 

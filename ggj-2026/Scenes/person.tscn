@@ -20,6 +20,20 @@ radius = 1.0144539
 [sub_resource type="BoxShape3D" id="BoxShape3D_10xcd"]
 size = Vector3(1.5412598, 1.8918457, 1.7116699)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_10xcd"]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74dau"]
+albedo_color = Color(0, 0.12103092, 0.4252267, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wrnb3"]
+material = SubResource("StandardMaterial3D_74dau")
+top_radius = 0.55
+bottom_radius = 0.55
+height = 0.7
+
 [node name="Person" type="CharacterBody3D" unique_id=801703538]
 script = ExtResource("1_10xcd")
 
@@ -43,6 +57,7 @@ shape = SubResource("ConvexPolygonShape3D_37kl0")
 debug_color = Color(0.8392157, 0, 0.9254902, 1)
 
 [node name="Catchball" type="Area3D" parent="." unique_id=595382056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.234339, 0, 0)
 collision_layer = 4
 collision_mask = 4
 
@@ -64,6 +79,15 @@ shape = SubResource("BoxShape3D_10xcd")
 
 [node name="Timer3" type="Timer" parent="." unique_id=317225881]
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=737056896]
+transform = Transform3D(-0.10624671, 0.9943398, 0, -0.9943398, -0.10624671, 0, 0, 0, 1, 0.47029257, 0.4383216, 0)
+mesh = SubResource("CylinderMesh_10xcd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=288370114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.30505374, 0)
+mesh = SubResource("CylinderMesh_wrnb3")
+
 [connection signal="body_entered" from="Viewcone" to="." method="_on_area_entered"]
+[connection signal="area_entered" from="Hitbody" to="." method="_taken"]
 [connection signal="timeout" from="Timer1" to="." method="_point_reached"]
 [connection signal="timeout" from="Timer2" to="." method="_start_chase"]

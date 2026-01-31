@@ -22,7 +22,7 @@ const walk = 5.0
 const chase = 7.5
 
 func _ready() -> void: #setup
-	var spot_root = get_node("/root/Game/npcs/NavigationRegion3D/Points")
+	var spot_root = get_node("/root/Game/People/NavigationRegion3D/Points")
 	mask = preload("res://Scenes/mask_refill.tscn")
 	var nums = ((self.get_name()).split("-"))
 	for i in nums:
@@ -78,6 +78,7 @@ func _physics_process(delta: float) -> void: #moves npc
 		velocity.z = direction.z * speed
 		_reach_check(now_pos, next_pos)
 		move_and_slide()
+		self.set_rotation(Vector3(0,180+now_pos.angle_to(velocity),0))
 
 func _on_area_entered(body: Node3D) -> void:
 	#get disguise status
@@ -88,7 +89,6 @@ func _on_area_entered(body: Node3D) -> void:
 		if !shocked and !chasing:
 			shocked = true
 			freeze.start()
-		
 	pass
 
 func _start_chase():
@@ -103,7 +103,7 @@ func _catch(): #for when person collider hits player
 	pass
 
 func _taken(): #for when player kills person
-	get_parent().add_child(mask)
-	get_node("/root/Node3D/People/mask").set_global_position(self.get_global_position())
+	#get_parent().add_child(mask)
+	#get_node("/root/Node3D/People/mask").set_global_position(self.get_global_position())
 	self.queue_free()
 	pass
