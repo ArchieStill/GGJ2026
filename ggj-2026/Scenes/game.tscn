@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://dnpa8784sm6gd" path="res://Scenes/Minigames/coffee_game.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/Minigames/simonsaysgame.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/folderSort.tscn" id="9_rku1e"]
 [ext_resource type="PackedScene" uid="uid://dgb2ti0kx8hlm" path="res://Assets/Models/Mask GGJ Map -- Unfinished.fbx" id="10_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://cxks2h47q5qw0" path="res://Scenes/Minigames/paperGame.tscn" id="10_rfjv2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -90,8 +92,16 @@ transform = Transform3D(0.9999688, 0, 0.007906258, 0, 1, 0, -0.007906258, 0, 0.9
 minigame = "FILING"
 
 [node name="Filing" type="Label3D" parent="Interacts/Filing" unique_id=1086298809]
-text = "Simon
-Says"
+text = "Filing"
+font_size = 100
+
+[node name="PaperSort" parent="Interacts" unique_id=1442743367 instance=ExtResource("3_whr1e")]
+transform = Transform3D(0.9999688, 0, 0.007906258, 0, 1, 0, -0.007906258, 0, 0.9999688, 6.572233, 1.5530734, -5.842637)
+minigame = "FILING"
+
+[node name="PaperSort" type="Label3D" parent="Interacts/PaperSort" unique_id=1964279920]
+text = "Paper
+Sort"
 font_size = 100
 
 [node name="Prompt" parent="." unique_id=819614728 instance=ExtResource("4_3lc0u")]
@@ -106,10 +116,17 @@ visible = false
 [node name="SimonSaysGame" parent="." unique_id=1769986982 instance=ExtResource("9_h4fw4")]
 visible = false
 
+[node name="FolderGame" parent="." unique_id=1798135369 instance=ExtResource("9_rku1e")]
+script = null
+
+[node name="PaperGame" parent="." unique_id=1332495056 instance=ExtResource("10_rfjv2")]
+script = null
+
 [node name="UI" parent="." unique_id=355486815 instance=ExtResource("9_ldgsr")]
 
 [node name="Mask GGJ Map -- Unfinished" parent="." unique_id=565526421 instance=ExtResource("10_ldgsr")]
 transform = Transform3D(124.37901, 0, 0, 0, 124.37901, 0, 0, 0, 124.37901, -2.393281, 0.5002814, 1.622438)
+visible = false
 
 [connection signal="refill" from="maskRefill" to="." method="_on_mask_refill_refill"]
 [connection signal="coffee" from="Interacts/Typing" to="." method="_on_interact_point_coffee"]
@@ -124,6 +141,9 @@ transform = Transform3D(124.37901, 0, 0, 0, 124.37901, 0, 0, 0, 124.37901, -2.39
 [connection signal="coffee" from="Interacts/Filing" to="." method="_on_interact_point_coffee"]
 [connection signal="simonsays" from="Interacts/Filing" to="." method="_on_interact_point_simonsays"]
 [connection signal="typing" from="Interacts/Filing" to="." method="_on_interact_point_typing"]
+[connection signal="coffee" from="Interacts/PaperSort" to="." method="_on_interact_point_coffee"]
+[connection signal="simonsays" from="Interacts/PaperSort" to="." method="_on_interact_point_simonsays"]
+[connection signal="typing" from="Interacts/PaperSort" to="." method="_on_interact_point_typing"]
 [connection signal="finished" from="TypingGame" to="." method="_on_typing_game_finished"]
 [connection signal="finished" from="CoffeeGame" to="." method="_on_coffee_game_finished"]
 [connection signal="finished" from="SimonSaysGame" to="." method="_on_simon_says_game_finished"]

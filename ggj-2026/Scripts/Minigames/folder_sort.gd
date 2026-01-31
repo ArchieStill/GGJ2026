@@ -1,6 +1,6 @@
 extends Control
 
-var folder_scene = preload("res://scenes/FolderPreset.tscn")
+var folder_scene = preload("res://Scenes/Minigames/FolderPreset.tscn")
 var foldersToSolve = 5
 
 func _ready() -> void:
