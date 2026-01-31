@@ -12,13 +12,13 @@ func _ready():
 	
 func _physics_process(delta: float) -> void:
 	if can_play:
-		path.set_progress(path.get_progress() + 200 * delta)
+		path.set_progress(path.get_progress() + 500 * delta)
 		
 		if Input.is_action_pressed("interact"):
 			$Coffee.show()
 			var overlaplist = $Coffee/Area2D.get_overlapping_areas()
 			if (overlaplist.size() > 0):
-				mug.value += 1 
+				mug.value += 2.5 
 				if mug.value >= 100:
 					can_play = false
 					$EndTimer.start()

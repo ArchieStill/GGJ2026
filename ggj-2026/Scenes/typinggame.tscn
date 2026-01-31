@@ -1,27 +1,13 @@
 [gd_scene format=3 uid="uid://cegdh4d7frl5l"]
 
 [ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://Scripts/typinggame.gd" id="1_w3iff"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw0gs"]
-bg_color = Color(0.36568993, 0.63567513, 0.79276067, 1)
-border_width_left = 30
-border_width_top = 30
-border_width_right = 30
-border_width_bottom = 30
-border_color = Color(0.18039216, 0.18039216, 0.18039216, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sesx8"]
-bg_color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="2_sesx8"]
+[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://Assets/TYPINGGAME.png" id="3_mho23"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3iff"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3iff"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 5
 
 [node name="TypingGame" type="Control" unique_id=1545435764]
 layout_mode = 3
@@ -41,71 +27,79 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28235295, 0.28235295, 0.28235295, 0.7058824)
 
-[node name="Monitor" type="Panel" parent="." unique_id=1600777203]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -472.0
-offset_top = -291.0
-offset_right = 474.0
-offset_bottom = 225.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_mw0gs")
-
-[node name="MonitorStand" type="Panel" parent="Monitor" unique_id=603350352]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -45.0
-offset_top = 256.0
-offset_right = 39.0
-offset_bottom = 359.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(8, 17)
-theme_override_styles/panel = SubResource("StyleBoxFlat_sesx8")
+[node name="Background" type="TextureRect" parent="." unique_id=1702303919]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 18.0
+offset_right = 3565.0
+offset_bottom = 2498.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_mho23")
 
 [node name="TextInput" type="LineEdit" parent="." unique_id=1633843432]
 layout_mode = 0
-offset_left = 357.0
-offset_top = 352.0
-offset_right = 767.0
-offset_bottom = 470.0
-theme_override_font_sizes/font_size = 50
+offset_left = 235.0
+offset_top = 305.0
+offset_right = 909.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.6748142, 0.67481476, 0.6748144, 1)
+theme_override_colors/caret_color = Color(0.7213019, 0.721302, 0.72130287, 1)
+theme_override_constants/outline_size = 7
+theme_override_constants/caret_width = 10
+theme_override_fonts/font = ExtResource("2_sesx8")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_w3iff")
 theme_override_styles/focus = SubResource("StyleBoxFlat_w3iff")
-alignment = 1
+max_length = 19
 
 [node name="TargetWord" type="Label" parent="." unique_id=1121224199]
 layout_mode = 0
-offset_left = 372.0
-offset_top = 178.0
-offset_right = 750.0
-offset_bottom = 247.0
-theme_override_font_sizes/font_size = 50
-text = "WWWWWWWW"
-horizontal_alignment = 1
+offset_left = 235.0
+offset_top = 200.0
+offset_right = 974.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.5058824, 0.5058824, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_sesx8")
+theme_override_font_sizes/font_size = 75
+text = "ANTHROPOMORPHISM"
 
 [node name="Goal" type="Label" parent="." unique_id=1515960658]
 layout_mode = 0
-offset_left = 907.0
-offset_top = 84.0
-offset_right = 999.0
-offset_bottom = 167.0
-theme_override_font_sizes/font_size = 60
-text = "0/5"
+offset_left = 235.0
+offset_top = 506.0
+offset_right = 359.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0.5058824, 0.5058824, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_sesx8")
+theme_override_font_sizes/font_size = 75
+text = "0/3"
 horizontal_alignment = 1
 
 [node name="EndTimer" type="Timer" parent="." unique_id=694456706]
 wait_time = 3.0
 one_shot = true
 
+[node name="WinText" type="Label" parent="." unique_id=149403773]
+visible = false
+layout_mode = 0
+offset_left = 296.0
+offset_top = 212.0
+offset_right = 858.0
+offset_bottom = 393.0
+theme_override_colors/font_color = Color(0.5058824, 0.5058824, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_sesx8")
+theme_override_font_sizes/font_size = 100
+text = "MENIAL TASK
+COMPLETED!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="text_changed" from="TextInput" to="." method="_on_text_input_text_changed"]
+[connection signal="text_changed" from="TextInput" to="TextInput" method="_on_text_changed"]
 [connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
