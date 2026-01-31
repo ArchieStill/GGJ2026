@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://c826iir6btlk4"
 Typinggamewords="*uid://bgv7jxlitwnss"
+Namelist="*uid://bckgtjkx8m17g"
 
 [input]
 

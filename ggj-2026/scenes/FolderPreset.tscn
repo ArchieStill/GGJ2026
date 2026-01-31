@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://mrdwxfqh3d1s"]
+
+[ext_resource type="Script" uid="uid://b6p0ewa1ghbas" path="res://scripts/folder_preset.gd" id="1_78y2m"]
+[ext_resource type="Texture2D" uid="uid://cbuham80x6qwm" path="res://assets/folderBG.png" id="1_k1cxm"]
+[ext_resource type="Texture2D" uid="uid://b7lg58urw2ccv" path="res://assets/folder.png" id="1_vnhg0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78y2m"]
+size = Vector2(1.8648828, 2.4029832)
+
+[node name="Folder" type="RigidBody2D" unique_id=1039454103]
+scale = Vector2(1.0042188, 1)
+gravity_scale = 0.0
+script = ExtResource("1_78y2m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1893292089]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("1_k1cxm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2136443158]
+scale = Vector2(0.088, 0.088)
+texture = ExtResource("1_vnhg0")
+
+[node name="Button" type="Button" parent="." unique_id=2128797694]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -88.0
+offset_top = -68.00001
+offset_right = -80.0
+offset_bottom = -60.000008
+scale = Vector2(22.026781, 16.888311)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1908909710]
+position = Vector2(2.3841858e-06, 0)
+scale = Vector2(94.3759, 56.596317)
+shape = SubResource("RectangleShape2D_78y2m")
+
+[node name="Label" type="Label" parent="." unique_id=1238963836]
+offset_left = -64.0
+offset_top = -26.0
+offset_right = -19.0
+offset_bottom = -3.0
+scale = Vector2(3, 3)
+text = "Joahn"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
