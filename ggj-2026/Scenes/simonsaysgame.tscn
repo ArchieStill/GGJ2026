@@ -679,30 +679,37 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -122.551315
-offset_top = -34.565754
-offset_right = 71.41821
-offset_bottom = 55.88446
+offset_left = -29.328518
+offset_top = -13.616814
+offset_right = 42.08972
+offset_bottom = 27.603394
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28235295, 0.28235295, 0.28235295, 0.7058824)
 
 [node name="Background" type="TextureRect" parent="." unique_id=1530289573]
-layout_mode = 0
-offset_left = 28.000004
-offset_top = 15.000002
-offset_right = 3211.0
-offset_bottom = 1949.0
-scale = Vector2(0.33, 0.33)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.97058
+offset_top = -284.19702
+offset_right = 2718.0293
+offset_bottom = 1649.803
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("10_bvo36")
 
 [node name="RedText" type="Label" parent="." unique_id=873121168]
 visible = false
 layout_mode = 0
-offset_left = 358.0
-offset_top = 269.0
-offset_right = 783.0
-offset_bottom = 352.0
+offset_left = 388.9897
+offset_top = 254.52965
+offset_right = 813.9897
+offset_bottom = 337.52966
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -714,10 +721,10 @@ vertical_alignment = 1
 [node name="BlueText" type="Label" parent="." unique_id=492827093]
 visible = false
 layout_mode = 0
-offset_left = 358.0
-offset_top = 269.0
-offset_right = 783.0
-offset_bottom = 352.0
+offset_left = 388.9897
+offset_top = 254.52965
+offset_right = 813.9897
+offset_bottom = 337.52966
 theme_override_colors/font_color = Color(0, 0.28627452, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -729,10 +736,10 @@ vertical_alignment = 1
 [node name="GreenText" type="Label" parent="." unique_id=126713594]
 visible = false
 layout_mode = 0
-offset_left = 322.0
-offset_top = 269.0
-offset_right = 850.0
-offset_bottom = 352.0
+offset_left = 352.9897
+offset_top = 254.52965
+offset_right = 880.9897
+offset_bottom = 337.52966
 theme_override_colors/font_color = Color(0, 0.61960787, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -744,10 +751,10 @@ vertical_alignment = 1
 [node name="YellowText" type="Label" parent="." unique_id=432864841]
 visible = false
 layout_mode = 0
-offset_left = 322.0
-offset_top = 269.0
-offset_right = 850.0
-offset_bottom = 352.0
+offset_left = 352.9897
+offset_top = 254.52965
+offset_right = 880.9897
+offset_bottom = 337.52966
 theme_override_colors/font_color = Color(0.8352941, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -759,30 +766,30 @@ vertical_alignment = 1
 [node name="ManThumbsUp" type="TextureRect" parent="." unique_id=1989704087]
 visible = false
 layout_mode = 0
-offset_left = 206.00003
-offset_top = 53.000004
-offset_right = 3392.667
-offset_bottom = 1475.2223
-scale = Vector2(0.225, 0.225)
+offset_left = 282.81073
+offset_top = 74.36875
+offset_right = 3467.05
+offset_bottom = 1535.5575
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_lqnwl")
 
 [node name="ManSad" type="TextureRect" parent="." unique_id=955568350]
 visible = false
 layout_mode = 0
-offset_left = 206.00003
-offset_top = 53.000004
-offset_right = 3392.667
-offset_bottom = 1475.2223
+offset_left = 283.85815
+offset_top = 74.368744
+offset_right = 3100.3274
+offset_bottom = 1382.5139
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("4_do37b")
 
 [node name="PlayerButtons" type="HBoxContainer" parent="." unique_id=655376494]
 layout_mode = 0
-offset_left = 268.0
-offset_top = 510.0
-offset_right = 852.0
-offset_bottom = 614.0
-theme_override_constants/separation = 60
+offset_left = 332.04074
+offset_top = 488.11038
+offset_right = 859.9541
+offset_bottom = 586.57043
+theme_override_constants/separation = 50
 
 [node name="Red" type="Button" parent="PlayerButtons" unique_id=265148402]
 layout_mode = 2
@@ -811,10 +818,10 @@ theme_override_styles/hover = ExtResource("8_i23xv")
 
 [node name="ButtonGuard" type="Panel" parent="." unique_id=181776587]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 466.0
-offset_right = 887.0
-offset_bottom = 651.0
+offset_left = 318.42392
+offset_top = 464.01904
+offset_right = 874.869
+offset_bottom = 605.42444
 theme_override_styles/panel = SubResource("StyleBoxEmpty_lqnwl")
 
 [node name="ButtonPatterns" type="AnimationPlayer" parent="." unique_id=1506907903]
@@ -824,11 +831,12 @@ libraries/ = SubResource("AnimationLibrary_lqnwl")
 one_shot = true
 
 [node name="ButtonCount" type="Label" parent="." unique_id=1723598916]
+visible = false
 layout_mode = 0
-offset_left = 97.0
-offset_top = 506.0
-offset_right = 212.0
-offset_bottom = 609.0
+offset_left = 166.5441
+offset_top = 476.58844
+offset_right = 281.5441
+offset_bottom = 579.58844
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 75
 text = "0/4"
@@ -836,11 +844,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Score" type="Label" parent="." unique_id=1054042307]
+visible = false
 layout_mode = 0
-offset_left = 921.0
-offset_top = 508.0
-offset_right = 1036.0
-offset_bottom = 611.0
+offset_left = 912.3265
+offset_top = 475.54102
+offset_right = 1027.3264
+offset_bottom = 578.541
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 75
 text = "0/3"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbuham80x6qwm"
-path="res://.godot/imported/folderBG.png-f3e28c02fc64a6e929de4c02f7f8be35.ctex"
+uid="uid://c3bxyjtphbuiv"
+path="res://.godot/imported/TYPINGGAME.png-9b50c4e70cbdff1ab298ba2f12f215a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/folderBG.png"
-dest_files=["res://.godot/imported/folderBG.png-f3e28c02fc64a6e929de4c02f7f8be35.ctex"]
+source_file="res://Assets/TYPINGGAME.png"
+dest_files=["res://.godot/imported/TYPINGGAME.png-9b50c4e70cbdff1ab298ba2f12f215a6.ctex"]
 
 [params]
 

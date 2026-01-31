@@ -3,6 +3,7 @@ extends Area3D
 signal typing
 signal simonsays
 signal coffee
+signal filing
 
 @export var minigame = ""
 
@@ -28,6 +29,7 @@ func _physics_process(_delta: float) -> void:
 				"TYPING": emit_signal("typing")
 				"SIMONSAYS": emit_signal("simonsays")
 				"COFFEE": emit_signal("coffee")
+				"FILING": emit_signal("filing")
 			$"../../Prompt".hide()
 			can_interact = false
 			hide()
