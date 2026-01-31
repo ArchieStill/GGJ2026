@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://f4m3tbvok3qp"]
+
+[ext_resource type="Script" uid="uid://duuwuu4vjmflk" path="res://Scripts/mask_health.gd" id="1_p3tft"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08ril"]
+bg_color = Color(0.22094142, 0.22094142, 0.22094133, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3tft"]
+bg_color = Color(0.7579568, 0.17252293, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[node name="MaskHealth" type="ProgressBar" unique_id=1667059085]
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -152.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_08ril")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p3tft")
+value = 100.0
+show_percentage = false
+script = ExtResource("1_p3tft")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

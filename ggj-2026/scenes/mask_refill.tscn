@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqsdq0knoy4a4"]
 
-[ext_resource type="Script" uid="uid://dqg7ygj3nbn00" path="res://scripts/mask_refill.gd" id="1_fqf36"]
+[ext_resource type="Script" uid="uid://dqg7ygj3nbn00" path="res://Scripts/mask_refill.gd" id="1_fqf36"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gifd2"]
 
