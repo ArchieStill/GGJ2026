@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dnpa8784sm6gd"]
+
+[ext_resource type="Script" uid="uid://cmg3rbsmol41y" path="res://scripts/coffee_game.gd" id="1_earhl"]
+[ext_resource type="Texture2D" uid="uid://cqblnr38u6kk7" path="res://assets/coffeedevart.png" id="2_r2fce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_earhl"]
+size = Vector2(32, 206)
+
+[sub_resource type="Curve2D" id="Curve2D_earhl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 177, 493, 0, 0, 0, 0, 957, 493, 0, 0, 0, 0, 177, 493)
+}
+point_count = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uywy"]
+bg_color = Color(0.61960787, 0.61960787, 0.61960787, 0)
+border_width_left = 8
+border_width_right = 8
+border_width_bottom = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_earhl"]
+bg_color = Color(0.24313726, 0.12156863, 0, 1)
+border_width_left = 8
+border_width_right = 8
+border_width_bottom = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2fce"]
+size = Vector2(100, 126)
+
+[node name="CoffeeGame" type="Control" unique_id=925774508]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_earhl")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1452399577]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 1116.0
+offset_bottom = 610.0
+color = Color(0.47843137, 0.6431373, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=201104198]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 1051.0
+offset_bottom = 554.0
+color = Color(0.6190818, 0.6190819, 0.6190818, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background/ColorRect" unique_id=1658483599]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 457.0
+offset_right = 987.0
+offset_bottom = 497.0
+color = Color(0.41960785, 0.19607843, 0, 1)
+
+[node name="CoffeeSpill" type="Sprite2D" parent="." unique_id=970600369]
+position = Vector2(579, 338)
+texture = ExtResource("2_r2fce")
+
+[node name="Coffee" type="ColorRect" parent="." unique_id=1843512210]
+visible = false
+layout_mode = 0
+offset_left = 547.0
+offset_top = 301.0
+offset_right = 579.0
+offset_bottom = 507.0
+color = Color(0.24313726, 0.12156863, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="Coffee" unique_id=433968975]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffee/Area2D" unique_id=518389389]
+position = Vector2(16, 103)
+shape = SubResource("RectangleShape2D_earhl")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1040137901]
+curve = SubResource("Curve2D_earhl")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=499667761]
+position = Vector2(177, 493)
+rotates = false
+
+[node name="ProgressBar" type="ProgressBar" parent="Path2D/PathFollow2D" unique_id=5836481 groups=["coffee"]]
+offset_left = -50.0
+offset_top = -103.0
+offset_right = 50.0
+offset_bottom = 22.0
+theme_override_styles/background = SubResource("StyleBoxFlat_6uywy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_earhl")
+fill_mode = 3
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/ProgressBar" unique_id=1308553554]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/ProgressBar/Area2D" unique_id=377673995]
+position = Vector2(50, 63)
+shape = SubResource("RectangleShape2D_r2fce")
+
+[node name="Pourer" type="ColorRect" parent="." unique_id=828065608]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 54.0
+offset_right = 583.0
+offset_bottom = 301.0
+color = Color(0.31431612, 0.31431612, 0.3143161, 1)
