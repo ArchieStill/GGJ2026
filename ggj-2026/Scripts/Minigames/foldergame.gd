@@ -2,9 +2,9 @@ extends Control
 
 var folder_scene = preload("res://Scenes/Minigames/FolderPreset.tscn")
 var foldersToSolve = 5
+var can_play = false
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	for i in range(5):
 		var new_num = randi() % Namelist.Text.size()
 		

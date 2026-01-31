@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://qhpg6tmuusb4"]
 
 [ext_resource type="Texture2D" uid="uid://8njvvm41btlt" path="res://Assets/Images/white-house-plan-business-hotel-amtrak-white-bar.jpg" id="1_ldlei"]
-[ext_resource type="Script" path="res://scripts/paper.gd" id="1_vas6c"]
+[ext_resource type="Script" uid="uid://r2nyvg5e1wq0" path="res://Scripts/Minigames/paper.gd" id="1_vas6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vas6c"]
 size = Vector2(2.974659, 0.58719194)
 
 [node name="paper" type="RigidBody2D" unique_id=1906650262 groups=["paper"]]
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_vas6c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=621621913]

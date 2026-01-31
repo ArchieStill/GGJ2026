@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxks2h47q5qw0"]
 
-[ext_resource type="Script" path="res://scripts/paper_game.gd" id="1_f6aeu"]
+[ext_resource type="Script" uid="uid://iy6r710vp1le" path="res://Scripts/Minigames/papergame.gd" id="1_f6aeu"]
 [ext_resource type="PackedScene" uid="uid://qhpg6tmuusb4" path="res://Scenes/Minigames/paper.tscn" id="1_sc6pk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6aeu"]
@@ -9,7 +9,10 @@ size = Vector2(874, 40)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p1u1"]
 size = Vector2(19.349249, 23.731789)
 
-[node name="paperGame" type="Control" unique_id=1332495056]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3t41"]
+size = Vector2(14, 183)
+
+[node name="PaperGame" type="Control" unique_id=1332495056]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,7 +83,7 @@ color = Color(0.7529412, 0.56078434, 0.30980393, 1)
 [node name="paperController" type="Node2D" parent="." unique_id=1870903638]
 
 [node name="paper" parent="paperController" unique_id=1906650262 instance=ExtResource("1_sc6pk")]
-position = Vector2(273, 312)
+position = Vector2(275, 309)
 
 [node name="paper2" parent="paperController" unique_id=1913827081 instance=ExtResource("1_sc6pk")]
 position = Vector2(276, 345)
@@ -91,5 +94,24 @@ position = Vector2(275, 379)
 [node name="paper4" parent="paperController" unique_id=882072533 instance=ExtResource("1_sc6pk")]
 position = Vector2(275, 413)
 
+[node name="BoxBorders" type="Area2D" parent="." unique_id=587960769]
+collision_layer = 3855
+collision_mask = 3855
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBorders" unique_id=1810374287]
+position = Vector2(676, 343)
+shape = SubResource("RectangleShape2D_o3t41")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BoxBorders" unique_id=566584870]
+position = Vector2(936, 343)
+shape = SubResource("RectangleShape2D_o3t41")
+
+[node name="EndTimer" type="Timer" parent="." unique_id=266446778]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="body_entered" from="boxBack" to="." method="_on_box_back_body_entered"]
 [connection signal="body_exited" from="boxBack" to="." method="_on_box_back_body_exited"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
