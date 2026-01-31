@@ -1,11 +1,155 @@
 [gd_scene format=3 uid="uid://i45fblbjbmb"]
 
+[ext_resource type="Script" uid="uid://yph7i4uv5mdq" path="res://Scripts/simonsaysgame.gd" id="1_3o5b1"]
 [ext_resource type="StyleBox" uid="uid://cgu7rwe6nqd38" path="res://Styles/redbutton.tres" id="1_svsfh"]
+[ext_resource type="StyleBox" uid="uid://bl2doyt7qhenu" path="res://Styles/redhover.tres" id="2_4iikw"]
 [ext_resource type="StyleBox" uid="uid://cnpojrnnk21t8" path="res://Styles/bluebutton.tres" id="2_qemty"]
 [ext_resource type="StyleBox" uid="uid://b53x50iqfrg5u" path="res://Styles/greenbutton.tres" id="3_4iikw"]
+[ext_resource type="StyleBox" uid="uid://ffaxvkid11ck" path="res://Styles/bluehover.tres" id="4_4iikw"]
 [ext_resource type="StyleBox" uid="uid://ck6lx073hqp8f" path="res://Styles/yellowbutton.tres" id="4_lxsu7"]
+[ext_resource type="StyleBox" uid="uid://c58vg4ppjyn36" path="res://Styles/greenhover.tres" id="6_lxsu7"]
+[ext_resource type="StyleBox" uid="uid://ckcibqy8l7522" path="res://Styles/yellowhover.tres" id="8_i23xv"]
+[ext_resource type="StyleBox" uid="uid://vhg8pitp7dwa" path="res://Styles/redpressed.tres" id="9_ai8w8"]
+[ext_resource type="Texture2D" uid="uid://cvhkjq6ajitvr" path="res://Assets/simonsays.png" id="10_bvo36"]
+[ext_resource type="Texture2D" uid="uid://bnnn7t7nefvvk" path="res://Assets/suitthumbsup.jpg" id="12_lqnwl"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svsfh"]
+[sub_resource type="Animation" id="Animation_3o5b1"]
+resource_name = "Pattern 1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedText:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlueText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GreenText:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("YellowText:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_bvo36"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedText:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlueText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GreenText:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("YellowText:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ManThumbsUp:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_do37b"]
+resource_name = "win_anim"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ManThumbsUp:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lqnwl"]
+_data = {
+&"Pattern 1": SubResource("Animation_3o5b1"),
+&"RESET": SubResource("Animation_bvo36"),
+&"win_anim": SubResource("Animation_do37b")
+}
 
 [node name="SimonSaysGame" type="Control" unique_id=1769986982]
 layout_mode = 3
@@ -14,6 +158,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3o5b1")
 
 [node name="Transparency" type="ColorRect" parent="." unique_id=1543927034]
 layout_mode = 1
@@ -24,94 +169,128 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28235295, 0.28235295, 0.28235295, 0.7058824)
 
-[node name="GuideBase" type="Panel" parent="." unique_id=1710912800]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -509.0
-offset_top = -295.0
-offset_right = 501.0
-offset_bottom = -27.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PlayerBase" type="Panel" parent="." unique_id=1108137312]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -509.0
-offset_top = 35.0
-offset_right = 501.0
-offset_bottom = 303.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GuideButtons" type="HBoxContainer" parent="." unique_id=1601203494]
+[node name="Background" type="TextureRect" parent="." unique_id=1530289573]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 60.0
-offset_right = 1041.0
-offset_bottom = 265.0
-theme_override_constants/separation = 40
-
-[node name="Red" type="Button" parent="GuideButtons" unique_id=1426811495]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("1_svsfh")
-
-[node name="Blue" type="Button" parent="GuideButtons" unique_id=803435597]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("2_qemty")
-
-[node name="Green" type="Button" parent="GuideButtons" unique_id=1227926827]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("3_4iikw")
-
-[node name="Yellow" type="Button" parent="GuideButtons" unique_id=859669091]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("4_lxsu7")
-
-[node name="GuideBarrier" type="Panel" parent="." unique_id=1201715295]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 29.0
-offset_right = 1080.0
-offset_bottom = 293.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_svsfh")
+offset_left = 28.000004
+offset_top = 15.000002
+offset_right = 3211.0
+offset_bottom = 1949.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("10_bvo36")
 
 [node name="PlayerButtons" type="HBoxContainer" parent="." unique_id=655376494]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 390.0
-offset_right = 1041.0
-offset_bottom = 595.0
-theme_override_constants/separation = 40
+offset_left = 268.0
+offset_top = 510.0
+offset_right = 852.0
+offset_bottom = 614.0
+theme_override_constants/separation = 60
 
 [node name="Red" type="Button" parent="PlayerButtons" unique_id=265148402]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("1_svsfh")
+theme_override_styles/pressed = ExtResource("9_ai8w8")
+theme_override_styles/hover = ExtResource("2_4iikw")
 
 [node name="Blue" type="Button" parent="PlayerButtons" unique_id=236023286]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("2_qemty")
+theme_override_styles/hover = ExtResource("4_4iikw")
 
 [node name="Green" type="Button" parent="PlayerButtons" unique_id=693123110]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("3_4iikw")
+theme_override_styles/hover = ExtResource("6_lxsu7")
 
 [node name="Yellow" type="Button" parent="PlayerButtons" unique_id=447536342]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("4_lxsu7")
+theme_override_styles/hover = ExtResource("8_i23xv")
+
+[node name="ButtonPatterns" type="AnimationPlayer" parent="." unique_id=1506907903]
+libraries/ = SubResource("AnimationLibrary_lqnwl")
+
+[node name="StartTimer" type="Timer" parent="." unique_id=247692790]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="RedText" type="Label" parent="." unique_id=873121168]
+visible = false
+layout_mode = 0
+offset_left = 358.0
+offset_top = 269.0
+offset_right = 783.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Blood Diet Lite"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlueText" type="Label" parent="." unique_id=492827093]
+visible = false
+layout_mode = 0
+offset_left = 358.0
+offset_top = 269.0
+offset_right = 783.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0, 0.28627452, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "OxygenInACan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GreenText" type="Label" parent="." unique_id=126713594]
+visible = false
+layout_mode = 0
+offset_left = 322.0
+offset_top = 269.0
+offset_right = 850.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0, 0.61960787, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Grass (Ultra rare!)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YellowText" type="Label" parent="." unique_id=432864841]
+visible = false
+layout_mode = 0
+offset_left = 322.0
+offset_top = 269.0
+offset_right = 850.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0.8352941, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Actual Rat Urine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ManThumbsUp" type="TextureRect" parent="." unique_id=1989704087]
+visible = false
+layout_mode = 0
+offset_left = 206.00003
+offset_top = 53.000004
+offset_right = 3392.667
+offset_bottom = 1475.2223
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("12_lqnwl")
+
+[connection signal="pressed" from="PlayerButtons/Red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="PlayerButtons/Blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="PlayerButtons/Green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="PlayerButtons/Yellow" to="." method="_on_yellow_pressed"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
