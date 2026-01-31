@@ -10,6 +10,7 @@ var index = 1
 var last_caret_pos: int = 0
 var words_done = 0
 var can_play = false
+var allowed_characters = "[A-Za-z]"
 
 func _ready() -> void:
 	line = Typinggamewords.Text.pick_random()
@@ -23,15 +24,24 @@ func _process(_delta: float) -> void:
 		input.release_focus()
 
 func _on_text_input_text_changed(new_text: String) -> void:
-	last_caret_pos = input.caret_column
-	input.text = new_text.to_upper()
-	input.caret_column = last_caret_pos
+	# Prevents non-letters from being typed
+	var old_caret_position = input.caret_column
+	var word = ''
+	var regex = RegEx.new()
+	regex.compile(allowed_characters)
+	for valid_character in regex.search_all(new_text):
+		word += valid_character.get_string()
+	input.text = word.to_upper()
+	input.caret_column = old_caret_position
 	if input.text == target_word.text:
 		_new_word()
 		input.clear()
 		if words_done == 3:
 			can_play = false
-			target_word.text = "YAY"
+			input.hide()
+			target_word.hide()
+			$WinText.show()
+			#target_word.text = "YAY"
 			$EndTimer.start()
 
 func _new_word():
