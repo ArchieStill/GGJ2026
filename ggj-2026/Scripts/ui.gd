@@ -4,12 +4,12 @@ extends Control
 @onready var sprite: TextureRect = $PlayerSprite
 
 
-const empty = preload("res://Assets/playerspriteempty.png")
-const blood = preload("res://Assets/playerspriteemptyblood.png")
-const full = preload("res://Assets/playerspritefull.png")
-const threefour = preload("res://Assets/playersprite3quart.png")
-const half = preload("res://Assets/playerspritehalf.png")
-const onefour = preload("res://Assets/playersprite1quart.png")
+const empty = preload("res://Assets/Sprites/playerspriteempty.png")
+const blood = preload("res://Assets/Sprites/playerspriteemptyblood.png")
+const full = preload("res://Assets/Sprites/playerspritefull.png")
+const threefour = preload("res://Assets/Sprites/playersprite3quart.png")
+const half = preload("res://Assets/Sprites/playerspritehalf.png")
+const onefour = preload("res://Assets/Sprites/playersprite1quart.png")
 
 func _process(delta: float) -> void:
 	if Global.HasMask:
