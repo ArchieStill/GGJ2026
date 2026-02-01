@@ -81,6 +81,7 @@ shape = SubResource("RectangleShape2D_ccy37")
 
 [node name="folderShuffleAudio" type="AudioStreamPlayer" parent="." unique_id=1930128669]
 stream = ExtResource("4_adx7r")
+bus = &"SFX"
 
 [connection signal="body_entered" from="A-H" to="." method="_on_ah_body_entered"]
 [connection signal="body_entered" from="I-P" to="." method="_on_ip_body_entered"]

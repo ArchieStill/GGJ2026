@@ -209,6 +209,7 @@ libraries/ = SubResource("AnimationLibrary_bfxn8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2083916106]
 stream = ExtResource("6_njqww")
+bus = &"SFX"
 
 [connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
 [connection signal="pressed" from="CoffeeButton" to="." method="_on_coffee_button_pressed"]

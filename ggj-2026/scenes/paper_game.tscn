@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d2c3fyi7lcmdh"]
+
+[ext_resource type="Script" uid="uid://iy6r710vp1le" path="res://scripts/paper_game.gd" id="1_pjepy"]
+[ext_resource type="PackedScene" uid="uid://qhpg6tmuusb4" path="res://scenes/paper.tscn" id="1_xbxmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0u7q"]
+
+[node name="PaperGame" type="Control" unique_id=896336089]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pjepy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1970609363]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 34.0
+offset_right = 1108.0
+offset_bottom = 613.0
+color = Color(0.20784314, 0.7254902, 0.7254902, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=593864167]
+position = Vector2(557, 504.00003)
+scale = Vector2(41.641994, -4.6192994)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=849231196]
+shape = SubResource("RectangleShape2D_o0u7q")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=897971532]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.3737458, 0.21469581, 0.086764686, 1)
+
+[node name="paper" parent="." unique_id=747625290 instance=ExtResource("1_xbxmp")]
+position = Vector2(299, 346)
+
+[connection signal="clicked" from="paper" to="." method="_on_paper_clicked"]

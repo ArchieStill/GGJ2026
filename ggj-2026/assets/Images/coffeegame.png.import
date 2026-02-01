@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db4fhr0ge1csn"
-path="res://.godot/imported/coffeegame.png-78b6cb23622b86257e0b68f57ce7c3f6.ctex"
+path="res://.godot/imported/coffeegame.png-bd755e71fd68f85309665b7530c2ec32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/coffeegame.png"
-dest_files=["res://.godot/imported/coffeegame.png-78b6cb23622b86257e0b68f57ce7c3f6.ctex"]
+source_file="res://assets/Images/coffeegame.png"
+dest_files=["res://.godot/imported/coffeegame.png-bd755e71fd68f85309665b7530c2ec32.ctex"]
 
 [params]
 
