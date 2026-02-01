@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://yptls2850tje"
-path="res://.godot/imported/folderRustle.mp3-0098521bf141761ad2191df418d89d72.mp3str"
+path="res://.godot/imported/folderRustle.mp3-b83a8c9b7d391fce683ce328a1d64c22.mp3str"
 
 [deps]
 
-source_file="res://Assets/Music/folderRustle.mp3"
-dest_files=["res://.godot/imported/folderRustle.mp3-0098521bf141761ad2191df418d89d72.mp3str"]
+source_file="res://assets/music/folderRustle.mp3"
+dest_files=["res://.godot/imported/folderRustle.mp3-b83a8c9b7d391fce683ce328a1d64c22.mp3str"]
 
 [params]
 
