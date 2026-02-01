@@ -14,14 +14,16 @@ var can_interact = true
 func _ready() -> void:
 	$"../../Prompt".hide()
 
-func _on_body_entered(_body: Node3D) -> void:
-	if can_interact:
-		$"../../Prompt".show()
-		menu_up = true
+func _on_body_entered(body: Node3D) -> void:
+	if body.get_name() == "Player":
+		if can_interact:
+			$"../../Prompt".show()
+			menu_up = true
 
-func _on_body_exited(_body: Node3D) -> void:
-	$"../../Prompt".hide()
-	menu_up = false
+func _on_body_exited(body: Node3D) -> void:
+	if body.get_name() == "Player":
+		$"../../Prompt".hide()
+		menu_up = false
 
 func _physics_process(_delta: float) -> void:
 	if menu_up:

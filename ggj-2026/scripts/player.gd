@@ -21,7 +21,6 @@ var can_move = true
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	hands.set_deferred("monitorable", false)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if can_move:
@@ -30,8 +29,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotate_x(-event.relative.y * SENSITIVITY)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 		if event is InputEventKey and event.key_label == KEY_F:
-			hands.set_deferred("monitorable", true) # doesn't do anything atm. investigate.
-			print(hands.is_monitorable())
+			hands.set_monitorable(true) # doesn't do anything atm. investigate.
+			$Timer.start()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -72,3 +71,7 @@ func _headbob(time) -> Vector3:
 
 func _facetake():
 	pass
+
+
+func _on_timer_timeout() -> void:
+	hands.set_monitorable(false)

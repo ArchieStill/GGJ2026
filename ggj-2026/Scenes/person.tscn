@@ -12,7 +12,7 @@ albedo_color = Color(0.45262197, 0.45262197, 0.163927, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_37kl0"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_37kl0"]
-points = PackedVector3Array(0, 0, 0, 5, 0, 2.5, 5, 2.5, 0, 5, 0, -2.5, 5, -1, 0)
+points = PackedVector3Array(0, 0, 0, 15, 0, 7.5, 15, 7.5, 0, 15, 0, -7.5, 15, -3.5, 0)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_37kl0"]
 radius = 1.0144539
@@ -35,6 +35,7 @@ bottom_radius = 0.55
 height = 0.7
 
 [node name="Person" type="CharacterBody3D" unique_id=801703538]
+transform = Transform3D(0.0016581183, 0, -0.99999875, 0, 1, 0, 0.99999875, 0, 0.0016581183, 0, 0, 0)
 script = ExtResource("1_10xcd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1638399332]
@@ -49,8 +50,7 @@ mesh = SubResource("CapsuleMesh_37kl0")
 
 [node name="Viewcone" type="Area3D" parent="." unique_id=1166845293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5320971, 0)
-collision_layer = 8
-collision_mask = 8
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Viewcone" unique_id=1685562303]
 shape = SubResource("ConvexPolygonShape3D_37kl0")
@@ -58,8 +58,7 @@ debug_color = Color(0.8392157, 0, 0.9254902, 1)
 
 [node name="Catchball" type="Area3D" parent="." unique_id=595382056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.234339, 0, 0)
-collision_layer = 4
-collision_mask = 4
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Catchball" unique_id=1467623288]
 shape = SubResource("SphereShape3D_37kl0")
@@ -70,14 +69,18 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbody" unique_id=1461600783]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0015869141, 0.05822754, -0.044555664)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041819785, 0.05822754, -0.044622377)
 shape = SubResource("BoxShape3D_10xcd")
 
 [node name="Timer1" type="Timer" parent="." unique_id=1536968283]
+one_shot = true
 
 [node name="Timer2" type="Timer" parent="." unique_id=599594306]
+one_shot = true
 
 [node name="Timer3" type="Timer" parent="." unique_id=317225881]
+wait_time = 8.0
+one_shot = true
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=737056896]
 transform = Transform3D(-0.10624671, 0.9943398, 0, -0.9943398, -0.10624671, 0, 0, 0, 1, 0.47029257, 0.4383216, 0)
@@ -88,6 +91,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.30505374, 0)
 mesh = SubResource("CylinderMesh_wrnb3")
 
 [connection signal="body_entered" from="Viewcone" to="." method="_on_area_entered"]
+[connection signal="body_exited" from="Viewcone" to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Catchball" to="." method="_catch"]
 [connection signal="area_entered" from="Hitbody" to="." method="_taken"]
 [connection signal="timeout" from="Timer1" to="." method="_point_reached"]
 [connection signal="timeout" from="Timer2" to="." method="_start_chase"]
+[connection signal="timeout" from="Timer3" to="." method="_lose_chase"]

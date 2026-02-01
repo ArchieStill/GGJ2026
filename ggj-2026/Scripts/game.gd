@@ -32,22 +32,6 @@ func _on_simon_says_game_finished() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$Player.can_move = true
 
-func _on_interact_point_folder() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	$FolderGame.show()
-	$FolderGame._toggle_can_play()
-	$Player.can_move = false
-
-func _on_folder_game_finished() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	$Player.can_move = true
-
-#func _on_interact_point_paper() -> void:
-	#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	#$PaperGame.show()
-	#$PaperGame.can_play = true
-	#$Player.can_move = false
-#
-#func _on_paper_game_finished() -> void:
-	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	#$Player.can_move = true
+func _set_signal():
+	var mask = get_node("maskRefill")
+	mask.refill.connect(_on_mask_refill_refill)
