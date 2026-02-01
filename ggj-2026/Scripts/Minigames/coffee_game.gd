@@ -4,7 +4,7 @@ signal finished
 
 @onready var path = $Path2D/PathFollow2D
 var number = 0
-@onready var mug = $Path2D/PathFollow2D/ProgressBar
+@onready var mug = $ProgressBar
 var can_play = false
 
 func _ready():
@@ -35,9 +35,13 @@ func _on_end_timer_timeout() -> void:
 
 func _on_coffee_button_pressed() -> void:
 	#$Coffee.position = Vector2(567,272)
-	var overlaplist = $Coffee/Area2D.get_overlapping_areas()
-	if (overlaplist.size() > 0):
-		mug.value += 33.4
-		if mug.value >= 100:
-			can_play = false
-			$EndTimer.start()
+	#var overlaplist = $Coffee/Area2D.get_overlapping_areas()
+	#if (overlaplist.size() > 0):
+	$AnimationPlayer.play("coffee")
+	mug.value += 10
+	if mug.value >= 100:
+		$Overflow.show()
+		$CoffeeButton.disabled = true
+		$Scrumptious.show()
+		can_play = false
+		$EndTimer.start()
