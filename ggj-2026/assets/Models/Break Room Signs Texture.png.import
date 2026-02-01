@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://25ltjveq4uht"
-path="res://.godot/imported/Break Room Signs Texture.png-dc0595d3f9aa6f2c8417e18aa6c86810.ctex"
+path="res://.godot/imported/Break Room Signs Texture.png-75680ae170328ec497b10f0dbacd1051.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Models/Break Room Signs Texture.png"
-dest_files=["res://.godot/imported/Break Room Signs Texture.png-dc0595d3f9aa6f2c8417e18aa6c86810.ctex"]
+source_file="res://Assets/Models/Break Room Signs Texture.png"
+dest_files=["res://.godot/imported/Break Room Signs Texture.png-75680ae170328ec497b10f0dbacd1051.ctex"]
 
 [params]
 

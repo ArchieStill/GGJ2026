@@ -10,8 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/Minigames/simonsaysgame.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/foldergame.tscn" id="9_rku1e"]
-[ext_resource type="PackedScene" uid="uid://cmbeltwaokjjs" path="res://assets/Models/officespace.tscn" id="12_rku1e"]
-[ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://Scenes/person.tscn" id="13_rfjv2"]
+[ext_resource type="PackedScene" uid="uid://cmbeltwaokjjs" path="res://Assets/Models/officespace.tscn" id="12_rku1e"]
 [ext_resource type="PackedScene" uid="uid://d1520o570w2qe" path="res://Scenes/pause_menu.tscn" id="14_trtic"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
@@ -780,8 +779,3 @@ debug_color = Color(0.97725016, 0.00016614735, 0.8103747, 1)
 [connection signal="finished" from="CoffeeGame" to="." method="_on_coffee_game_finished"]
 [connection signal="finished" from="SimonSaysGame" to="." method="_on_simon_says_game_finished"]
 [connection signal="finished" from="FolderGame" to="." method="_on_folder_game_finished"]
-[connection signal="refill" from="Enemy" to="." method="_on_enemy_refill"]
-[connection signal="refill" from="Enemy2" to="." method="_on_enemy_2_refill"]
-[connection signal="refill" from="Enemy3" to="." method="_on_enemy_3_refill"]
-[connection signal="refill" from="Enemy4" to="." method="_on_enemy_4_refill"]
-[connection signal="refill" from="Enemy5" to="." method="_on_enemy_5_refill"]

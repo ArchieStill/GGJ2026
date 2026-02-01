@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dhwwjgx4h7uv3"
-path="res://.godot/imported/13381-game-system-nintendo-64-goldeneye-007-elevator-music.mp3-4134467425559e9f728f6f2f30600bbf.mp3str"
+path="res://.godot/imported/13381-game-system-nintendo-64-goldeneye-007-elevator-music.mp3-f3932e862dbf15db53d0b9973a63a094.mp3str"
 
 [deps]
 
-source_file="res://assets/music/13381-game-system-nintendo-64-goldeneye-007-elevator-music.mp3"
-dest_files=["res://.godot/imported/13381-game-system-nintendo-64-goldeneye-007-elevator-music.mp3-4134467425559e9f728f6f2f30600bbf.mp3str"]
+source_file="res://Assets/Music/13381-game-system-nintendo-64-goldeneye-007-elevator-music.mp3"
+dest_files=["res://.godot/imported/13381-game-system-nintendo-64-goldeneye-007-elevator-music.mp3-f3932e862dbf15db53d0b9973a63a094.mp3str"]
 
 [params]
 

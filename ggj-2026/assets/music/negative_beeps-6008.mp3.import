@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dlkumbh5fmnlo"
-path="res://.godot/imported/negative_beeps-6008.mp3-e25ae7bc8e258f80f1fd1ff9aa2e09cf.mp3str"
+path="res://.godot/imported/negative_beeps-6008.mp3-5aa887857e598ab47c69746263f1f0be.mp3str"
 
 [deps]
 
-source_file="res://assets/music/negative_beeps-6008.mp3"
-dest_files=["res://.godot/imported/negative_beeps-6008.mp3-e25ae7bc8e258f80f1fd1ff9aa2e09cf.mp3str"]
+source_file="res://Assets/Music/negative_beeps-6008.mp3"
+dest_files=["res://.godot/imported/negative_beeps-6008.mp3-5aa887857e598ab47c69746263f1f0be.mp3str"]
 
 [params]
 
