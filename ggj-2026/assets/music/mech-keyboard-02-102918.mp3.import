@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://rnyvv83ra4wx"
-path="res://.godot/imported/mech-keyboard-02-102918.mp3-4bb857529e2ad5d1c82fb8f2b0e3a3b2.mp3str"
+path="res://.godot/imported/mech-keyboard-02-102918.mp3-a2f1b75d34334bec6779cadc7c519bb7.mp3str"
 
 [deps]
 
-source_file="res://Assets/Music/mech-keyboard-02-102918.mp3"
-dest_files=["res://.godot/imported/mech-keyboard-02-102918.mp3-4bb857529e2ad5d1c82fb8f2b0e3a3b2.mp3str"]
+source_file="res://assets/music/mech-keyboard-02-102918.mp3"
+dest_files=["res://.godot/imported/mech-keyboard-02-102918.mp3-a2f1b75d34334bec6779cadc7c519bb7.mp3str"]
 
 [params]
 

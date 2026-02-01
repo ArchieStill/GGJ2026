@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch0i10bm7lflx"
-path.s3tc="res://.godot/imported/Conference Room Signs Texture.png-420e05e52a52a010f47bd8d9f064d71f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Conference Room Signs Texture.png-1ba323c47af615bf90b20953e0f12b69.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Models/Conference Room Signs Texture.png"
-dest_files=["res://.godot/imported/Conference Room Signs Texture.png-420e05e52a52a010f47bd8d9f064d71f.s3tc.ctex"]
+source_file="res://assets/Models/Conference Room Signs Texture.png"
+dest_files=["res://.godot/imported/Conference Room Signs Texture.png-1ba323c47af615bf90b20953e0f12b69.s3tc.ctex"]
 
 [params]
 

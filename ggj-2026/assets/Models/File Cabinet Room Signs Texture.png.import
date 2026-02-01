@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jgmay7cwwatt"
-path="res://.godot/imported/File Cabinet Room Signs Texture.png-93497f815f365b6a62093c3dff7b0f28.ctex"
+path="res://.godot/imported/File Cabinet Room Signs Texture.png-6efa801d99e82ed81b7e33924c343487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Models/File Cabinet Room Signs Texture.png"
-dest_files=["res://.godot/imported/File Cabinet Room Signs Texture.png-93497f815f365b6a62093c3dff7b0f28.ctex"]
+source_file="res://assets/Models/File Cabinet Room Signs Texture.png"
+dest_files=["res://.godot/imported/File Cabinet Room Signs Texture.png-6efa801d99e82ed81b7e33924c343487.ctex"]
 
 [params]
 
