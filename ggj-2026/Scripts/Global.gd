@@ -1,6 +1,7 @@
 extends Node
 
 var HasMask: bool = false
+var InGame: bool = false
 var MinigamesCompleted: int = 0
 var PreviousGoal: int = 0
 var CurrentGoal: int = 1

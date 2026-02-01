@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/foldergame.tscn" id="9_rku1e"]
 [ext_resource type="PackedScene" uid="uid://cmbeltwaokjjs" path="res://Assets/Models/officespace.tscn" id="12_rku1e"]
+[ext_resource type="PackedScene" uid="uid://b1e721e8lu2qy" path="res://Scenes/enemy.tscn" id="13_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://d1520o570w2qe" path="res://Scenes/pause_menu.tscn" id="14_trtic"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
@@ -771,6 +772,21 @@ transform = Transform3D(0.99999565, 0, -2.3376197e-07, 0, 0.9999957, 0, -5.82076
 shape = SubResource("BoxShape3D_7t8sx")
 debug_color = Color(0.97725016, 0.00016614735, 0.8103747, 1)
 
+[node name="Enemy" parent="." unique_id=271225118 instance=ExtResource("13_rfjv2")]
+transform = Transform3D(1.2523592, 0, 0.44097334, 0, 1.3666043, 0, -0.6153143, 0, 0.8975202, -6.9455657, 2.6417174, 0)
+
+[node name="Enemy2" parent="." unique_id=1223718311 instance=ExtResource("13_rfjv2")]
+transform = Transform3D(-0.5513447, 0, 0.91862583, 0, 1.3666042, 0, -1.2818089, 0, -0.39512867, 11.516808, 2.5962849, -2.3303614)
+
+[node name="Enemy3" parent="." unique_id=1428195834 instance=ExtResource("13_rfjv2")]
+transform = Transform3D(1.2523592, 0, 0.44097334, 0, 1.3666043, 0, -0.6153143, 0, 0.8975202, -12.930031, 2.6417174, -24.600452)
+
+[node name="Enemy4" parent="." unique_id=2019266286 instance=ExtResource("13_rfjv2")]
+transform = Transform3D(1.2523592, 0, 0.44097334, 0, 1.3666043, 0, -0.6153143, 0, 0.8975202, -9.622007, 2.6417174, -36.810596)
+
+[node name="Enemy5" parent="." unique_id=1797385310 instance=ExtResource("13_rfjv2")]
+transform = Transform3D(1.2523592, 0, 0.44097334, 0, 1.3666043, 0, -0.6153143, 0, 0.8975202, -21.684494, 2.6417155, -9.815735)
+
 [connection signal="typing" from="Interacts/Typing" to="." method="_on_interact_point_typing"]
 [connection signal="simonsays" from="Interacts/SimonSays" to="." method="_on_interact_point_simonsays"]
 [connection signal="coffee" from="Interacts/Coffee" to="." method="_on_interact_point_coffee"]
@@ -779,3 +795,8 @@ debug_color = Color(0.97725016, 0.00016614735, 0.8103747, 1)
 [connection signal="finished" from="CoffeeGame" to="." method="_on_coffee_game_finished"]
 [connection signal="finished" from="SimonSaysGame" to="." method="_on_simon_says_game_finished"]
 [connection signal="finished" from="FolderGame" to="." method="_on_folder_game_finished"]
+[connection signal="refill" from="Enemy" to="." method="_on_enemy_refill"]
+[connection signal="refill" from="Enemy2" to="." method="_on_enemy_2_refill"]
+[connection signal="refill" from="Enemy3" to="." method="_on_enemy_3_refill"]
+[connection signal="refill" from="Enemy4" to="." method="_on_enemy_4_refill"]
+[connection signal="refill" from="Enemy5" to="." method="_on_enemy_5_refill"]

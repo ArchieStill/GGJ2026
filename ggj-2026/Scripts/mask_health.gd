@@ -4,8 +4,11 @@ func _process(delta: float) -> void:
 	#if Input.is_key_pressed(KEY_0):
 		#Global.HasMask = true
 	if Global.HasMask:
-		show()
-		value -= 5 * delta
+		if !Global.InGame:
+			show()
+			value -= 5 * delta
+		else:
+			hide()
 	else:
 		hide()
 
