@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dkucmdu6tjk8g" path="res://Scripts/person.gd" id="1_10xcd"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mf4mk"]
-radius = 0.4951172
-height = 1.8798828
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_10xcd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37kl0"]
 albedo_color = Color(0.45262197, 0.45262197, 0.163927, 1)
@@ -36,11 +34,14 @@ height = 0.7
 
 [node name="Person" type="CharacterBody3D" unique_id=801703538]
 transform = Transform3D(0.0016581183, 0, -0.99999875, 0, 1, 0, 0.99999875, 0, 0.0016581183, 0, 0, 0)
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 script = ExtResource("1_10xcd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1638399332]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04736328, 0)
-shape = SubResource("CapsuleShape3D_mf4mk")
+shape = SubResource("CylinderShape3D_10xcd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1985309317]
 material_override = SubResource("StandardMaterial3D_37kl0")
@@ -83,7 +84,7 @@ wait_time = 8.0
 one_shot = true
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=737056896]
-transform = Transform3D(-0.10624671, 0.9943398, 0, -0.9943398, -0.10624671, 0, 0, 0, 1, 0.47029257, 0.4383216, 0)
+transform = Transform3D(0.0002748307, -0.017896434, 0.9998399, -0.99998146, -0.006073832, 0.00016615241, 0.006069886, -0.9998215, -0.017897805, -0.008243943, 0.46348763, -0.45229793)
 mesh = SubResource("CylinderMesh_10xcd")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=288370114]
