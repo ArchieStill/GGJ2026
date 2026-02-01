@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdxa6qno56g0l"
-path="res://.godot/imported/playersprite1quart.png-7eb41dc055d75a9a482b414067000e10.ctex"
+uid="uid://7e2r3gkrylib"
+path="res://.godot/imported/HumanResources.png-a3b1b5cc9d4e4950f6f428e3273592ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/playersprite1quart.png"
-dest_files=["res://.godot/imported/playersprite1quart.png-7eb41dc055d75a9a482b414067000e10.ctex"]
+source_file="res://Assets/Images/HumanResources.png"
+dest_files=["res://.godot/imported/HumanResources.png-a3b1b5cc9d4e4950f6f428e3273592ca.ctex"]
 
 [params]
 
