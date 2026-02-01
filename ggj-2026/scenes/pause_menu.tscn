@@ -38,17 +38,17 @@ offset_right = 878.0
 offset_bottom = 518.0
 text = "Quit Game"
 
-[node name="AudioSlider" type="HSlider" parent="." unique_id=1051522259]
+[node name="MasterAudioSlider" type="HSlider" parent="." unique_id=1051522259]
 layout_mode = 0
-offset_left = 290.0
-offset_top = 256.0
-offset_right = 834.0
-offset_bottom = 272.0
+offset_left = 289.0
+offset_top = 194.0
+offset_right = 833.0
+offset_bottom = 210.0
 max_value = 2.0
 step = 0.01
-value = 2.0
+value = 1.0
 
-[node name="Label" type="Label" parent="AudioSlider" unique_id=1133588909]
+[node name="Label" type="Label" parent="MasterAudioSlider" unique_id=1133588909]
 layout_mode = 0
 offset_left = 94.0
 offset_top = -47.0
@@ -59,5 +59,48 @@ text = "Master Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="BGMAudioSlider" type="HSlider" parent="." unique_id=1715290117]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 276.0
+offset_right = 831.0
+offset_bottom = 292.0
+max_value = 2.0
+step = 0.01
+value = 2.0
+
+[node name="Label2" type="Label" parent="BGMAudioSlider" unique_id=867514337]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -45.0
+offset_right = 426.0
+offset_bottom = -3.0
+theme_override_font_sizes/font_size = 30
+text = "BGM Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXAudioSlider" type="HSlider" parent="." unique_id=631434111]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 360.0
+offset_right = 835.0
+offset_bottom = 376.0
+max_value = 2.0
+step = 0.01
+value = 2.0
+
+[node name="Label3" type="Label" parent="SFXAudioSlider" unique_id=674184611]
+layout_mode = 0
+offset_left = 84.0
+offset_top = -42.0
+offset_right = 420.0
+theme_override_font_sizes/font_size = 30
+text = "SFX Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="button_down" from="quitGameButton" to="." method="_on_quit_game_button_button_down"]
-[connection signal="value_changed" from="AudioSlider" to="." method="_on_audio_slider_value_changed"]
+[connection signal="value_changed" from="MasterAudioSlider" to="." method="_on_audio_slider_value_changed"]
+[connection signal="value_changed" from="BGMAudioSlider" to="." method="_on_bgm_audio_slider_value_changed"]
+[connection signal="value_changed" from="SFXAudioSlider" to="." method="_on_sfx_audio_slider_value_changed"]

@@ -104,6 +104,7 @@ vertical_alignment = 1
 [node name="Typing" type="AudioStreamPlayer" parent="." unique_id=259511622]
 stream = ExtResource("4_xtpg1")
 volume_db = -2.0
+bus = &"SFX"
 
 [connection signal="text_changed" from="TextInput" to="." method="_on_text_input_text_changed"]
 [connection signal="text_changed" from="TextInput" to="TextInput" method="_on_text_changed"]

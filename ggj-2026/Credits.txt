@@ -7,3 +7,4 @@ buttonPress - Sound Effect by EAGLAXLE from Pixabay
 winBeep - Sound Effect by freesound_community from Pixabay
 loseBeep - Sound Effect by freesound_community from Pixabay
 typing - Sound Effect by freesound_community from Pixabay
+menuMusic - https://uppbeat.io/sfx/office-quiet-work-ambience/163198/44682

@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://bep0fl00c10xr"]
 
-[ext_resource type="Script" uid="uid://dne86pu8gp4fg" path="res://Scripts/title_screen.gd" id="1_ak2if"]
-[ext_resource type="Texture2D" uid="uid://7e2r3gkrylib" path="res://Assets/Images/HumanResources.png" id="1_v6p8y"]
-[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="3_4gxqj"]
+[ext_resource type="Script" uid="uid://dne86pu8gp4fg" path="res://scripts/title_screen.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://7e2r3gkrylib" path="res://assets/Images/HumanResources.png" id="1_v6p8y"]
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://assets/Fonts/editundo.ttf" id="3_4gxqj"]
 [ext_resource type="StyleBox" uid="uid://e44yo601ch4x" path="res://Styles/coffeenormal.tres" id="4_12m1t"]
 [ext_resource type="StyleBox" uid="uid://bbaa7aaofe5m6" path="res://Styles/coffeepressed.tres" id="5_6vd4x"]
 [ext_resource type="StyleBox" uid="uid://bi1t8b144dwff" path="res://Styles/coffeehover.tres" id="6_n82rj"]
+[ext_resource type="AudioStream" uid="uid://benptarstg7os" path="res://assets/music/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3" id="7_3yumr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0061g"]
 
@@ -153,6 +154,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=332199991]
+stream = ExtResource("7_3yumr")
+autoplay = true
+bus = &"BGM"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

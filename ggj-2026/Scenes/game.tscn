@@ -126,10 +126,6 @@ visible = false
 [node name="FolderGame" parent="." unique_id=1798135369 instance=ExtResource("9_rku1e")]
 visible = false
 
-[node name="PaperGame" parent="." unique_id=1332495056 instance=ExtResource("10_rfjv2")]
-visible = false
-script = null
-
 [node name="UI" parent="." unique_id=355486815 instance=ExtResource("9_ldgsr")]
 
 [node name="People" type="Node3D" parent="." unique_id=771029013]
@@ -164,6 +160,7 @@ visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2012649246]
 stream = SubResource("AudioStreamMP3_trtic")
 autoplay = true
+bus = &"BGM"
 
 [connection signal="typing" from="Interacts/Typing" to="." method="_on_interact_point_typing"]
 [connection signal="coffee" from="Interacts/Coffee" to="." method="_on_interact_point_coffee"]
