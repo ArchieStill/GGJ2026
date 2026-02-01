@@ -26,3 +26,6 @@ func _maskhealth():
 		sprite.texture = half
 	else:
 		sprite.texture = onefour
+
+func _new_mask():
+	health._refill()

@@ -157,7 +157,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.092942, 0.8390484, 18.1635
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.342384, 1, -1.3453112)
 
 [node name="Person-0-1-2" parent="People" unique_id=801703538 instance=ExtResource("13_rfjv2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5824687, 0)
 
 [node name="Pause Menu" parent="." unique_id=705247251 instance=ExtResource("14_trtic")]
 visible = false

@@ -82,21 +82,21 @@ func _physics_process(delta: float) -> void: #moves npc
 		velocity.z = direction.z * speed
 		_reach_check(now_pos, next_pos)
 		move_and_slide()
-		if Vector3().cross(Vector3(next_pos.x, self.get_position().y, next_pos.z)).is_zero_approx():
-			print("halp")
-			self.look_at(Vector3(next_pos.x, self.get_position().y, next_pos.z))
+		#if !Vector3().cross(Vector3(next_pos.x, self.get_position().y, next_pos.z)).is_zero_approx():
+		print("halp")
+		self.look_at(Vector3(next_pos.x, self.get_position().y, next_pos.z))
 
 func _on_area_entered(body: Node3D) -> void:
 	if body.get_name() == "Player":
-		#get disguise status
-		var disguise = false
-		if !disguise:
+		if Global.HasMask == false:
 			_navigate(body.get_position())
 			catcher.set_deferred("disabled", false)
 			if !shocked and !chasing:
 				shocked = true
 				target = body
 				freeze.start()
+		elif chasing == true:
+			_lose_chase()
 
 func _on_area_exited(body: Node3D) -> void:
 	if body.get_name() == "Player":
@@ -113,7 +113,10 @@ func _lose_chase():
 
 func _catch(body: Node3D) -> void: #for when person collider hits player
 	if chasing:
-		print("gotcha")
+		var ending = preload("res://Scenes/over_screen.tscn")
+		var endy = ending.instantiate()
+		get_node("/root").add_child(endy)
+		get_node("/root/Game").queue_free()
 	pass
 
 func _taken(area: Area3D): #for when player kills person
