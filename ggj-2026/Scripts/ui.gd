@@ -15,8 +15,10 @@ const onefour = preload("res://Assets/Sprites/playersprite1quart.png")
 func _process(delta: float) -> void:
 	if Global.HasMask:
 		_maskhealth()
+		$DeathClock.text = ""
 	else:
 		sprite.texture = empty
+		$DeathTimer3.start()
 	
 	match Global.CurrentGoal:
 		1: $CurrentGoal.text = "CURRENT GOAL: COMPUTER"
@@ -36,3 +38,16 @@ func _maskhealth():
 
 func _new_mask():
 	health._refill()
+
+
+func _on_death_timer_3_timeout() -> void:
+	$DeathClock.text = "3"
+	$DeathTimer2.start()
+func _on_death_timer_2_timeout() -> void:
+	$DeathClock.text = "2"
+	$DeathTimer1.start()
+func _on_death_timer_1_timeout() -> void:
+	$DeathClock.text = "1"
+	$DeathTimer0.start()
+func _on_death_timer_0_timeout() -> void:
+	get_tree().change_scene_to_file("res://Scenes/over_screen.tscn")

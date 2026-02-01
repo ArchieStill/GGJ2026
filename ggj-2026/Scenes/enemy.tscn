@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b1e721e8lu2qy"]
+
+[ext_resource type="Script" uid="uid://euiceuvhisha" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://bvjr5acgongrv" path="res://Assets/Images/enemy.jpg" id="1_hghv2"]
+[ext_resource type="AudioStream" uid="uid://c33ktvmyhrmsk" path="res://Assets/Music/scream.mp3" id="3_afpow"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f0kj"]
+albedo_texture = ExtResource("1_hghv2")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_afpow"]
+material = SubResource("StandardMaterial3D_1f0kj")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hghv2"]
+size = Vector3(1.7055054, 2.8483887, 1.1514282)
+
+[node name="Enemy" type="Area3D" unique_id=271225118]
+transform = Transform3D(1.3953549, 0, 0, 0, 1.3666042, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_1f0kj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1637638679]
+transform = Transform3D(0.83099574, 0, 0, 0, -4.371139e-08, -1.4639641, 0, 1, -6.3991905e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_afpow")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=971153881]
+transform = Transform3D(1.432778, 0, 0, 0, 1, 0, 0, 0, 2.2241263, 0.04360962, 0.10656738, 0.3993225)
+shape = SubResource("BoxShape3D_hghv2")
+
+[node name="Scream" type="AudioStreamPlayer" parent="." unique_id=1908064804]
+stream = ExtResource("3_afpow")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

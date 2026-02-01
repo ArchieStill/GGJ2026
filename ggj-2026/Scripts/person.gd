@@ -110,17 +110,17 @@ func _lose_chase():
 	chasing = false
 	_point_reached()
 
-func _catch(body: Node3D) -> void: #for when person collider hits player
-	if chasing:
-		var ending = preload("res://Scenes/over_screen.tscn")
-		var endy = ending.instantiate()
-		get_node("/root").add_child(endy)
-		get_node("/root/Game").queue_free()
-	pass
-
-func _taken(area: Area3D): #for when player kills person
-	var masky = mask.instantiate()
-	get_node("/root/Game").add_child(masky)
-	get_node("/root/Game/maskRefill").set_global_position(area.get_global_position())
-	self.queue_free()
-	pass
+#func _catch(body: Node3D) -> void: #for when person collider hits player
+	#if chasing:
+		#var ending = preload("res://Scenes/over_screen.tscn")
+		#var endy = ending.instantiate()
+		#get_node("/root").add_child(endy)
+		#get_node("/root/Game").queue_free()
+	#pass
+#
+#func _taken(area: Area3D): #for when player kills person
+	#var masky = mask.instantiate()
+	#get_node("/root/Game").add_child(masky)
+	#get_node("/root/Game/maskRefill").set_global_position(area.get_global_position())
+	#self.queue_free()
+	#pass

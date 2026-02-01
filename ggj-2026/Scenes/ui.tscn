@@ -46,3 +46,27 @@ theme_override_font_sizes/font_size = 60
 text = "CURRENT GOAL: FILING ROOM"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="DeathClock" type="Label" parent="." unique_id=157776609]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DeathTimer1" type="Timer" parent="." unique_id=1154231049]
+one_shot = true
+
+[node name="DeathTimer0" type="Timer" parent="." unique_id=386777415]
+one_shot = true
+
+[node name="DeathTimer2" type="Timer" parent="." unique_id=2043172174]
+one_shot = true
+
+[node name="DeathTimer3" type="Timer" parent="." unique_id=2043615020]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="DeathTimer1" to="." method="_on_death_timer_1_timeout"]
+[connection signal="timeout" from="DeathTimer0" to="." method="_on_death_timer_0_timeout"]
+[connection signal="timeout" from="DeathTimer0" to="." method="_on_death_timer_1_timeout"]
+[connection signal="timeout" from="DeathTimer2" to="." method="_on_death_timer_2_timeout"]
+[connection signal="timeout" from="DeathTimer3" to="." method="_on_death_timer_3_timeout"]

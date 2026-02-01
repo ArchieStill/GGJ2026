@@ -70,3 +70,15 @@ func _on_paper_game_finished() -> void:
 func _set_signal():
 	var mask = get_node("maskRefill")
 	mask.refill.connect(_on_mask_refill_refill)
+
+
+func _on_enemy_refill() -> void:
+	Global.HasMask = true
+func _on_enemy_2_refill() -> void:
+	Global.HasMask = true
+func _on_enemy_3_refill() -> void:
+	Global.HasMask = true
+func _on_enemy_4_refill() -> void:
+	Global.HasMask = true
+func _on_enemy_5_refill() -> void:
+	Global.HasMask = true
