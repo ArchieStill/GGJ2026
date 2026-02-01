@@ -4,5 +4,5 @@
 load_path = "res://.godot/imported/Textured GGJ Mask plz god_11.png-6fa59b3b541a177227611fe2cf015147.s3tc.ctex"
 
 [resource]
-albedo_color = Color(0.7508529, 0.63459605, 0.4261536, 1)
+albedo_color = Color(0.48388314, 0.5127788, 0.4929347, 1)
 albedo_texture = SubResource("CompressedTexture2D_scfb0")

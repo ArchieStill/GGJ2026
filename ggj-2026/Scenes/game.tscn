@@ -9,9 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/Minigames/simonsaysgame.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/foldergame.tscn" id="9_rku1e"]
-[ext_resource type="PackedScene" uid="uid://cxks2h47q5qw0" path="res://Scenes/Minigames/paperGame.tscn" id="10_rfjv2"]
+[ext_resource type="PackedScene" uid="uid://cmbeltwaokjjs" path="res://Assets/Models/officespace.tscn" id="12_rku1e"]
 [ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://Scenes/person.tscn" id="13_rfjv2"]
-[ext_resource type="ArrayMesh" uid="uid://dixrc3x3x5e17" path="res://assets/Models/Textured with Roof hopefully.obj" id="14_1phco"]
 [ext_resource type="PackedScene" uid="uid://d1520o570w2qe" path="res://Scenes/pause_menu.tscn" id="14_trtic"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
@@ -23,6 +22,7 @@ sky_material = SubResource("ProceduralSkyMaterial_ukw5w")
 
 [sub_resource type="Environment" id="Environment_whr1e"]
 background_mode = 2
+background_energy_multiplier = 0.49
 sky = SubResource("Sky_kuqtn")
 tonemap_mode = 2
 
@@ -51,6 +51,7 @@ script = ExtResource("1_i6g32")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=441263989]
 transform = Transform3D(-0.8553643, 0.51802695, 2.2643677e-08, 0, -4.371139e-08, 1, 0.51802695, 0.8553643, 3.7389164e-08, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1509588367]
@@ -60,6 +61,7 @@ environment = SubResource("Environment_whr1e")
 transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 3.5, 0, 0, -10.323332)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1169923487]
+visible = false
 material_override = SubResource("StandardMaterial3D_v158k")
 mesh = SubResource("BoxMesh_ukw5w")
 
@@ -162,6 +164,9 @@ visible = false
 stream = SubResource("AudioStreamMP3_trtic")
 autoplay = true
 bus = &"BGM"
+
+[node name="Textured GGJ Mask plz god" parent="." unique_id=1576389117 instance=ExtResource("12_rku1e")]
+transform = Transform3D(92.23847, 0, 0, 0, 114.377945, 0, 0, 0, 92.23847, -8.488972, 0.67405415, -4.968466)
 
 [connection signal="typing" from="Interacts/Typing" to="." method="_on_interact_point_typing"]
 [connection signal="coffee" from="Interacts/Coffee" to="." method="_on_interact_point_coffee"]

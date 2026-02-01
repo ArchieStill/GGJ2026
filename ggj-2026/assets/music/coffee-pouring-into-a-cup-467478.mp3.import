@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ctiwkkxdaf7o3"
-path="res://.godot/imported/coffee-pouring-into-a-cup-467478.mp3-4e3bc600342cd06182a2e80c6894d75c.mp3str"
+path="res://.godot/imported/coffee-pouring-into-a-cup-467478.mp3-a00c50b147fb4f7864fdc9ea0c05ef15.mp3str"
 
 [deps]
 
-source_file="res://assets/music/coffee-pouring-into-a-cup-467478.mp3"
-dest_files=["res://.godot/imported/coffee-pouring-into-a-cup-467478.mp3-4e3bc600342cd06182a2e80c6894d75c.mp3str"]
+source_file="res://Assets/Music/coffee-pouring-into-a-cup-467478.mp3"
+dest_files=["res://.godot/imported/coffee-pouring-into-a-cup-467478.mp3-a00c50b147fb4f7864fdc9ea0c05ef15.mp3str"]
 
 [params]
 

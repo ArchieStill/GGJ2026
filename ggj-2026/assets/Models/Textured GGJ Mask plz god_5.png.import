@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdxa6qno56g0l"
-path="res://.godot/imported/playersprite1quart.png-7eb41dc055d75a9a482b414067000e10.ctex"
+uid="uid://dgbbtt7n1fgsm"
+path.s3tc="res://.godot/imported/Textured GGJ Mask plz god_5.png-890a60e02b3b2ec073ee9b5fd3c3d1bb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "261a5d6ed87f4295dcd579ba14ac6a61"
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/playersprite1quart.png"
-dest_files=["res://.godot/imported/playersprite1quart.png-7eb41dc055d75a9a482b414067000e10.ctex"]
+source_file="res://Assets/Models/Textured GGJ Mask plz god_5.png"
+dest_files=["res://.godot/imported/Textured GGJ Mask plz god_5.png-890a60e02b3b2ec073ee9b5fd3c3d1bb.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

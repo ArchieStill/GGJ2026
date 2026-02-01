@@ -1,0 +1,834 @@
+[gd_scene format=4 uid="uid://cmbeltwaokjjs"]
+
+[ext_resource type="PackedScene" uid="uid://rfrm0di1xtmr" path="res://Assets/Models/Textured GGJ Mask plz god.fbx" id="1_8auxl"]
+[ext_resource type="Material" uid="uid://bua3q6rfsg7xv" path="res://Assets/Models/Materials/FloorMaterial.tres" id="2_7nw1l"]
+[ext_resource type="Material" uid="uid://qq6ibbf08we" path="res://Assets/Models/Materials/WallMaterial.tres" id="3_kbpj1"]
+[ext_resource type="Material" uid="uid://m40n1v553768" path="res://Assets/Models/Materials/ChairMaterial.tres" id="4_kbpj1"]
+[ext_resource type="Material" uid="uid://cj753t5j0bgp6" path="res://Assets/Models/Materials/FilingMaterial.tres" id="5_voy8d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pugv"]
+resource_name = "Office_Carpet_Texture"
+vertex_color_use_as_albedo = true
+roughness = 0.8
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l6uau"]
+_surfaces = [{
+"aabb": AABB(-0.05, 0, -0.03, 0.060000002, 1e-05, 0.03),
+"format": 34359742465,
+"index_count": 108,
+"index_data": PackedByteArray("EwABAAIAAgAAABMAAQATABQAFAADAAEAFQATAAAAAAAFABUABgAVAAUABQAHAAYAFQAGAAQAEwAVABYABAAWABUAFgAUABMAFgAEAAgACAAXABYAFAAWABcAFwAIAAoAAwAUABgAFwAYABQAGAAJAAMACgAZABcAGAAXABkAGQAKAA0ACQAYABoAGQAaABgAGgALAAkADQAMABkAGgAZAAwADAANAA4ADgAQAAwADAAbABoACwAaABsAGwAMABAAGwAPAAsAEAARABsADwAbABEAEQASAA8A"),
+"lods": [3.1622794e-06, PackedByteArray("AAABAAIAAQAAAAMABAADAAAAAAAFAAQABQAGAAQABQAHAAYAAwAEAAgACAAJAAMACQAIAAoACgALAAkACwAKAAwADQAMAAoADAANAA4ADAAPAAsADgAQAAwADwAMABAAEAARAA8AEQASAA8A")],
+"name": "Office_Carpet_Texture",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("zcxMvQAAAAAK1yO8CtcjvQAAAAAAAAAAzcxMvQAAAAAAAAAAj8L1vAAAAAAAAAAAj8L1vAAAAACPwvW8zcxMvQAAAAAK16O8CtcjvQAAAACPwvW8zcxMvQAAAACPwvW8CtejvAAAAACPwvW8CtejvAAAAAAAAAAACtcjvAAAAACPwvW8CtcjvAAAAAAAAAAAAAAAAAAAAAAK16O8AAAAAAAAAACPwvW8CtcjPAAAAACPwvW8AAAAAAAAAAAAAAAACtcjPAAAAAAK16O8CtcjPAAAAAAK1yO8CtcjPAAAAAAAAAAACtcjvQAAAAAK1yO8j8L1vAAAAAAK1yO8CtcjvQAAAAAK16O8j8L1vAAAAAAK16O8CtejvAAAAAAK16O8CtejvAAAAAAK1yO8CtcjvAAAAAAK16O8CtcjvAAAAAAK1yO8AAAAAAAAAAAK1yO8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fcyji"]
+resource_name = "Side_Floor21"
+_surfaces = [{
+"aabb": AABB(-0.05, 0, -0.03, 0.060000002, 1e-05, 0.03),
+"attribute_data": PackedByteArray("T+NDwNUDtD99Rg3AvJ4QQE/jQ8C8nhBAWlOtv7yeEEBaU62/wL2Zvk/jQ8BplA0/fUYNwMC9mb5P40PAwL2ZvmszAL/AvZm+azMAv7yeEECyf7Q+wL2ZvrJ/tD68nhBAjlmaP2mUDT+OWZo/wL2ZvprJA0DAvZm+jlmaP7yeEECayQNAaZQNP5rJA0DVA7Q/mskDQLyeEEB9Rg3A1QO0P1pTrb/VA7Q/fUYNwGmUDT9aU62/aZQNP2szAL9plA0/azMAv9UDtD+yf7Q+aZQNP7J/tD7VA7Q/jlmaP9UDtD8="),
+"format": 34359742487,
+"index_count": 108,
+"index_data": PackedByteArray("EwABAAIAAgAAABMAAQATABQAFAADAAEAFQATAAAAAAAFABUABgAVAAUABQAHAAYAFQAGAAQAEwAVABYABAAWABUAFgAUABMAFgAEAAgACAAXABYAFAAWABcAFwAIAAoAAwAUABgAFwAYABQAGAAJAAMACgAZABcAGAAXABkAGQAKAA0ACQAYABoAGQAaABgAGgALAAkADQAMABkAGgAZAAwADAANAA4ADgAQAAwADAAbABoACwAaABsAGwAMABAAGwAPAAsAEAARABsADwAbABEAEQASAA8A"),
+"lods": [3.1622794e-06, PackedByteArray("AAABAAIAAQAAAAMABAADAAAAAAAFAAQABQAGAAQABQAHAAYAAwAEAAgACAAJAAMACQAIAAoACgALAAkACwAKAAwADQAMAAoADAANAA4ADAAPAAsADgAQAAwADwAMABAAEAARAA8AEQASAA8A")],
+"material": SubResource("StandardMaterial3D_5pugv"),
+"name": "Office_Carpet_Texture",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("zcxMvQAAAAAK1yO8CtcjvQAAAAAAAAAAzcxMvQAAAAAAAAAAj8L1vAAAAAAAAAAAj8L1vAAAAACPwvW8zcxMvQAAAAAK16O8CtcjvQAAAACPwvW8zcxMvQAAAACPwvW8CtejvAAAAACPwvW8CtejvAAAAAAAAAAACtcjvAAAAACPwvW8CtcjvAAAAAAAAAAAAAAAAAAAAAAK16O8AAAAAAAAAACPwvW8CtcjPAAAAACPwvW8AAAAAAAAAAAAAAAACtcjPAAAAAAK16O8CtcjPAAAAAAK1yO8CtcjPAAAAAAAAAAACtcjvQAAAAAK1yO8j8L1vAAAAAAK1yO8CtcjvQAAAAAK16O8j8L1vAAAAAAK16O8CtejvAAAAAAK16O8CtejvAAAAAAK1yO8CtcjvAAAAAAK16O8CtcjvAAAAAAK1yO8AAAAAAAAAAAK1yO8/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_l6uau")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udhbj"]
+resource_name = "Wall_Texture"
+vertex_color_use_as_albedo = true
+roughness = 0.2
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ayyms"]
+_surfaces = [{
+"aabb": AABB(-0.05, -0.005, -0.00033333345, 0.24389522, 0.02998266, 0.0006666669),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAQAAAAQAAwACAAUABQACAAEAAAADAAYABQAGAAMABgAEAAAAAQAHAAUABgAFAAcABAAHAAEABwAEAAYA"),
+"name": "Wall_Texture",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("dIxGPm+ozDw4w665dIxGPgrXo7s4w665eIxGPgrXo7tDw645eIxGPm+ozDxDw645zcxMvW+ozDxCw665zcxMvQrXo7tDw645zcxMvW+ozDxDw645zcxMvQrXo7tCw665")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_olely"]
+resource_name = "Int_X_Wall_8"
+_surfaces = [{
+"aabb": AABB(-0.05, -0.005, -0.00033333345, 0.24389522, 0.02998266, 0.0006666669),
+"attribute_data": PackedByteArray("Yopev+yJvj9iil6/9jvhPxDlYL/2O+E/EOVgv+yJvj9Hree/mP3jvu9/5r+Y/eO+73/mv/I74T9Hree/9jvhP1ooWb/2O+E/WihZv+yJvj+ozVa/7Im+P6jNVr/2O+E/Hbvjv/I74T8du+O/mP3jvseN4r+Y/eO+x43iv/Y74T+nJ6i/iP3jvh9uZr+I/eO+H25mv/Y74T+nJ6i/9jvhPy3sqr/2O+E/w9zfv/Y74T/D3N+/mP3jvi3sqr+Y/eO+"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_udhbj"),
+"name": "Wall_Texture",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("dIxGPm+ozDw4w665dIxGPgrXo7s4w665eIxGPgrXo7tDw645eIxGPm+ozDxDw645zcxMvW+ozDxDw645zcxMvW+ozDxCw665dIxGPm+ozDw4w665eIxGPm+ozDxDw645zcxMvQrXo7tCw665zcxMvW+ozDxCw665zcxMvW+ozDxDw645zcxMvQrXo7tDw645dIxGPgrXo7s4w665zcxMvQrXo7tCw665zcxMvQrXo7tDw645eIxGPgrXo7tDw645zcxMvW+ozDxCw665zcxMvQrXo7tCw665dIxGPgrXo7s4w665dIxGPm+ozDw4w665eIxGPm+ozDxDw645eIxGPgrXo7tDw645zcxMvQrXo7tDw645zcxMvW+ozDxDw645//8CgAAA/f///wKAAAD9////AoAAAP3///8CgAAA/f//f///AAAAgP9////+/wCA/3///wAAAID/f///AAAAgAAA/3//f/+/AAD/f/9//78AAP9//3//vwAA/3//f/+//38AAACA/7//fwAA/3//v/9/AAD/f/+//38AAACA/7///////38AgP//////fwCA//////9/AID//////38AgP9//3//f////3//f/9/////f/9//3////9//3//f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ayyms")
+
+[node name="Textured GGJ Mask plz god" unique_id=1576389117 instance=ExtResource("1_8auxl")]
+
+[node name="Main_Floor" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="0" unique_id=140842432]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="1" unique_id=467511631]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Elevator_Floor" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="2" unique_id=799727299]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Break_Room_Floor" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="3" unique_id=856839789]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor1" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="4" unique_id=639450028]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor2" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="5" unique_id=2077810010]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor3" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="6" unique_id=2139249173]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor4" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="7" unique_id=681510117]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor5" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="8" unique_id=751920459]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor6" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="9" unique_id=524420771]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor7" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="10" unique_id=1305980650]
+transform = Transform3D(0, 0, 1.5, 0, 1.5, 0, -1.5, 0, 0, 0.09123747, 0, -0.29606926)
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor8" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="11" unique_id=1966089614]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor9" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="12" unique_id=358304834]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor10" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="13" unique_id=1635574499]
+transform = Transform3D(0, 0, 1.5, 0, 1.5, 0, -1.5, 0, 0, 0.16149516, 0, -0.29692066)
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor11" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="14" unique_id=1784794759]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor12" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="15" unique_id=494931777]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor13" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="16" unique_id=1851807144]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor14" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="17" unique_id=969230655]
+transform = Transform3D(0, 0, 1.7244258, 0, 1.5, 0, -1.5, 0, 0, 0.090602994, -1.7763568e-17, -0.116914794)
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor15" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="18" unique_id=1240097338]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor16" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="19" unique_id=1055374162]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor17" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="20" unique_id=825455488]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor18" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="21" unique_id=683688567]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor19" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="22" unique_id=1667813806]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor20" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="23" unique_id=47783903]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor21" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="24" unique_id=2043664816]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor28" type="MeshInstance3D" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="25" unique_id=1000774244]
+transform = Transform3D(0.38749313, 0, -0.08777869, 0, 1.5, 0, 0.0937874, 0, 0.36266744, 0.009568498, 0, -0.13616739)
+mesh = SubResource("ArrayMesh_fcyji")
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor22" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="26" unique_id=122657597]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor23" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="27" unique_id=1347396359]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor24" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="28" unique_id=196433477]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor25" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="29" unique_id=902878149]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor26" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="30" unique_id=1531837823]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Side_Floor27" parent="Office_Space/Floors" parent_id_path=PackedInt32Array(439831480) index="31" unique_id=1226653581]
+surface_material_override/0 = ExtResource("2_7nw1l")
+
+[node name="Ext_Wall_1" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="0" unique_id=382067676]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_2" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="1" unique_id=1758641138]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_3" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="2" unique_id=1611306753]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_4" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="3" unique_id=246554982]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_1" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="0" unique_id=986191079]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_3" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="1" unique_id=106325932]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_4" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="2" unique_id=1540551679]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Central_Wall" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="3" unique_id=1126688337]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_1" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="4" unique_id=1212916822]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_2" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="5" unique_id=510360559]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_5" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="6" unique_id=535451776]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_6" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="7" unique_id=668573311]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_3" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="8" unique_id=1576400374]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_4" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="9" unique_id=112593455]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_5" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="10" unique_id=795302771]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_6" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="11" unique_id=618675548]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_7" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="12" unique_id=722634146]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_9" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="13" unique_id=792165278]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_10" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="14" unique_id=1317878399]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_8" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="15" unique_id=1885654990]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_13" type="MeshInstance3D" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="16" unique_id=1470639929]
+transform = Transform3D(0.19999847, 0.0011618877, 0.0037377758, -0.00023802805, 0.9999707, 0.0075653596, -0.00074577524, -0.00756975, 0.9999644, 0.016407754, 0.004937688, -0.0761439)
+mesh = SubResource("ArrayMesh_olely")
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_11" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="17" unique_id=1334309185]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_12" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="18" unique_id=1712188412]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_9" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="19" unique_id=1895726202]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_13" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="20" unique_id=1440620925]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_10" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="21" unique_id=452152471]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_11" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="22" unique_id=845334011]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_12" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="23" unique_id=2120692887]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_14" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="24" unique_id=2113359135]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Central_Wall2" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="25" unique_id=1797083936]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_15" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="26" unique_id=1590791049]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_15" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="27" unique_id=272660615]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_16" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="28" unique_id=1153463399]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_16" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="29" unique_id=1571815511]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_17" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="30" unique_id=913138897]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_17" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="31" unique_id=502501819]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_18" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="32" unique_id=1654505476]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_18" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="33" unique_id=1388229172]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_19" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="34" unique_id=137142659]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_19" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="35" unique_id=494245245]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_20" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="36" unique_id=1431381440]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_20" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="37" unique_id=822404916]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_21" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="38" unique_id=1580580425]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_21" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="39" unique_id=577277527]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_22" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="40" unique_id=630572696]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_22" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="41" unique_id=753625457]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_23" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="42" unique_id=399368907]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_23" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="43" unique_id=787320381]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_Y_Wall_24" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="44" unique_id=2031008916]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_24" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="45" unique_id=663301286]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_25" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="46" unique_id=805021146]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_26" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="47" unique_id=609087082]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_27" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="48" unique_id=1359479291]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Int_X_Wall_28" parent="Office_Space/Walls/External_Walls/Internal_Walls" parent_id_path=PackedInt32Array(1105472604) index="49" unique_id=995214584]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_5" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="5" unique_id=106154785]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_6" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="6" unique_id=1694397699]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_7" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="7" unique_id=1490580772]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_8" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="8" unique_id=1150093437]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_9" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="9" unique_id=1175748111]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_10" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="10" unique_id=261031100]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_11" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="11" unique_id=1991308440]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_12" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="12" unique_id=794635040]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_13" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="13" unique_id=705124199]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_14" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="14" unique_id=636001952]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_15" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="15" unique_id=1900601920]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Ext_Wall_16" parent="Office_Space/Walls/External_Walls" parent_id_path=PackedInt32Array(663009775) index="16" unique_id=1594462649]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__pasted__pasted__Int_X_Wall_8" parent="Office_Space/Walls/group8/group7/pasted__group6/pasted__pasted__group3/pasted__pasted__pasted__Office_Space/pasted__pasted__pasted__Walls/pasted__pasted__pasted__External_Walls/pasted__pasted__pasted__Internal_Walls" parent_id_path=PackedInt32Array(2101118157) index="0" unique_id=1014634195]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_10" parent="Office_Space/Walls/group8/group5/pasted__Office_Space2/pasted__Walls2/pasted__External_Walls2/pasted__Internal_Walls2" parent_id_path=PackedInt32Array(1405504981) index="0" unique_id=1808719735]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_102" parent="Office_Space/Walls/group8/group4/pasted__Office_Space3/pasted__Walls3/pasted__External_Walls3/pasted__Internal_Walls3" parent_id_path=PackedInt32Array(276321164) index="0" unique_id=1655911045]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_11" parent="Office_Space/Walls/group8/group4/pasted__Office_Space3/pasted__Walls3/pasted__External_Walls3/pasted__Internal_Walls3" parent_id_path=PackedInt32Array(276321164) index="1" unique_id=2043786051]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_X_Wall_7" parent="Office_Space/Walls/group8/group3/pasted__Office_Space4/pasted__Walls4/pasted__External_Walls4/pasted__Internal_Walls4" parent_id_path=PackedInt32Array(597818840) index="0" unique_id=635927938]
+transform = Transform3D(-0.2, 0, -8.742278e-08, 0, 1, 0, 1.7484556e-08, 0, -1, 0.06465262, 0.004937688, -0.0763878)
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_X_Wall_8" parent="Office_Space/Walls/group8/group3/pasted__Office_Space4/pasted__Walls4/pasted__External_Walls4/pasted__Internal_Walls4" parent_id_path=PackedInt32Array(597818840) index="1" unique_id=874121861]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_2" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="0" unique_id=904247801]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_12" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="1" unique_id=1849705276]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_13" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="2" unique_id=1720195475]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_14" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="3" unique_id=1266019195]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_15" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="4" unique_id=1964939941]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_16" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="5" unique_id=385158236]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_17" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="6" unique_id=1845729772]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_18" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="7" unique_id=1845951892]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="pasted__Int_Y_Wall_19" parent="Office_Space/Walls/group8/group2/pasted__Office_Space5/pasted__Walls5/pasted__External_Walls5/pasted__Internal_Walls5" parent_id_path=PackedInt32Array(753636161) index="8" unique_id=1737207472]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Office_Chair_4" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="0" unique_id=1188581351]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_17" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="1" unique_id=665218790]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_18" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="2" unique_id=2111459729]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_19" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="3" unique_id=436509190]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_20" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="4" unique_id=2075108657]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_21" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="5" unique_id=92168326]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_22" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="6" unique_id=262111849]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_24" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="7" unique_id=1346038530]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_25" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="8" unique_id=1198222951]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_26" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="9" unique_id=1573851861]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_27" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="10" unique_id=1600172846]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_28" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="11" unique_id=114992339]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_29" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="12" unique_id=856465984]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_30" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="13" unique_id=448452143]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_31" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="14" unique_id=770234365]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_32" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="15" unique_id=878665791]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_33" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="16" unique_id=1159966534]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_34" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="17" unique_id=1718795495]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_35" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="18" unique_id=1035985602]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_36" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="19" unique_id=1758828387]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_37" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="20" unique_id=835321838]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_38" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="21" unique_id=691270267]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_39" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="22" unique_id=1745999177]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_40" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="23" unique_id=1385423414]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_41" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="24" unique_id=1959197462]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_42" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="25" unique_id=687342068]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_43" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="26" unique_id=355729904]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_44" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="27" unique_id=1548417196]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_45" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="28" unique_id=1216824372]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="Office_Chair_46" parent="Office_Space/Meeting_Room/Office_Chairs" parent_id_path=PackedInt32Array(1837951060) index="29" unique_id=2086079871]
+surface_material_override/0 = ExtResource("4_kbpj1")
+surface_material_override/1 = ExtResource("4_kbpj1")
+surface_material_override/2 = ExtResource("4_kbpj1")
+surface_material_override/3 = ExtResource("4_kbpj1")
+
+[node name="pasted__Int_Y_Wall_9" parent="Office_Space/group1/group/pasted__Office_Space/pasted__Walls/pasted__External_Walls/pasted__Internal_Walls" parent_id_path=PackedInt32Array(140284192) index="0" unique_id=1972999961]
+surface_material_override/0 = ExtResource("3_kbpj1")
+
+[node name="Filing_Cabinet_1" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="0" unique_id=400161567]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_2" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="1" unique_id=1092124108]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_3" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="2" unique_id=1095631613]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_4" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="3" unique_id=280660521]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_5" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="4" unique_id=183226940]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_6" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="5" unique_id=1984039825]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_7" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="6" unique_id=1075371948]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_8" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="7" unique_id=1749356463]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_9" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="8" unique_id=244243952]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_10" parent="Office_Space/Cabinet_Room/Cabinets/group9" parent_id_path=PackedInt32Array(294532104) index="0" unique_id=992338071]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_12" parent="Office_Space/Cabinet_Room/Cabinets/group9" parent_id_path=PackedInt32Array(294532104) index="1" unique_id=678317569]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_13" parent="Office_Space/Cabinet_Room/Cabinets/group10" parent_id_path=PackedInt32Array(696652600) index="0" unique_id=1881808754]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_14" parent="Office_Space/Cabinet_Room/Cabinets/group10" parent_id_path=PackedInt32Array(696652600) index="1" unique_id=559932609]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_15" parent="Office_Space/Cabinet_Room/Cabinets/group10" parent_id_path=PackedInt32Array(696652600) index="2" unique_id=1795181158]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="Filing_Cabinet_16" parent="Office_Space/Cabinet_Room/Cabinets" parent_id_path=PackedInt32Array(1202810220) index="11" unique_id=312176482]
+surface_material_override/0 = ExtResource("5_voy8d")
+
+[node name="ambientLight1" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="0" unique_id=652368389]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight2" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="1" unique_id=2092355054]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight3" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="2" unique_id=1117921361]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight4" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="3" unique_id=1745705641]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight5" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="4" unique_id=1932367134]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight6" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="5" unique_id=915876560]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight7" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="6" unique_id=1143017457]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight8" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="7" unique_id=2044763582]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight9" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="8" unique_id=1039572107]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight10" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="9" unique_id=502997486]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight11" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="10" unique_id=262503386]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight12" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="11" unique_id=2077683971]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight13" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="12" unique_id=804244854]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight14" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="13" unique_id=1867368989]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight15" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="14" unique_id=1364109533]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight16" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="15" unique_id=395177121]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight17" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="16" unique_id=1346979732]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight18" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="17" unique_id=1415395268]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight19" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="18" unique_id=1100910138]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight20" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="19" unique_id=764998345]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight21" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="20" unique_id=1644373538]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight22" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="21" unique_id=1207006316]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight23" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="22" unique_id=954418185]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight24" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="23" unique_id=1587655011]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight25" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="24" unique_id=690817963]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight26" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="25" unique_id=158194403]
+visible = false
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight27" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="26" unique_id=1139360348]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight28" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="27" unique_id=594419896]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight29" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="28" unique_id=59058441]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight30" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="29" unique_id=1288877245]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight31" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="30" unique_id=1136557034]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.044623252, 0.029555542, -0.06874833)
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight32" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="31" unique_id=221959666]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight33" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="32" unique_id=1022919302]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight34" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="33" unique_id=1392480862]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight35" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="34" unique_id=895285832]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight36" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="35" unique_id=1471814349]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight37" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="36" unique_id=412100609]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight38" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="37" unique_id=550417372]
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight39" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="38" unique_id=1976194375]
+visible = false
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="ambientLight40" parent="Office_Space/Lights" parent_id_path=PackedInt32Array(702098575) index="39" unique_id=1148530157]
+visible = false
+light_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+light_energy = 2.0
+
+[node name="Roof" parent="Office_Space" parent_id_path=PackedInt32Array(1592714519) index="11" unique_id=1135383579]
+visible = false
+surface_material_override/0 = ExtResource("2_7nw1l")
