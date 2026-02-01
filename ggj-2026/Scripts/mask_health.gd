@@ -14,3 +14,6 @@ func _process(delta: float) -> void:
 func _on_value_changed(value: float) -> void:
 	if value == 0:
 		Global.HasMask = false
+
+func _refill():
+	value = 100

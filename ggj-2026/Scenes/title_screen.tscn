@@ -1,104 +1,16 @@
 [gd_scene format=3 uid="uid://bep0fl00c10xr"]
 
-[ext_resource type="Script" uid="uid://dne86pu8gp4fg" path="res://scripts/title_screen.gd" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://dne86pu8gp4fg" path="res://Scripts/title_screen.gd" id="1_ak2if"]
 [ext_resource type="Texture2D" uid="uid://7e2r3gkrylib" path="res://assets/Images/HumanResources.png" id="1_v6p8y"]
 [ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://assets/Fonts/editundo.ttf" id="3_4gxqj"]
 [ext_resource type="StyleBox" uid="uid://e44yo601ch4x" path="res://Styles/coffeenormal.tres" id="4_12m1t"]
 [ext_resource type="StyleBox" uid="uid://bbaa7aaofe5m6" path="res://Styles/coffeepressed.tres" id="5_6vd4x"]
 [ext_resource type="StyleBox" uid="uid://bi1t8b144dwff" path="res://Styles/coffeehover.tres" id="6_n82rj"]
-[ext_resource type="AudioStream" uid="uid://benptarstg7os" path="res://assets/music/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3" id="7_3yumr"]
+[ext_resource type="AnimationLibrary" uid="uid://duj1c4mpb1bkp" path="res://assets/Sprites/anims.res" id="7_6vd4x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0061g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12m1t"]
-
-[sub_resource type="Animation" id="Animation_4gxqj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_twnyg"]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_55kwv"]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_55kwv"]
-_data = {
-&"RESET": SubResource("Animation_4gxqj"),
-&"fade_in": SubResource("Animation_twnyg"),
-&"fade_out": SubResource("Animation_55kwv")
-}
 
 [node name="TitleScreen" type="Control" unique_id=928863788]
 layout_mode = 3
@@ -144,7 +56,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_12m1t")
 text = "QUIT"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=964181634]
-libraries/ = SubResource("AnimationLibrary_55kwv")
+libraries/ = ExtResource("7_6vd4x")
 autoplay = &"fade_in"
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=937327063]

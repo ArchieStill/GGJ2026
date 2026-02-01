@@ -1,7 +1,7 @@
 extends Node3D
 
 func _on_mask_refill_refill() -> void:
-	$MaskHealth.value = 100
+	$UI._new_mask()
 
 func _on_interact_point_typing() -> void:
 	$TypingGame.show()

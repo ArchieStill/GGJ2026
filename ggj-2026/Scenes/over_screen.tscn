@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dlsfdlmdhgsyg"]
+
+[ext_resource type="AnimationLibrary" uid="uid://duj1c4mpb1bkp" path="res://assets/Sprites/anims.res" id="1_yg7k6"]
+
+[node name="GameOver" type="Control" unique_id=602924338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=198051617]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1971540100]
+libraries/anims = ExtResource("1_yg7k6")
+autoplay = &"anims/fade_in"
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=1593773921]
+visible = false
+offset_right = 1149.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
