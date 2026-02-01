@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eme5wvqtm1f4"
-path.s3tc="res://.godot/imported/Textured GGJ Mask plz god_3.png-1ca56929287b0f3a4291c44f730ff023.s3tc.ctex"
+path.s3tc="res://.godot/imported/Textured GGJ Mask plz god_3.png-99f8f04b9220984444f609f89417f409.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Models/Textured GGJ Mask plz god_3.png"
-dest_files=["res://.godot/imported/Textured GGJ Mask plz god_3.png-1ca56929287b0f3a4291c44f730ff023.s3tc.ctex"]
+source_file="res://assets/Models/Textured GGJ Mask plz god_3.png"
+dest_files=["res://.godot/imported/Textured GGJ Mask plz god_3.png-99f8f04b9220984444f609f89417f409.s3tc.ctex"]
 
 [params]
 
