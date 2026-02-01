@@ -43,21 +43,28 @@ func _on_pattern_timer_timeout() -> void:
 			10: anim.play("pattern10")
 
 func _on_red_pressed() -> void:
+	$ButtonPressAudio.playing = true
 	code = code + "R"
 	code_index += 1
 	$ButtonCount.text = str(code_index) + "/4"
 	_code_check()
+	
 func _on_blue_pressed() -> void:
+	$ButtonPressAudio.playing = true
 	code = code + "B"
 	code_index += 1
 	$ButtonCount.text = str(code_index) + "/4"
 	_code_check()
+	
 func _on_green_pressed() -> void:
+	$ButtonPressAudio.playing = true
 	code = code + "G"
 	code_index += 1
 	$ButtonCount.text = str(code_index) + "/4"
 	_code_check()
+	
 func _on_yellow_pressed() -> void:
+	$ButtonPressAudio.playing = true
 	code = code + "Y"
 	code_index += 1
 	$ButtonCount.text = str(code_index) + "/4"
@@ -67,12 +74,14 @@ func _code_check():
 	if code_index == 4:
 		if code == target_code:
 			anim.play("win_anim")
+			$LevelPassAudio.playing = true
 			score += 1
 			$Score.text = str(score) + "/3"
 			if score == 3:
 				_win()
 		else:
 			anim.play("lose_anim")
+			$LevelFailAudio.playing = true
 		code_index = 0
 		$ButtonGuard.mouse_filter = MOUSE_FILTER_STOP
 

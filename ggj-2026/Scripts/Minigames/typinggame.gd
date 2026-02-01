@@ -16,6 +16,7 @@ func _ready() -> void:
 	line = Typinggamewords.Text.pick_random()
 	target_word.text = line
 	input.grab_focus()
+	$Typing.volume_linear = 0.5
 
 func _process(_delta: float) -> void:
 	if can_play:
@@ -33,6 +34,7 @@ func _on_text_input_text_changed(new_text: String) -> void:
 		word += valid_character.get_string()
 	input.text = word.to_upper()
 	input.caret_column = old_caret_position
+	$Typing.playing = true
 	if input.text == target_word.text:
 		_new_word()
 		input.clear()
@@ -43,6 +45,7 @@ func _on_text_input_text_changed(new_text: String) -> void:
 			$WinText.show()
 			#target_word.text = "YAY"
 			$EndTimer.start()
+			
 
 func _new_word():
 	line = Typinggamewords.Text.pick_random()

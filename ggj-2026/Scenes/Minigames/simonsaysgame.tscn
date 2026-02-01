@@ -1,18 +1,21 @@
 [gd_scene format=3 uid="uid://i45fblbjbmb"]
 
-[ext_resource type="Script" uid="uid://yph7i4uv5mdq" path="res://Scripts/Minigames/simonsaysgame.gd" id="1_3o5b1"]
+[ext_resource type="Script" uid="uid://yph7i4uv5mdq" path="res://scripts/Minigames/simonsaysgame.gd" id="1_3o5b1"]
 [ext_resource type="StyleBox" uid="uid://cgu7rwe6nqd38" path="res://Styles/SSButtons/redbutton.tres" id="1_svsfh"]
 [ext_resource type="StyleBox" uid="uid://bl2doyt7qhenu" path="res://Styles/SSButtons/redhover.tres" id="2_4iikw"]
 [ext_resource type="StyleBox" uid="uid://cnpojrnnk21t8" path="res://Styles/SSButtons/bluebutton.tres" id="2_qemty"]
 [ext_resource type="StyleBox" uid="uid://b53x50iqfrg5u" path="res://Styles/SSButtons/greenbutton.tres" id="3_4iikw"]
 [ext_resource type="StyleBox" uid="uid://ffaxvkid11ck" path="res://Styles/SSButtons/bluehover.tres" id="4_4iikw"]
-[ext_resource type="Texture2D" uid="uid://v1lwwemvhbqn" path="res://Assets/Images/suitsad.jpg" id="4_do37b"]
+[ext_resource type="Texture2D" uid="uid://v1lwwemvhbqn" path="res://assets/Images/suitsad.jpg" id="4_do37b"]
 [ext_resource type="StyleBox" uid="uid://ck6lx073hqp8f" path="res://Styles/SSButtons/yellowbutton.tres" id="4_lxsu7"]
 [ext_resource type="StyleBox" uid="uid://c58vg4ppjyn36" path="res://Styles/SSButtons/greenhover.tres" id="6_lxsu7"]
 [ext_resource type="StyleBox" uid="uid://ckcibqy8l7522" path="res://Styles/SSButtons/yellowhover.tres" id="8_i23xv"]
 [ext_resource type="StyleBox" uid="uid://vhg8pitp7dwa" path="res://Styles/SSButtons/redpressed.tres" id="9_ai8w8"]
-[ext_resource type="Texture2D" uid="uid://cvhkjq6ajitvr" path="res://Assets/Images/simonsays.png" id="10_bvo36"]
-[ext_resource type="Texture2D" uid="uid://bnnn7t7nefvvk" path="res://Assets/Images/suitthumbsup.jpg" id="12_lqnwl"]
+[ext_resource type="Texture2D" uid="uid://cvhkjq6ajitvr" path="res://assets/Images/simonsays.png" id="10_bvo36"]
+[ext_resource type="Texture2D" uid="uid://bnnn7t7nefvvk" path="res://assets/Images/suitthumbsup.jpg" id="12_lqnwl"]
+[ext_resource type="AudioStream" uid="uid://boysrrxgqj78c" path="res://assets/music/electronic-beep-1-453381.mp3" id="14_nst7r"]
+[ext_resource type="AudioStream" uid="uid://bbyjxv11wcqru" path="res://assets/music/positive_beeps-85504.mp3" id="15_1cyep"]
+[ext_resource type="AudioStream" uid="uid://dlkumbh5fmnlo" path="res://assets/music/negative_beeps-6008.mp3" id="16_vdm2d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lqnwl"]
 
@@ -862,6 +865,16 @@ one_shot = true
 
 [node name="StartTimer" type="Timer" parent="." unique_id=1159374488]
 one_shot = true
+
+[node name="ButtonPressAudio" type="AudioStreamPlayer" parent="." unique_id=785406314]
+stream = ExtResource("14_nst7r")
+volume_db = 2.0
+
+[node name="LevelPassAudio" type="AudioStreamPlayer" parent="." unique_id=697561955]
+stream = ExtResource("15_1cyep")
+
+[node name="LevelFailAudio" type="AudioStreamPlayer" parent="." unique_id=1742900870]
+stream = ExtResource("16_vdm2d")
 
 [connection signal="pressed" from="PlayerButtons/Red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="PlayerButtons/Blue" to="." method="_on_blue_pressed"]
