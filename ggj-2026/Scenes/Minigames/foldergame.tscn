@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dmptxhcw14tlu" path="res://scripts/Minigames/foldergame.gd" id="1_gvgsa"]
 [ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://scenes/Minigames/FolderPreset.tscn" id="1_y1ywe"]
 [ext_resource type="Texture2D" uid="uid://c8ghv23ni7q67" path="res://assets/Images/cabinet.png" id="3_2vhpx"]
+[ext_resource type="AudioStream" uid="uid://yptls2850tje" path="res://assets/music/folderRustle.mp3" id="4_adx7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvgsa"]
 size = Vector2(15.338356, 16.071085)
@@ -77,6 +78,9 @@ scale = Vector2(7.9028516, 2.9450498)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Q-Z" unique_id=495017005]
 shape = SubResource("RectangleShape2D_ccy37")
+
+[node name="folderShuffleAudio" type="AudioStreamPlayer" parent="." unique_id=1930128669]
+stream = ExtResource("4_adx7r")
 
 [connection signal="body_entered" from="A-H" to="." method="_on_ah_body_entered"]
 [connection signal="body_entered" from="I-P" to="." method="_on_ip_body_entered"]

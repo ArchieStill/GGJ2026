@@ -38,6 +38,7 @@ func _on_coffee_button_pressed() -> void:
 	#var overlaplist = $Coffee/Area2D.get_overlapping_areas()
 	#if (overlaplist.size() > 0):
 	$AnimationPlayer.play("coffee")
+	$AudioStreamPlayer.playing = true
 	mug.value += 10
 	if mug.value >= 100:
 		$Overflow.show()
