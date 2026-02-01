@@ -19,6 +19,17 @@ offset_right = 1026.0
 offset_bottom = 564.0
 color = Color(0.114158, 0.11415812, 0.11415804, 0.2784314)
 
+[node name="Label" type="Label" parent="." unique_id=587752225]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 50.0
+offset_right = 757.0
+offset_bottom = 163.0
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="quitGameButton" type="Button" parent="." unique_id=1541746641]
 layout_mode = 0
 offset_left = 244.0
@@ -27,4 +38,26 @@ offset_right = 878.0
 offset_bottom = 518.0
 text = "Quit Game"
 
+[node name="AudioSlider" type="HSlider" parent="." unique_id=1051522259]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 256.0
+offset_right = 834.0
+offset_bottom = 272.0
+max_value = 2.0
+step = 0.01
+value = 2.0
+
+[node name="Label" type="Label" parent="AudioSlider" unique_id=1133588909]
+layout_mode = 0
+offset_left = 94.0
+offset_top = -47.0
+offset_right = 430.0
+offset_bottom = -5.0
+theme_override_font_sizes/font_size = 30
+text = "Master Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="button_down" from="quitGameButton" to="." method="_on_quit_game_button_button_down"]
+[connection signal="value_changed" from="AudioSlider" to="." method="_on_audio_slider_value_changed"]

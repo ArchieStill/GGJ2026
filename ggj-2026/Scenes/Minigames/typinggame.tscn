@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cegdh4d7frl5l"]
 
-[ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://Scripts/Minigames/typinggame.gd" id="1_w3iff"]
-[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="2_sesx8"]
-[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://Assets/Images/TYPINGGAME.png" id="3_mho23"]
+[ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://scripts/Minigames/typinggame.gd" id="1_w3iff"]
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://assets/Fonts/editundo.ttf" id="2_sesx8"]
+[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://assets/Images/TYPINGGAME.png" id="3_mho23"]
+[ext_resource type="AudioStream" uid="uid://rnyvv83ra4wx" path="res://assets/music/mech-keyboard-02-102918.mp3" id="4_xtpg1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3iff"]
 
@@ -99,6 +100,10 @@ text = "MENIAL TASK
 COMPLETED!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Typing" type="AudioStreamPlayer" parent="." unique_id=259511622]
+stream = ExtResource("4_xtpg1")
+volume_db = -2.0
 
 [connection signal="text_changed" from="TextInput" to="." method="_on_text_input_text_changed"]
 [connection signal="text_changed" from="TextInput" to="TextInput" method="_on_text_changed"]
