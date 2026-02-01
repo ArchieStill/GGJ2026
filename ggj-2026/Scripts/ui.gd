@@ -2,6 +2,7 @@ extends Control
 
 @onready var health: ProgressBar = $MaskHealth
 @onready var sprite: TextureRect = $PlayerSprite
+@onready var current_goal: Label = $CurrentGoal
 
 
 const empty = preload("res://Assets/Sprites/playerspriteempty.png")
@@ -16,6 +17,12 @@ func _process(delta: float) -> void:
 		_maskhealth()
 	else:
 		sprite.texture = empty
+	
+	match Global.CurrentGoal:
+		1: $CurrentGoal.text = "CURRENT GOAL: COMPUTER"
+		2: $CurrentGoal.text = "CURRENT GOAL: CONFERENCE"
+		3: $CurrentGoal.text = "CURRENT GOAL: BREAK"
+		4: $CurrentGoal.text = "CURRENT GOAL: FILING ROOM"
 
 func _maskhealth():
 	if health.value > 75:

@@ -3,17 +3,31 @@
 [ext_resource type="Texture2D" uid="uid://8njvvm41btlt" path="res://assets/Images/white-house-plan-business-hotel-amtrak-white-bar.jpg" id="1_ldlei"]
 [ext_resource type="Script" uid="uid://r2nyvg5e1wq0" path="res://scripts/paper.gd" id="1_vas6c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vas6c"]
-size = Vector2(240, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbjgq"]
+size = Vector2(803, 317)
 
-[node name="paper" type="RigidBody2D" unique_id=747625290]
+[node name="paper" type="RigidBody2D" unique_id=499716398]
 collision_layer = 4
 collision_mask = 4
+freeze_mode = 1
 script = ExtResource("1_vas6c")
 
-[node name="WhiteHousePlanBusinessHotelAmtrakWhiteBar" type="Sprite2D" parent="." unique_id=161821917]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315235377]
 scale = Vector2(0.3, 0.1)
 texture = ExtResource("1_ldlei")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466569936]
-shape = SubResource("RectangleShape2D_vas6c")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=654785833]
+position = Vector2(-1.5, -0.5)
+scale = Vector2(0.3, 0.1)
+shape = SubResource("RectangleShape2D_cbjgq")
+
+[node name="Button" type="Button" parent="." unique_id=1061382788]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -118.99999
+offset_top = -15.0
+offset_right = -110.99999
+offset_bottom = -7.0
+scale = Vector2(29.740005, 3.6200001)
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
