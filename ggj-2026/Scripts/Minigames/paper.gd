@@ -3,8 +3,6 @@ extends RigidBody2D
 var dragging = false
 var of = Vector2.ZERO
 
-var insideBox = false
-
 func _process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position() - of
@@ -15,11 +13,7 @@ func _on_button_button_down() -> void:
 	gravity_scale = 0.0
 
 func _on_button_button_up() -> void:
+	linear_velocity = Vector2.ZERO
+	angular_velocity = 0.0
 	dragging = false
 	gravity_scale = 1.0
-	
-func _setBox(newState):
-		insideBox = newState
-
-func _getBox() -> bool:
-	return insideBox

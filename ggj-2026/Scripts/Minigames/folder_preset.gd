@@ -2,9 +2,8 @@ extends RigidBody2D
 
 var dragging = false
 var of = Vector2.ZERO
-@onready var button = $Button
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position() - of
 
