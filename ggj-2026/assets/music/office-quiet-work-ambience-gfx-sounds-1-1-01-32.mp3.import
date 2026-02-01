@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://benptarstg7os"
-path="res://.godot/imported/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3-8a0c3e2372c12ef78004820f75436ed3.mp3str"
+path="res://.godot/imported/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3-9a12f6d8ee8ba7befe287637f0fc82cc.mp3str"
 
 [deps]
 
-source_file="res://assets/music/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3"
-dest_files=["res://.godot/imported/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3-8a0c3e2372c12ef78004820f75436ed3.mp3str"]
+source_file="res://Assets/Music/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3"
+dest_files=["res://.godot/imported/office-quiet-work-ambience-gfx-sounds-1-1-01-32.mp3-9a12f6d8ee8ba7befe287637f0fc82cc.mp3str"]
 
 [params]
 

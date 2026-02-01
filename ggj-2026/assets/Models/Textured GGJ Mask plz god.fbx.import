@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://rfrm0di1xtmr"
-path="res://.godot/imported/Textured GGJ Mask plz god.fbx-7308865b9623fc097bb8a894c4b18b3e.scn"
+path="res://.godot/imported/Textured GGJ Mask plz god.fbx-3555ffb14dd5186fef0942a77ef4aef0.scn"
 
 [deps]
 
-source_file="res://assets/Models/Textured GGJ Mask plz god.fbx"
-dest_files=["res://.godot/imported/Textured GGJ Mask plz god.fbx-7308865b9623fc097bb8a894c4b18b3e.scn"]
+source_file="res://Assets/Models/Textured GGJ Mask plz god.fbx"
+dest_files=["res://.godot/imported/Textured GGJ Mask plz god.fbx-3555ffb14dd5186fef0942a77ef4aef0.scn"]
 
 [params]
 

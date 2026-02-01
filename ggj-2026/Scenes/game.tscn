@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://i45fblbjbmb" path="res://Scenes/Minigames/simonsaysgame.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://Scenes/ui.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/foldergame.tscn" id="9_rku1e"]
-[ext_resource type="PackedScene" uid="uid://cmbeltwaokjjs" path="res://assets/Models/officespace.tscn" id="12_rku1e"]
+[ext_resource type="PackedScene" uid="uid://cmbeltwaokjjs" path="res://Assets/Models/officespace.tscn" id="12_rku1e"]
 [ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://Scenes/person.tscn" id="13_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://d1520o570w2qe" path="res://Scenes/pause_menu.tscn" id="14_trtic"]
 
@@ -681,14 +681,6 @@ transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 5.631128, -9.8278885, 0,
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Wall17" unique_id=578972750]
 transform = Transform3D(0.99999577, 0, 2.842171e-14, 0, 0.9999957, 0, -4.440892e-16, 0, 0.9999999, -0.119157314, 2.612896, -0.081085205)
-shape = SubResource("BoxShape3D_rku1e")
-debug_color = Color(0.97725016, 0.00016614735, 0.8103747, 1)
-
-[node name="Wall28" type="StaticBody3D" parent="Walls" unique_id=626900744]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 5.631128, -3.3482382, 0, -27.770834)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Wall28" unique_id=1575167224]
-transform = Transform3D(0.9999962, 0, 2.2952397e-14, 0, 0.9999957, 0, -4.440892e-16, 0, 0.8075655, -2.108694, 2.612896, 2.0873082)
 shape = SubResource("BoxShape3D_rku1e")
 debug_color = Color(0.97725016, 0.00016614735, 0.8103747, 1)
 

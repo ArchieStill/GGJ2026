@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mjfnardep6p1"
-path.s3tc="res://.godot/imported/Textured GGJ Mask plz god_4.png-49855bb6cd1d2a406b37f37744356ff4.s3tc.ctex"
+uid="uid://bvjr5acgongrv"
+path.s3tc="res://.godot/imported/enemy.jpg-a638e90558fa795ba60d62a1690fe94b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "0d7c9dd47401dbf209d10fd0a92223a3"
-}
 
 [deps]
 
-source_file="res://Assets/Models/Textured GGJ Mask plz god_4.png"
-dest_files=["res://.godot/imported/Textured GGJ Mask plz god_4.png-49855bb6cd1d2a406b37f37744356ff4.s3tc.ctex"]
+source_file="res://Assets/Images/enemy.jpg"
+dest_files=["res://.godot/imported/enemy.jpg-a638e90558fa795ba60d62a1690fe94b.s3tc.ctex"]
 
 [params]
 
