@@ -43,3 +43,4 @@ func _check_finish():
 	if foldersToSolve == 0:
 		emit_signal("finished")
 		hide()
+		
