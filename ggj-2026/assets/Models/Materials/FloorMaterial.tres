@@ -1,7 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bua3q6rfsg7xv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_scfb0"]
-load_path = "res://.godot/imported/Textured GGJ Mask plz god_11.png-6fa59b3b541a177227611fe2cf015147.s3tc.ctex"
 
 [resource]
 albedo_color = Color(0.48388314, 0.5127788, 0.4929347, 1)
