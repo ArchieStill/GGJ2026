@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://Scenes/Minigames/foldergame.tscn" id="9_rku1e"]
 [ext_resource type="PackedScene" uid="uid://cxks2h47q5qw0" path="res://Scenes/Minigames/paperGame.tscn" id="10_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://Scenes/person.tscn" id="13_rfjv2"]
+[ext_resource type="ArrayMesh" uid="uid://dixrc3x3x5e17" path="res://assets/Models/Textured with Roof hopefully.obj" id="14_1phco"]
 [ext_resource type="PackedScene" uid="uid://d1520o570w2qe" path="res://Scenes/pause_menu.tscn" id="14_trtic"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukw5w"]
@@ -66,7 +67,7 @@ mesh = SubResource("BoxMesh_ukw5w")
 shape = SubResource("BoxShape3D_kuqtn")
 
 [node name="Player" parent="." unique_id=1619847247 instance=ExtResource("1_ukw5w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.821892, 1.5462308, 8.688974)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.022524, 1.5462308, 3.9034557)
 
 [node name="Interacts" type="Node3D" parent="." unique_id=928704487]
 
@@ -143,13 +144,13 @@ mesh = SubResource("PlaneMesh_nb51f")
 [node name="Points" type="Node3D" parent="People/NavigationRegion3D" unique_id=1596130815]
 
 [node name="Spot 0" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1967282286]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3384275, 1, -5.049)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9555864, 1, 9.252152)
 
 [node name="Spot1" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1867529062]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85842323, 0.8390484, 7.3455286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.092942, 0.8390484, 18.163528)
 
 [node name="Spot2" type="Node3D" parent="People/NavigationRegion3D/Points" unique_id=1537309508]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.250023, 1, -1.3453112)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.342384, 1, -1.3453112)
 
 [node name="Person-0-1-2" parent="People" unique_id=801703538 instance=ExtResource("13_rfjv2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

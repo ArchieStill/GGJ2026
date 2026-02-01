@@ -19,8 +19,8 @@ var target
 
 var mask
 
-const walk = 5.0
-const chase = 7.5
+const walk = 3
+const chase = 5
 
 func _ready() -> void: #setup
 	var spot_root = get_node("/root/Game/People/NavigationRegion3D/Points")
@@ -82,9 +82,9 @@ func _physics_process(delta: float) -> void: #moves npc
 		velocity.z = direction.z * speed
 		_reach_check(now_pos, next_pos)
 		move_and_slide()
-		if !Vector3().cross(Vector3(next_pos)).is_zero_approx():
+		if Vector3().cross(Vector3(next_pos.x, self.get_position().y, next_pos.z)).is_zero_approx():
 			print("halp")
-			self.look_at(next_pos)
+			self.look_at(Vector3(next_pos.x, self.get_position().y, next_pos.z))
 
 func _on_area_entered(body: Node3D) -> void:
 	if body.get_name() == "Player":
