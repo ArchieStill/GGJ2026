@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://chdakdc422pr6"]
 
-[ext_resource type="Script" uid="uid://dmptxhcw14tlu" path="res://Scripts/Minigames/foldergame.gd" id="1_gvgsa"]
-[ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://Scenes/Minigames/FolderPreset.tscn" id="1_y1ywe"]
-[ext_resource type="Texture2D" uid="uid://c8ghv23ni7q67" path="res://Assets/Images/cabinet.png" id="3_2vhpx"]
+[ext_resource type="Script" uid="uid://dmptxhcw14tlu" path="res://scripts/Minigames/foldergame.gd" id="1_gvgsa"]
+[ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://scenes/Minigames/FolderPreset.tscn" id="1_y1ywe"]
+[ext_resource type="Texture2D" uid="uid://c8ghv23ni7q67" path="res://assets/Images/cabinet.png" id="3_2vhpx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvgsa"]
 size = Vector2(15.338356, 16.071085)
@@ -36,25 +36,20 @@ color = Color(0.6190818, 0.6190819, 0.6190818, 1)
 
 [node name="FolderController" type="Node2D" parent="." unique_id=1328452010]
 
-[node name="Folder" parent="FolderController" unique_id=1039454103 instance=ExtResource("1_y1ywe")]
-position = Vector2(226, 172)
-script = null
+[node name="Folder" parent="FolderController" unique_id=1039454103 groups=["folder"] instance=ExtResource("1_y1ywe")]
+position = Vector2(215, 497)
 
-[node name="Folder2" parent="FolderController" unique_id=283737929 instance=ExtResource("1_y1ywe")]
-position = Vector2(164, 323)
-script = null
+[node name="Folder2" parent="FolderController" unique_id=313033793 groups=["folder"] instance=ExtResource("1_y1ywe")]
+position = Vector2(425, 400)
 
-[node name="Folder3" parent="FolderController" unique_id=552829096 instance=ExtResource("1_y1ywe")]
-position = Vector2(427, 312)
-script = null
+[node name="Folder3" parent="FolderController" unique_id=1778465655 groups=["folder"] instance=ExtResource("1_y1ywe")]
+position = Vector2(204, 316)
 
-[node name="Folder4" parent="FolderController" unique_id=407013959 instance=ExtResource("1_y1ywe")]
-position = Vector2(213, 496)
-script = null
+[node name="Folder4" parent="FolderController" unique_id=1828666488 groups=["folder"] instance=ExtResource("1_y1ywe")]
+position = Vector2(437, 165)
 
-[node name="Folder5" parent="FolderController" unique_id=1915569989 instance=ExtResource("1_y1ywe")]
-position = Vector2(408, 484)
-script = null
+[node name="Folder5" parent="FolderController" unique_id=1949491839 groups=["folder"] instance=ExtResource("1_y1ywe")]
+position = Vector2(190, 135)
 
 [node name="Cabinet" type="Sprite2D" parent="." unique_id=44279739]
 position = Vector2(808, 338)

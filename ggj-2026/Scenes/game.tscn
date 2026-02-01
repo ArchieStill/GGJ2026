@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://b2uccfx16mtvv" path="res://scenes/ui.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://chdakdc422pr6" path="res://scenes/Minigames/foldergame.tscn" id="9_rku1e"]
 [ext_resource type="PackedScene" uid="uid://dgb2ti0kx8hlm" path="res://assets/Models/Mask GGJ Map -- Unfinished.fbx" id="10_ldgsr"]
-[ext_resource type="PackedScene" uid="uid://cxks2h47q5qw0" path="res://scenes/Minigames/paperGame.tscn" id="10_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://bbkjy0xi4oehv" path="res://scenes/person.tscn" id="13_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://d1520o570w2qe" path="res://scenes/pause_menu.tscn" id="14_trtic"]
 
@@ -135,11 +134,6 @@ visible = false
 
 [node name="FolderGame" parent="." unique_id=1798135369 instance=ExtResource("9_rku1e")]
 visible = false
-script = null
-
-[node name="PaperGame" parent="." unique_id=1332495056 instance=ExtResource("10_rfjv2")]
-visible = false
-script = null
 
 [node name="UI" parent="." unique_id=355486815 instance=ExtResource("9_ldgsr")]
 
@@ -199,3 +193,4 @@ visible = false
 [connection signal="finished" from="TypingGame" to="." method="_on_typing_game_finished"]
 [connection signal="finished" from="CoffeeGame" to="." method="_on_coffee_game_finished"]
 [connection signal="finished" from="SimonSaysGame" to="." method="_on_simon_says_game_finished"]
+[connection signal="finished" from="FolderGame" to="." method="_on_folder_game_finished"]
