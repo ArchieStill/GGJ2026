@@ -887,12 +887,15 @@ one_shot = true
 [node name="ButtonPressAudio" type="AudioStreamPlayer" parent="." unique_id=785406314]
 stream = ExtResource("14_nst7r")
 volume_db = 2.0
+bus = &"SFX"
 
 [node name="LevelPassAudio" type="AudioStreamPlayer" parent="." unique_id=697561955]
 stream = ExtResource("15_1cyep")
+bus = &"SFX"
 
 [node name="LevelFailAudio" type="AudioStreamPlayer" parent="." unique_id=1742900870]
 stream = ExtResource("16_vdm2d")
+bus = &"SFX"
 
 [connection signal="pressed" from="PlayerButtons/Red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="PlayerButtons/Blue" to="." method="_on_blue_pressed"]
