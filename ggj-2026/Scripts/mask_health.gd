@@ -1,8 +1,8 @@
 extends ProgressBar
 
 func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_0):
-		Global.HasMask = true
+	#if Input.is_key_pressed(KEY_0):
+		#Global.HasMask = true
 	if Global.HasMask:
 		show()
 		value -= 5 * delta
