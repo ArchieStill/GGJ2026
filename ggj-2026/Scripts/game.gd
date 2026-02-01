@@ -42,11 +42,11 @@ func _on_folder_game_finished() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$Player.can_move = true
 
-func _on_interact_point_paper() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	$PaperGame.show()
-	$PaperGame.can_play = true
-	$Player.can_move = false
+#func _on_interact_point_paper() -> void:
+	#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	#$PaperGame.show()
+	#$PaperGame.can_play = true
+	#$Player.can_move = false
 
 func _on_paper_game_finished() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
