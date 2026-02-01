@@ -27,3 +27,7 @@ func _on_interact_point_simonsays() -> void:
 func _on_simon_says_game_finished() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$Player.can_move = true
+
+func _set_signal():
+	var mask = get_node("maskRefill")
+	mask.refill.connect(_on_mask_refill_refill)

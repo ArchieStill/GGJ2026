@@ -56,9 +56,10 @@ func _point_reached():
 func _reach_check(now, next):
 	if (snapped(abs(now.z), 0.01) == snapped(abs(next.z), 0.01)):
 		if (snapped(abs(now.x), 0.01) == snapped(abs(next.x), 0.01)):
-			waiting = true
-			if pause.is_stopped():
-				pause.start()
+			if chasing == false:
+				waiting = true
+				if pause.is_stopped():
+					pause.start()
 		elif waiting:
 			waiting = false
 	elif waiting:
@@ -78,18 +79,20 @@ func _physics_process(delta: float) -> void: #moves npc
 		velocity.z = direction.z * speed
 		_reach_check(now_pos, next_pos)
 		move_and_slide()
-		self.set_rotation(Vector3(0,180+now_pos.angle_to(velocity),0))
+		if !Vector3().cross(Vector3(next_pos)).is_zero_approx():
+			print("halp")
+			self.look_at(next_pos)
 
 func _on_area_entered(body: Node3D) -> void:
-	#get disguise status
-	var disguise = false
-	if !disguise:
-		_navigate(body.get_position())
-		catcher.set_deferred("disabled", false)
-		if !shocked and !chasing:
-			shocked = true
-			freeze.start()
-	pass
+	if body.get_name() == "Player":
+		#get disguise status
+		var disguise = false
+		if !disguise:
+			_navigate(body.get_position())
+			catcher.set_deferred("disabled", false)
+			if !shocked and !chasing:
+				shocked = true
+				freeze.start()
 
 func _start_chase():
 	shocked = false
@@ -102,8 +105,9 @@ func _lose_chase():
 func _catch(): #for when person collider hits player
 	pass
 
-func _taken(): #for when player kills person
-	#get_parent().add_child(mask)
-	#get_node("/root/Node3D/People/mask").set_global_position(self.get_global_position())
+func _taken(area: Area3D): #for when player kills person
+	var masky = mask.instantiate()
+	get_node("/root/Game").add_child(masky)
+	get_node("/root/Game/maskRefill").set_global_position(area.get_global_position())
 	self.queue_free()
 	pass
