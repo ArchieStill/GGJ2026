@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://mrdwxfqh3d1s"]
 
-[ext_resource type="Script" uid="uid://b6p0ewa1ghbas" path="res://scripts/Minigames/folder_preset.gd" id="1_78y2m"]
+[ext_resource type="Script" uid="uid://b6p0ewa1ghbas" path="res://Scripts/Minigames/folder_preset.gd" id="1_78y2m"]
 [ext_resource type="Texture2D" uid="uid://cbuham80x6qwm" path="res://Assets/Images/folderBG.png" id="1_k1cxm"]
 [ext_resource type="Texture2D" uid="uid://b7lg58urw2ccv" path="res://Assets/Images/folder.png" id="1_vnhg0"]
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="4_b15jm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78y2m"]
 size = Vector2(1.8648828, 2.4029832)
 
 [node name="Folder" type="RigidBody2D" unique_id=1039454103]
-scale = Vector2(1.0042188, 1)
+scale = Vector2(0.75, 0.75)
 gravity_scale = 0.0
 script = ExtResource("1_78y2m")
 
@@ -35,11 +36,12 @@ scale = Vector2(94.3759, 56.596317)
 shape = SubResource("RectangleShape2D_78y2m")
 
 [node name="Label" type="Label" parent="." unique_id=1238963836]
-offset_left = -64.0
-offset_top = -26.0
-offset_right = -19.0
-offset_bottom = -3.0
-scale = Vector2(3, 3)
+offset_left = -80.0
+offset_top = -16.0
+offset_right = 33.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("4_b15jm")
+theme_override_font_sizes/font_size = 40
 text = "Joahn"
 horizontal_alignment = 1
 vertical_alignment = 1

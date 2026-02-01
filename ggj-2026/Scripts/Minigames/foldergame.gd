@@ -41,6 +41,11 @@ func _on_qz_body_entered(body: Node2D) -> void:
 		
 func _check_finish():
 	if foldersToSolve == 0:
-		emit_signal("finished")
-		hide()
-		
+		can_play = false
+		$EndTimer.start()
+		$WinLabel.show()
+
+
+func _on_end_timer_timeout() -> void:
+	emit_signal("finished")
+	hide()

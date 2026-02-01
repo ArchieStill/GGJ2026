@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://chdakdc422pr6"]
 
-[ext_resource type="Script" uid="uid://dmptxhcw14tlu" path="res://scripts/Minigames/foldergame.gd" id="1_gvgsa"]
-[ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://scenes/Minigames/FolderPreset.tscn" id="1_y1ywe"]
-[ext_resource type="Texture2D" uid="uid://c8ghv23ni7q67" path="res://assets/Images/cabinet.png" id="3_2vhpx"]
+[ext_resource type="Script" uid="uid://dmptxhcw14tlu" path="res://Scripts/Minigames/foldergame.gd" id="1_gvgsa"]
+[ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://Scenes/Minigames/FolderPreset.tscn" id="1_y1ywe"]
+[ext_resource type="Texture2D" uid="uid://cas0g0xcv6ay5" path="res://Assets/Images/foldergame.png" id="2_qplyh"]
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="4_h7ig5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvgsa"]
-size = Vector2(15.338356, 16.071085)
+size = Vector2(17.250782, 22.999994)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vhpx"]
+size = Vector2(23.635124, 36.428493)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccy37"]
+size = Vector2(22.020973, 32.410492)
 
 [node name="FolderGame" type="Control" unique_id=1798135369]
 layout_mode = 3
@@ -18,21 +21,14 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_gvgsa")
 
-[node name="Background" type="ColorRect" parent="." unique_id=306592116]
+[node name="Background" type="TextureRect" parent="." unique_id=488393678]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 31.0
-offset_right = 1116.0
-offset_bottom = 610.0
-color = Color(0.47843137, 0.6431373, 1, 1)
-
-[node name="ColorRect" type="ColorRect" parent="Background" unique_id=815308432]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 23.0
-offset_right = 1051.0
-offset_bottom = 554.0
-color = Color(0.6190818, 0.6190819, 0.6190818, 1)
+offset_left = 57.999996
+offset_top = 15.999999
+offset_right = 3173.0
+offset_bottom = 1859.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_qplyh")
 
 [node name="FolderController" type="Node2D" parent="." unique_id=1328452010]
 
@@ -40,28 +36,24 @@ color = Color(0.6190818, 0.6190819, 0.6190818, 1)
 position = Vector2(215, 497)
 
 [node name="Folder2" parent="FolderController" unique_id=313033793 groups=["folder"] instance=ExtResource("1_y1ywe")]
-position = Vector2(425, 400)
+position = Vector2(371, 393.00003)
 
 [node name="Folder3" parent="FolderController" unique_id=1778465655 groups=["folder"] instance=ExtResource("1_y1ywe")]
 position = Vector2(204, 316)
 
 [node name="Folder4" parent="FolderController" unique_id=1828666488 groups=["folder"] instance=ExtResource("1_y1ywe")]
-position = Vector2(437, 165)
+position = Vector2(378, 176)
 
 [node name="Folder5" parent="FolderController" unique_id=1949491839 groups=["folder"] instance=ExtResource("1_y1ywe")]
 position = Vector2(190, 135)
 
-[node name="Cabinet" type="Sprite2D" parent="." unique_id=44279739]
-position = Vector2(808, 338)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("3_2vhpx")
-
 [node name="A-H" type="Area2D" parent="." unique_id=1934214317]
-position = Vector2(677.99994, 176)
+position = Vector2(634, 177)
 scale = Vector2(9.393, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="A-H" unique_id=103659785]
-scale = Vector2(0.9999999, 1)
+position = Vector2(0.53230983, 2.0000007)
+scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_gvgsa")
 
 [node name="I-P" type="Area2D" parent="." unique_id=2108295943]
@@ -69,6 +61,8 @@ position = Vector2(678, 333)
 scale = Vector2(7.1873198, 2.8000057)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="I-P" unique_id=1817633202]
+position = Vector2(-4.304329, 5.7142715)
+scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_2vhpx")
 
 [node name="Q-Z" type="Area2D" parent="." unique_id=1804764237]
@@ -76,8 +70,30 @@ position = Vector2(676.99994, 483)
 scale = Vector2(7.9028516, 2.9450498)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Q-Z" unique_id=495017005]
+position = Vector2(-2.7856064, 8.242554)
 shape = SubResource("RectangleShape2D_ccy37")
+
+[node name="EndTimer" type="Timer" parent="." unique_id=1137828413]
+wait_time = 3.0
+one_shot = true
+
+[node name="WinLabel" type="Label" parent="." unique_id=496895940]
+visible = false
+layout_mode = 0
+offset_left = 310.0
+offset_top = 205.0
+offset_right = 814.0
+offset_bottom = 428.0
+theme_override_colors/font_color = Color(0.5058824, 0.5058824, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_h7ig5")
+theme_override_font_sizes/font_size = 125
+text = " I LOVE 
+FOLDERS"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="A-H" to="." method="_on_ah_body_entered"]
 [connection signal="body_entered" from="I-P" to="." method="_on_ip_body_entered"]
 [connection signal="body_entered" from="Q-Z" to="." method="_on_qz_body_entered"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
