@@ -5,6 +5,8 @@ var MinigamesCompleted: int = 0
 var PreviousGoal: int = 0
 var CurrentGoal: int = 1
 
+func _process(delta: float) -> void:
+	print(CurrentGoal)
 
 func _randomise_goal():
 	PreviousGoal = CurrentGoal

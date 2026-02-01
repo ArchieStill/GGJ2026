@@ -59,10 +59,12 @@ func _on_interact_point_paper() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$PaperGame.show()
 	$Player.can_move = false
+	$UI.current_goal.hide()
 func _on_paper_game_finished() -> void:
 	Global.MinigamesCompleted += 1
 	Global._randomise_goal()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	$UI.current_goal.show()
 	$Player.can_move = true
 
 func _set_signal():
