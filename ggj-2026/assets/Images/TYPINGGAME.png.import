@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3bxyjtphbuiv"
-path="res://.godot/imported/TYPINGGAME.png-faa6aef26bdc3c86293bbef4cfffba14.ctex"
+path="res://.godot/imported/TYPINGGAME.png-0b09fe613565adf9f553bd8cdf51f9a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/TYPINGGAME.png"
-dest_files=["res://.godot/imported/TYPINGGAME.png-faa6aef26bdc3c86293bbef4cfffba14.ctex"]
+source_file="res://Assets/Images/TYPINGGAME.png"
+dest_files=["res://.godot/imported/TYPINGGAME.png-0b09fe613565adf9f553bd8cdf51f9a1.ctex"]
 
 [params]
 
