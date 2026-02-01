@@ -1,0 +1,9 @@
+Audio Used
+
+BGM - https://www.midis101.com/free-midi/13381-game-system-nintendo-64-goldeneye-007-elevator-music
+Coffee Pour - Sound Effect by DRAGON-STUDIO from Pixabay
+Folder - Sound Effect by freesound_community from Pixabay
+buttonPress - Sound Effect by EAGLAXLE from Pixabay
+winBeep - Sound Effect by freesound_community from Pixabay
+loseBeep - Sound Effect by freesound_community from Pixabay
+typing - Sound Effect by freesound_community from Pixabay
