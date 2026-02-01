@@ -1,6 +1,7 @@
 extends Control
 
 var menu_open = false
+var mouse_already_visible = false
 @onready var main_audio_loop = $"../AudioStreamPlayer"
 
 func _ready() -> void:
@@ -10,11 +11,15 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("toggle_menu"):
 		if(menu_open):
 			hide()
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			if (!mouse_already_visible):
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 			menu_open = false
 		else:
 			show()
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			if (Input.mouse_mode == Input.MOUSE_MODE_VISIBLE):
+					mouse_already_visible = true
+			else:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			menu_open = true
 
 func _on_quit_game_button_button_down() -> void:
