@@ -12,6 +12,7 @@ var waiting = true
 
 var shocked = false
 var chasing = false
+var target
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var catcher = $Catchball/CollisionShape3D
@@ -60,6 +61,8 @@ func _reach_check(now, next):
 				waiting = true
 				if pause.is_stopped():
 					pause.start()
+			elif target != null:
+				_navigate(target.get_position())
 		elif waiting:
 			waiting = false
 	elif waiting:
@@ -92,7 +95,13 @@ func _on_area_entered(body: Node3D) -> void:
 			catcher.set_deferred("disabled", false)
 			if !shocked and !chasing:
 				shocked = true
+				target = body
 				freeze.start()
+
+func _on_area_exited(body: Node3D) -> void:
+	if body.get_name() == "Player":
+		if chasing:
+			target = null
 
 func _start_chase():
 	shocked = false
@@ -102,7 +111,9 @@ func _lose_chase():
 	chasing = false
 	_point_reached()
 
-func _catch(): #for when person collider hits player
+func _catch(body: Node3D) -> void: #for when person collider hits player
+	if chasing:
+		print("gotcha")
 	pass
 
 func _taken(area: Area3D): #for when player kills person

@@ -58,8 +58,7 @@ debug_color = Color(0.8392157, 0, 0.9254902, 1)
 
 [node name="Catchball" type="Area3D" parent="." unique_id=595382056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.234339, 0, 0)
-collision_layer = 4
-collision_mask = 4
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Catchball" unique_id=1467623288]
 shape = SubResource("SphereShape3D_37kl0")
@@ -93,6 +92,7 @@ mesh = SubResource("CylinderMesh_wrnb3")
 
 [connection signal="body_entered" from="Viewcone" to="." method="_on_area_entered"]
 [connection signal="body_exited" from="Viewcone" to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Catchball" to="." method="_catch"]
 [connection signal="area_entered" from="Hitbody" to="." method="_taken"]
 [connection signal="timeout" from="Timer1" to="." method="_point_reached"]
 [connection signal="timeout" from="Timer2" to="." method="_start_chase"]
