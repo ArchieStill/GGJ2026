@@ -1,21 +1,32 @@
 [gd_scene format=3 uid="uid://i45fblbjbmb"]
 
-[ext_resource type="Script" uid="uid://yph7i4uv5mdq" path="res://scripts/Minigames/simonsaysgame.gd" id="1_3o5b1"]
+[ext_resource type="Script" uid="uid://yph7i4uv5mdq" path="res://Scripts/Minigames/simonsaysgame.gd" id="1_3o5b1"]
 [ext_resource type="StyleBox" uid="uid://cgu7rwe6nqd38" path="res://Styles/SSButtons/redbutton.tres" id="1_svsfh"]
 [ext_resource type="StyleBox" uid="uid://bl2doyt7qhenu" path="res://Styles/SSButtons/redhover.tres" id="2_4iikw"]
 [ext_resource type="StyleBox" uid="uid://cnpojrnnk21t8" path="res://Styles/SSButtons/bluebutton.tres" id="2_qemty"]
 [ext_resource type="StyleBox" uid="uid://b53x50iqfrg5u" path="res://Styles/SSButtons/greenbutton.tres" id="3_4iikw"]
 [ext_resource type="StyleBox" uid="uid://ffaxvkid11ck" path="res://Styles/SSButtons/bluehover.tres" id="4_4iikw"]
-[ext_resource type="Texture2D" uid="uid://v1lwwemvhbqn" path="res://assets/Images/suitsad.jpg" id="4_do37b"]
+[ext_resource type="Texture2D" uid="uid://v1lwwemvhbqn" path="res://Assets/Images/suitsad.jpg" id="4_do37b"]
 [ext_resource type="StyleBox" uid="uid://ck6lx073hqp8f" path="res://Styles/SSButtons/yellowbutton.tres" id="4_lxsu7"]
 [ext_resource type="StyleBox" uid="uid://c58vg4ppjyn36" path="res://Styles/SSButtons/greenhover.tres" id="6_lxsu7"]
+[ext_resource type="StyleBox" uid="uid://ben0reivyb4bh" path="res://Styles/SSButtons/bluepressed.tres" id="8_btya1"]
 [ext_resource type="StyleBox" uid="uid://ckcibqy8l7522" path="res://Styles/SSButtons/yellowhover.tres" id="8_i23xv"]
 [ext_resource type="StyleBox" uid="uid://vhg8pitp7dwa" path="res://Styles/SSButtons/redpressed.tres" id="9_ai8w8"]
-[ext_resource type="Texture2D" uid="uid://cvhkjq6ajitvr" path="res://assets/Images/simonsays.png" id="10_bvo36"]
-[ext_resource type="Texture2D" uid="uid://bnnn7t7nefvvk" path="res://assets/Images/suitthumbsup.jpg" id="12_lqnwl"]
-[ext_resource type="AudioStream" uid="uid://boysrrxgqj78c" path="res://assets/music/electronic-beep-1-453381.mp3" id="14_nst7r"]
-[ext_resource type="AudioStream" uid="uid://bbyjxv11wcqru" path="res://assets/music/positive_beeps-85504.mp3" id="15_1cyep"]
-[ext_resource type="AudioStream" uid="uid://dlkumbh5fmnlo" path="res://assets/music/negative_beeps-6008.mp3" id="16_vdm2d"]
+[ext_resource type="Texture2D" uid="uid://cvhkjq6ajitvr" path="res://Assets/Images/simonsays.png" id="10_bvo36"]
+[ext_resource type="Texture2D" uid="uid://bnnn7t7nefvvk" path="res://Assets/Images/suitthumbsup.jpg" id="12_lqnwl"]
+[ext_resource type="StyleBox" uid="uid://cmvjglimfkdce" path="res://Styles/SSButtons/greenpressed.tres" id="12_pne6w"]
+[ext_resource type="AudioStream" uid="uid://boysrrxgqj78c" path="res://Assets/Music/electronic-beep-1-453381.mp3" id="14_nst7r"]
+[ext_resource type="AudioStream" uid="uid://bbyjxv11wcqru" path="res://Assets/Music/positive_beeps-85504.mp3" id="15_1cyep"]
+[ext_resource type="StyleBox" uid="uid://dai3iymxqyisi" path="res://Styles/SSButtons/yellowpressed.tres" id="15_aahf6"]
+[ext_resource type="AudioStream" uid="uid://dlkumbh5fmnlo" path="res://Assets/Music/negative_beeps-6008.mp3" id="16_vdm2d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aahf6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgg42"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvyrd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfe0h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lqnwl"]
 
@@ -632,7 +643,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_do37b"]
 resource_name = "win_anim"
-length = 0.5
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -640,7 +651,7 @@ tracks/0/path = NodePath("ManThumbsUp:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -800,24 +811,31 @@ size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("1_svsfh")
 theme_override_styles/pressed = ExtResource("9_ai8w8")
 theme_override_styles/hover = ExtResource("2_4iikw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aahf6")
 
 [node name="Blue" type="Button" parent="PlayerButtons" unique_id=236023286]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("2_qemty")
+theme_override_styles/pressed = ExtResource("8_btya1")
 theme_override_styles/hover = ExtResource("4_4iikw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lgg42")
 
 [node name="Green" type="Button" parent="PlayerButtons" unique_id=693123110]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("3_4iikw")
+theme_override_styles/pressed = ExtResource("12_pne6w")
 theme_override_styles/hover = ExtResource("6_lxsu7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wvyrd")
 
 [node name="Yellow" type="Button" parent="PlayerButtons" unique_id=447536342]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("4_lxsu7")
+theme_override_styles/pressed = ExtResource("15_aahf6")
 theme_override_styles/hover = ExtResource("8_i23xv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tfe0h")
 
 [node name="ButtonGuard" type="Panel" parent="." unique_id=181776587]
 layout_mode = 0
@@ -860,7 +878,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="EndTimer" type="Timer" parent="." unique_id=872638238]
-wait_time = 3.0
+wait_time = 1.5
 one_shot = true
 
 [node name="StartTimer" type="Timer" parent="." unique_id=1159374488]

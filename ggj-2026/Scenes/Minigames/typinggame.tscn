@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cegdh4d7frl5l"]
 
-[ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://scripts/Minigames/typinggame.gd" id="1_w3iff"]
-[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://assets/Fonts/editundo.ttf" id="2_sesx8"]
-[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://assets/Images/TYPINGGAME.png" id="3_mho23"]
-[ext_resource type="AudioStream" uid="uid://rnyvv83ra4wx" path="res://assets/music/mech-keyboard-02-102918.mp3" id="4_xtpg1"]
+[ext_resource type="Script" uid="uid://2xtqnvhywjjx" path="res://Scripts/Minigames/typinggame.gd" id="1_w3iff"]
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="2_sesx8"]
+[ext_resource type="Texture2D" uid="uid://c3bxyjtphbuiv" path="res://Assets/Images/TYPINGGAME.png" id="3_mho23"]
+[ext_resource type="AudioStream" uid="uid://rnyvv83ra4wx" path="res://Assets/Music/mech-keyboard-02-102918.mp3" id="4_xtpg1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3iff"]
 
@@ -81,7 +81,7 @@ text = "0/3"
 horizontal_alignment = 1
 
 [node name="EndTimer" type="Timer" parent="." unique_id=694456706]
-wait_time = 3.0
+wait_time = 2.0
 one_shot = true
 
 [node name="WinText" type="Label" parent="." unique_id=149403773]

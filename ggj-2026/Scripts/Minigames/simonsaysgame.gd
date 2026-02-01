@@ -77,7 +77,7 @@ func _code_check():
 			$LevelPassAudio.playing = true
 			score += 1
 			$Score.text = str(score) + "/3"
-			if score == 3:
+			if score == 1:
 				_win()
 		else:
 			anim.play("lose_anim")

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://mrdwxfqh3d1s" path="res://Scenes/Minigames/FolderPreset.tscn" id="1_y1ywe"]
 [ext_resource type="Texture2D" uid="uid://cas0g0xcv6ay5" path="res://Assets/Images/foldergame.png" id="2_qplyh"]
 [ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="4_h7ig5"]
+[ext_resource type="AudioStream" uid="uid://yptls2850tje" path="res://Assets/Music/folderRustle.mp3" id="5_nb3ik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvgsa"]
 size = Vector2(17.250782, 22.999994)
@@ -90,8 +91,11 @@ theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("4_h7ig5")
 theme_override_font_sizes/font_size = 125
 text = " I LOVE 
-FOLDERS"
-horizontal_alignment = 1
+FOLDERS!!"
+vertical_alignment = 1
+
+[node name="FolderShuffleAudio" type="AudioStreamPlayer" parent="." unique_id=925588645]
+stream = ExtResource("5_nb3ik")
 
 [connection signal="body_entered" from="A-H" to="." method="_on_ah_body_entered"]
 [connection signal="body_entered" from="I-P" to="." method="_on_ip_body_entered"]

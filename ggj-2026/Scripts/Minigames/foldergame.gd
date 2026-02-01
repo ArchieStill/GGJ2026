@@ -18,7 +18,7 @@ func _on_ah_body_entered(body: Node2D) -> void:
 		var letter_num = ord(name.left(1).to_upper()) - ord('A')
 		if (letter_num >= 0 && letter_num <= 7):
 			body.queue_free()
-			$folderShuffleAudio.playing = true
+			$FolderShuffleAudio.playing = true
 			foldersToSolve -= 1
 			_check_finish()
 
@@ -28,7 +28,7 @@ func _on_ip_body_entered(body: Node2D) -> void:
 		var letter_num = ord(name.left(1).to_upper()) - ord('A')
 		if (letter_num >= 8 && letter_num <= 15):
 			body.queue_free()
-			$folderShuffleAudio.playing = true
+			$FolderShuffleAudio.playing = true
 			foldersToSolve -= 1
 			_check_finish()
 
@@ -38,7 +38,7 @@ func _on_qz_body_entered(body: Node2D) -> void:
 		var letter_num = ord(name.left(1).to_upper()) - ord('A')
 		if (letter_num >= 16 && letter_num <= 25):
 			body.queue_free()
-			$folderShuffleAudio.playing = true
+			$FolderShuffleAudio.playing = true
 			foldersToSolve -= 1
 			_check_finish()
 		
