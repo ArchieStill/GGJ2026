@@ -9,6 +9,7 @@ func _on_interact_point_typing() -> void:
 	$Player.can_move = false
 
 func _on_typing_game_finished() -> void:
+	Global.MinigamesCompleted += 1
 	$Player.can_move = true
 
 func _on_interact_point_coffee() -> void:
@@ -18,6 +19,7 @@ func _on_interact_point_coffee() -> void:
 	$Player.can_move = false
 	
 func _on_coffee_game_finished() -> void:
+	Global.MinigamesCompleted += 1
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$Player.can_move = true
 	
@@ -29,6 +31,7 @@ func _on_interact_point_simonsays() -> void:
 	$Player.can_move = false
 
 func _on_simon_says_game_finished() -> void:
+	Global.MinigamesCompleted += 1
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$Player.can_move = true
 

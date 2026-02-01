@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://dlsfdlmdhgsyg"]
 
-[ext_resource type="AnimationLibrary" uid="uid://duj1c4mpb1bkp" path="res://assets/Sprites/anims.res" id="1_yg7k6"]
+[ext_resource type="Script" uid="uid://cj4dr0bda47c7" path="res://Scripts/over_screen.gd" id="1_fpt0e"]
+[ext_resource type="FontFile" uid="uid://xtd4qyc7dov8" path="res://Assets/Fonts/editundo.ttf" id="1_ftsq1"]
+[ext_resource type="Texture2D" uid="uid://b272oo44ni4l1" path="res://Assets/Sprites/playerspritedead.png" id="2_auvp2"]
+[ext_resource type="StyleBox" uid="uid://e44yo601ch4x" path="res://Styles/coffeenormal.tres" id="3_gdawf"]
+[ext_resource type="StyleBox" uid="uid://bbaa7aaofe5m6" path="res://Styles/coffeepressed.tres" id="4_fpt0e"]
+[ext_resource type="StyleBox" uid="uid://bi1t8b144dwff" path="res://Styles/coffeehover.tres" id="5_yab6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvwx0"]
 
 [node name="GameOver" type="Control" unique_id=602924338]
 layout_mode = 3
@@ -9,18 +16,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fpt0e")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=198051617]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=685199196]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14044744, 0.14044744, 0.14044744, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1291850654]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 194.0
+offset_top = 99.0
+offset_right = 917.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.8020228, 0, 0.12699455, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("1_ftsq1")
+theme_override_font_sizes/font_size = 150
+text = "GAME OVER!"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1971540100]
-libraries/anims = ExtResource("1_yg7k6")
-autoplay = &"anims/fade_in"
+[node name="TextureRect" type="TextureRect" parent="." unique_id=231102585]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 222.00002
+offset_right = 2010.0
+offset_bottom = 2322.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_auvp2")
 
-[node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=1593773921]
-visible = false
-offset_right = 1149.0
-offset_bottom = 648.0
-color = Color(0, 0, 0, 1)
+[node name="Label2" type="Label" parent="." unique_id=337051911]
+layout_mode = 0
+offset_left = 745.0
+offset_top = 351.0
+offset_right = 1089.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("1_ftsq1")
+theme_override_font_sizes/font_size = 60
+text = "Minigames completed: 0"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=900321316]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 461.0
+offset_right = 365.0
+offset_bottom = 604.0
+theme_override_fonts/font = ExtResource("1_ftsq1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_gdawf")
+theme_override_styles/pressed = ExtResource("4_fpt0e")
+theme_override_styles/hover = ExtResource("5_yab6x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kvwx0")
+text = "RETURN TO TITLE SCREEN"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
